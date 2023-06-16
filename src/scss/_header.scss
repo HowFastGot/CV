@@ -1,0 +1,229 @@
+@import "Variables";
+
+//<>====================================================================================================================================
+.header {
+
+     &__row {
+
+
+          @media (min-width: $md2) {
+               display: flex;
+               gap: 0 25px;
+
+          }
+
+     }
+
+     &__menu {
+          margin: 5px 12px 0px 12px;
+
+          @media (min-width: $md2) {
+               margin-top: 21px;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               gap: 16px;
+          }
+
+          @media (max-width: $md2) {
+               nav {
+                    width: 90%;
+               }
+          }
+
+     }
+
+     &__img-block {
+          position: relative;
+          width: 100%;
+          background: url("../img/icons/Header/Bitmap.jpg") center/cover no-repeat;
+          border-radius: 28px;
+
+          @media (max-width: $md2) {
+               width: 100%;
+               min-height: 302px;
+               border-radius: 0px;
+               top: -80px;
+               z-index: -1;
+          }
+     }
+
+     &__intro-cart {
+          position: absolute;
+          top: 63px;
+          left: 105px;
+          display: inline-block;
+          max-width: 70%;
+          padding: 31px 37px 57px;
+          background: linear-gradient(141.51deg, #9C27B0 -18.34%, #651FFF 66.03%);
+          mix-blend-mode: normal;
+          opacity: 0.79;
+          border-radius: 34px;
+
+          @media (max-width: $md2) {
+               position: relative;
+               padding: 20px;
+               left: 20px;
+               top: 120px;
+               color: $GOLD;
+          }
+
+          @media (max-width: $md3) {
+               max-width: 90%;
+          }
+     }
+
+
+     &__settings-wrapper {
+          cursor: pointer;
+          position: absolute;
+          right: 148px;
+          top: 75px;
+
+          &:hover,
+          &:active,
+          &:focus {
+               .header__settings-icon {}
+
+               .settings-popup {
+                    display: block !important;
+
+                    opacity: 1;
+                    top: 30px;
+                    right: -5px;
+                    overflow: visible;
+                    transform: rotate(0deg);
+                    transition: all 0.3s ease 0s;
+                    pointer-events: all;
+               }
+          }
+
+
+          @media (max-width: 1194px) {
+               right: 22px;
+               top: 12px;
+          }
+
+          @media (max-width: $md2) {
+               right: 12px;
+               top: 32px;
+          }
+     }
+
+     &__settings-icon {
+          transition: all .7s ease 0s;
+
+          &:hover,
+          &:active,
+          &:focus {
+               outline: none;
+               transform: rotate(90deg);
+          }
+     }
+
+     @media (max-width: $md2) {
+          max-height: 302px;
+     }
+}
+
+.menu-header {
+
+     &__logo {
+          @media (max-width: $md2) {
+               float: left;
+               margin-right: 20px;
+          }
+
+          @media (max-width: $md3) {
+               display: none;
+          }
+     }
+
+     &__list {
+          padding: 30px 25px;
+          background: #D1C4E9;
+          box-shadow: 0px 2px 14px #D1C4E9;
+          border-radius: 16px;
+
+          @media (max-width: $md2) {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               padding: 15px 10px;
+          }
+     }
+
+     &__item {
+          position: relative;
+
+          @media (min-width: $md2) {
+               &:not(:last-child) {
+                    margin-bottom: 33px;
+               }
+          }
+
+     }
+
+}
+
+.intro-cart {
+
+     &__greeting {
+          font-family: "lato700";
+          font-size: 36px;
+          line-height: calc(43 / 36);
+          color: $WHITE;
+
+          @media (max-width: $md2) {
+               font-size: 21px;
+               line-height: calc(21 / 36);
+          }
+     }
+
+     &__personal-info {
+          font-family: "lato900";
+          line-height: calc(24 /10);
+          color: $WHITE;
+
+          @media (min-width: 1260px) {
+               font-size: 48px;
+               line-height: calc(58 /48);
+          }
+     }
+
+     &__description {
+          margin: 22px 0;
+          font-size: 22px;
+          line-height: calc(33 / 22);
+          color: $WHITE;
+
+          @media (max-width: $md1) {
+               font-size: 12px;
+               margin: 5px 0;
+          }
+     }
+
+     &__socials-network {}
+
+     &__list-network {
+          display: flex;
+          gap: 25px;
+          justify-content: left;
+     }
+
+     &__social-item {}
+}
+
+.social-item {
+
+     &_instagram {}
+
+     &_telegram {}
+
+     &_linkedin {}
+
+     &_git {}
+}
+
+//<>====================================================================================================================================

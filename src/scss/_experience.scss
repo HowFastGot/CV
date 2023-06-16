@@ -1,0 +1,233 @@
+.page {
+
+     &__experience-section {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+}
+
+.experience-section {
+     &__div-block {
+          position: relative;
+     }
+
+     &__frame-own-photo {
+          position: relative;
+          min-width: 233px;
+          top: -425px;
+          left: 432px;
+          height: 360.5px;
+          width: 243px;
+          border-radius: 24px;
+          background: transparent;
+          border: 2px solid $BLUE;
+
+          &::after {
+               content: "";
+               display: inline-block;
+               position: absolute;
+               bottom: -100px;
+               right: 50%;
+               height: 100px;
+               width: 1.8px;
+               background-color: $BLUE;
+          }
+
+          &::before {
+               content: "";
+               display: inline-block;
+               position: absolute;
+               bottom: -100px;
+               right: 50%;
+               width: 300px;
+               height: 1.8px;
+               background-color: $BLUE;
+          }
+
+          @media (max-width: 1211px) {
+               top: -540px;
+          }
+
+          @media (max-width: 1006px) {
+               display: none;
+          }
+     }
+
+     &__vertival-line {
+          position: absolute;
+          left: -182px;
+          top: 455px;
+          height: 500px;
+          width: 2px;
+          background-color: $BLUE;
+
+          @media (max-width: 1211px) {
+               height: 615px;
+          }
+
+          @media (max-width: 1139px) {
+               left: -186px;
+          }
+     }
+
+     &__table-row {
+          margin-top: 30px;
+          width: 60%;
+          min-width: 865px;
+          border-spacing: 20px;
+
+          tbody {
+               position: relative;
+          }
+
+          tr {
+
+               th {
+                    text-align: left;
+                    font-family: "lato900";
+                    font-size: 24px;
+                    line-height: calc(29 / 24);
+                    padding-bottom: 10px;
+
+                    @media (max-width: $md2) {
+                         font-size: 16px;
+                         // text-align: center !important;
+                    }
+               }
+
+               td {
+                    position: relative;
+
+                    strong {
+                         @extend th;
+                         font-size: 20px;
+                         line-height: calc(24 / 20);
+
+                         @media (max-width: $md2) {
+                              font-size: 14px;
+                         }
+                    }
+
+                    p,
+                    time {
+                         font-size: 16px;
+                         line-height: calc(19 /16);
+                         color: rgba(73, 71, 71, 0.87);
+                    }
+               }
+
+          }
+
+          tbody tr {
+               &:nth-child(-n + 3) {
+                    td:first-child {
+                         width: 40%;
+                         padding-left: 10px;
+
+
+                         &::before {
+                              content: "";
+                              display: inline-block;
+                              position: absolute;
+                              left: -20px;
+                              top: 8px;
+                              vertical-align: middle;
+                              width: 23px;
+                              height: 23px;
+                              background-color: $GOLD;
+                              border: 4px solid $WHITE;
+                              border-radius: 50%
+                         }
+
+                         @media (max-width: $md3) {
+
+                              p,
+                              time {
+                                   font-size: 8px;
+                              }
+                         }
+
+                    }
+
+               }
+
+               td:last-child {
+                    width: 50%;
+
+                    &::before {
+                         content: "";
+                         display: inline-block;
+                         position: absolute;
+                         left: -35px;
+                         top: 10px;
+                         vertical-align: middle;
+                         width: 33px;
+                         height: 33px;
+                         background: url("../img/icons/experience/react.svg") no-repeat center/cover;
+                         border: 4px solid $WHITE;
+                         border-radius: 50%
+                    }
+
+                    @media (max-width: 1006px) {
+                         width: 20%;
+                    }
+               }
+          }
+
+          @media (max-width: 1006px) {
+               width: 75%;
+               padding: 0 10px;
+               border-spacing: 5px;
+               min-width: 0;
+          }
+
+          @media (max-width: $md3) {
+               width: 95%;
+          }
+     }
+
+     &__skill-range {
+          width: 100%;
+          height: 6px;
+          margin-top: 16px;
+          background: linear-gradient(141.51deg, #9C27B0 -18.34%, #651FFF 66.03%);
+          border-radius: 28px;
+
+          &_second {
+               width: 60%;
+          }
+
+          &_third {}
+
+          &_fourth {}
+
+          &_fifth {}
+     }
+
+     &__own-attr {
+          position: absolute;
+          left: 0;
+          top: -150px;
+
+          @media (max-width: $md1) {
+               top: -505px;
+               left: 20px;
+               z-index: -1;
+               pointer-events: none;
+
+               figure {
+                    height: 500px;
+                    width: 44px;
+
+                    img {
+                         width: 100%;
+                         height: 100%;
+                         object-fit: contain;
+                    }
+               }
+
+          }
+     }
+}
