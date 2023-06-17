@@ -32,7 +32,8 @@ const comprehensiveFunction = (e) => {
 export function changePageLanguage(languagesBlockSelector) {
      const parentLangBlock = findDOM_node(languagesBlockSelector);
 
-     setUpSessionStorageLanguage()
+     setUpSessionStorageLanguage();
+
      parentLangBlock && parentLangBlock.addEventListener("click", comprehensiveFunction)
 
 
