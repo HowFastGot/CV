@@ -38,7 +38,7 @@
 
           @media (max-width: $md2) {
                width: 100%;
-               min-height: 302px;
+               min-height: 312px;
                border-radius: 0px;
                top: -80px;
                z-index: -1;
@@ -193,6 +193,10 @@
           font-size: 22px;
           line-height: calc(33 / 22);
           color: $WHITE;
+
+          span {
+               color: yellow;
+          }
 
           @media (max-width: $md1) {
                font-size: 12px;

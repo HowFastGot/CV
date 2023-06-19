@@ -279,19 +279,25 @@ body.dark {
                     color: $BLUE;
                }
 
-               td {
-                    color: $WHITE;
-
-                    p,
-                    time {
+               tr {
+                    td {
                          color: $WHITE;
+
+                         &::before {
+                              border: 2px solid $WHITE !important;
+                         }
+
+                         p,
+                         time {
+                              color: $WHITE;
+                         }
                     }
                }
+
           }
 
           &__skill-range {
                background-color: rgba(255, 255, 255, 0.12);
-
           }
      }
 }

@@ -156,7 +156,7 @@ h6 {
 @media (max-width: 767.98px) {
   .header__img-block {
     width: 100%;
-    min-height: 302px;
+    min-height: 312px;
     border-radius: 0px;
     top: -80px;
     z-index: -1;
@@ -307,6 +307,9 @@ h6 {
   font-size: 22px;
   line-height: 1.5;
   color: #FFFFFF;
+}
+.intro-cart__description span {
+  color: yellow;
 }
 @media (max-width: 991.98px) {
   .intro-cart__description {
@@ -724,11 +727,14 @@ body.dark .menu-header__item img {
 body.dark .experience-section table th, body.dark .experience-section table .experience-section__table-row tr td strong, .experience-section__table-row tr td body.dark .experience-section table strong {
   color: #651FFF;
 }
-body.dark .experience-section table td {
+body.dark .experience-section table tr td {
   color: #FFFFFF;
 }
-body.dark .experience-section table td p,
-body.dark .experience-section table td time {
+body.dark .experience-section table tr td::before {
+  border: 2px solid #FFFFFF !important;
+}
+body.dark .experience-section table tr td p,
+body.dark .experience-section table tr td time {
   color: #FFFFFF;
 }
 body.dark .experience-section__skill-range {
@@ -1138,6 +1144,13 @@ body.dark .certificates h6 {
   }
 }
 @media (max-width: 479.98px) {
+  .contact-info__name::before {
+    width: 20px;
+    height: 20px;
+    top: -20px;
+  }
+}
+@media (max-width: 479.98px) {
   .contact-info__name {
     font-size: 28px;
     line-height: 1.3571428571;
@@ -1178,8 +1191,8 @@ body.dark .certificates h6 {
         flex-wrap: wrap;
     gap: 8px;
     position: absolute;
-    bottom: -20px;
-    left: 0;
+    bottom: -10px;
+    left: -10px;
   }
   .contact-info .intro-cart__list-network li {
     -webkit-box-flex: 0;
