@@ -157,3 +157,28 @@
           }
      }
 }
+
+
+//===Dark Theme===============================================================================
+body.dark {
+     .works {
+          color: $WHITE;
+
+          &__git-link {
+               color: $WHITE;
+
+               &::before {
+                    background: url("../img/icons/work/jam_github.svg") no-repeat center/cover;
+               }
+          }
+
+          &__online-link {
+               color: $WHITE;
+
+               &::after {
+                    background: url("../img/icons/work/outline_next.svg") no-repeat center/cover;
+
+               }
+          }
+     }
+}

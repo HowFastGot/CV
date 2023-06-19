@@ -82,6 +82,7 @@
      &__lang-item {
           position: relative;
           width: 25px;
+          color: $BLUE;
           cursor: pointer;
 
           &:not(:last-child) {
@@ -129,6 +130,7 @@
           &:hover,
           &:active {
                font-family: "lato900";
+               font-size: 16px;
 
                &::after {
                     border: 1px solid red;
