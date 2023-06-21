@@ -71,25 +71,26 @@
 
      &__project-img {
           height: 300px;
-          width: 350px;
+          width: 380px;
           border-radius: 15px;
+          box-shadow: 2px 3px 6px #999;
           overflow: hidden;
 
           img {
                width: 100%;
                height: 100%;
-               object-fit: fit;
+               object-fit: fill;
           }
 
           @media (max-width: 568px) {
                height: 250px;
-               width: 250px;
+               width: 300px;
 
           }
 
           @media (max-width: $md3) {
-               height: 250px;
-               width: 300px;
+               height: 80%;
+               width: 80%;
           }
      }
 
@@ -99,6 +100,7 @@
 
           h6 {
                font-family: "lato900";
+               font-size: 19px;
           }
 
           span {
@@ -113,7 +115,31 @@
 
      &__description {
           margin: 20px 0;
+          text-align-last: left;
 
+          p {
+               text-align: left;
+               line-height: 1.5;
+               margin-bottom: 10px;
+          }
+
+          ul {
+               margin: 10px;
+
+               li {
+                    font-family: "lato400";
+
+                    list-style: circle !important;
+                    text-align: left;
+                    line-height: calc(18 /15);
+
+                    abbr {
+                         text-decoration: none;
+                         font-family: "lato900";
+                    }
+               }
+
+          }
 
      }
 
@@ -125,6 +151,7 @@
           margin-top: 20px;
           white-space: nowrap;
 
+
           @media (max-width: 665px) {
                gap: 50px;
           }
@@ -132,6 +159,11 @@
 
      &__git-link {
           position: relative;
+          transition: all 0.3s ease 0s;
+
+          &:hover {
+               transform: scale(1.1);
+          }
 
           &::before {
                content: "";
@@ -139,11 +171,23 @@
                vertical-align: middle;
                width: 23px;
                height: 23px;
+               margin-right: 5px;
                background: url("../img/icons/work/github.svg") no-repeat center/cover;
           }
      }
 
      &__online-link {
+          transition: all 0.3s ease 0s;
+
+          span {
+               font-family: "lato900";
+               color: $BLUE;
+          }
+
+          &:hover {
+               transform: scale(1.1);
+          }
+
           &::after {
 
                content: "";
@@ -156,7 +200,60 @@
 
           }
      }
+
+     &__load-button-block {
+          button {
+               text-transform: uppercase;
+               font-family: "lato900";
+               border: 2px solid $GOLD;
+               padding: 10px 20px;
+               border-radius: 10px;
+               box-shadow: inset 0 8px 12px $GOLD, 0 5px 12px $GOLD ;
+               transition: all 0.6s ease 0s;
+
+               &:hover,
+               &:active {
+                    transform: scale(0.95);
+                    box-shadow: inset 0 2px 12px $GOLD, 0 2px 12px $GOLD ;
+               }
+          }
+     }
+
 }
+
+.notification {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     margin-top: 15px;
+     padding: 5px;
+     background-color: #fff;
+
+
+     background-color: rgb(30, 58, 138, .2);
+     border-radius: 10px;
+     font-size: 12px;
+
+     svg {
+          width: 25px;
+          height: 25px;
+     }
+
+     span {
+          display: inline-block;
+          margin-left: 5px;
+          text-align: left;
+          color: rgb(30, 58, 138);
+     }
+
+     a {
+          color: rgb(30, 58, 138);
+          text-decoration: underline;
+     }
+}
+
+
 
 
 //===Dark Theme===============================================================================
@@ -178,6 +275,22 @@ body.dark {
                &::after {
                     background: url("../img/icons/work/outline_next.svg") no-repeat center/cover;
 
+               }
+          }
+
+          &__load-button-block {
+               button {
+                    color: $GOLD;
+               }
+          }
+
+          .notification {
+               span {
+                    color: #d2cece;
+               }
+
+               a {
+                    color: $GOLD;
                }
           }
      }

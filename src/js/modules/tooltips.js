@@ -12,7 +12,7 @@ const createProperAttrs = (dataAttrText, tooltip) => {
                break;
           default:
                tooltip.setAttribute("href", `#${dataAttrText}`.toLocaleLowerCase())
-               smoothScroll(tooltip);
+               smoothScroll(".menu-header__item a");
                break;
      }
 };
@@ -54,12 +54,6 @@ const deleteTooltip = (tooltip, target) => {
 }
 
 export function showTooltip(menuSelector) {
-
-     const menuBlock = findDOM_node(menuSelector);
-
-     if (!menuBlock) {
-          menuBlock.removeEventListener("mouseover", createTooltip)
-     };
 
      document.addEventListener("mouseover", createTooltip);
 }

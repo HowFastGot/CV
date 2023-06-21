@@ -59,7 +59,7 @@
           position: absolute;
           left: -182px;
           top: 456px;
-          height: 500px;
+          height: 496px;
           width: 2px;
           background-color: $BLUE;
 
@@ -102,6 +102,7 @@
 
                     strong {
                          @extend th;
+                         padding-bottom: 0;
                          font-size: 20px;
                          line-height: calc(24 / 20);
 
@@ -120,72 +121,100 @@
 
           }
 
-          tbody tr {
-               &:nth-child(-n + 3) {
-                    td:first-child {
-                         width: 40%;
-                         padding-left: 10px;
+          tbody {
+               tr {
+                    &:nth-child(-n + 3) {
+                         td:first-child {
+                              width: 40%;
+                              padding-left: 10px;
 
+
+                              &::before {
+                                   content: "";
+                                   display: inline-block;
+                                   position: absolute;
+                                   left: -22px;
+                                   top: 0px;
+                                   vertical-align: middle;
+                                   width: 23px;
+                                   height: 23px;
+                                   background-color: $GOLD;
+                                   border: 2px solid $WHITE;
+                                   border-radius: 50%;
+
+                                   @media (max-width: 1146px) {
+                                        left: -15px;
+                                   }
+
+                                   @media (max-width: $md1) {
+                                        left: -10px;
+                                        top: 7px;
+                                        width: 13px;
+                                        height: 13px;
+                                   }
+                              }
+
+                              @media (max-width: $md3) {
+
+                                   p,
+                                   time {
+                                        font-size: 8px;
+                                   }
+                              }
+
+                         }
+
+                    }
+
+                    td:last-child {
+                         width: 50%;
 
                          &::before {
                               content: "";
                               display: inline-block;
                               position: absolute;
-                              left: -22px;
-                              top: 0px;
+                              left: -40px;
+                              top: 5px;
                               vertical-align: middle;
-                              width: 23px;
-                              height: 23px;
-                              background-color: $GOLD;
-                              border: 2px solid $WHITE;
+                              width: 33px;
+                              height: 33px;
                               border-radius: 50%;
 
-                              @media (max-width: 1146px) {
-                                   left: -15px;
-                              }
-
-                              @media (max-width: $md1) {
-                                   left: -10px;
-                                   top: 7px;
-                                   width: 13px;
-                                   height: 13px;
+                              @media (max-width: $md3) {
+                                   width: 23px;
+                                   height: 23px;
+                                   left: -30px;
                               }
                          }
 
-                         @media (max-width: $md3) {
-
-                              p,
-                              time {
-                                   font-size: 8px;
-                              }
+                         &.html-css::before {
+                              background: url("../img/icons/experience/html_css.svg") no-repeat center/cover;
                          }
 
-                    }
+                         &.js::before {
+                              background: url("../img/icons/experience/js.svg") no-repeat center/cover;
+                         }
 
-               }
+                         &.reactJs::before {
+                              background: url("../img/icons/experience/react.svg") no-repeat center/cover;
+                         }
 
-               td:last-child {
-                    width: 50%;
+                         &.ts::before {
+                              background: url("../img/icons/experience/ts.svg") no-repeat center/cover;
+                         }
 
-                    &::before {
-                         content: "";
-                         display: inline-block;
-                         position: absolute;
-                         left: -35px;
-                         top: 10px;
-                         vertical-align: middle;
-                         width: 33px;
-                         height: 33px;
-                         background: url("../img/icons/experience/react.svg") no-repeat center/cover;
-                         border: 4px solid $WHITE;
-                         border-radius: 50%
-                    }
+                         &.reactNative::before {
+                              background: url("../img/icons/experience/react-native.svg") no-repeat center/cover;
+                         }
 
-                    @media (max-width: 1006px) {
-                         width: 20%;
+                         @media (max-width: 1006px) {
+                              width: 20%;
+                         }
                     }
                }
           }
+
+
 
           @media (max-width: 1006px) {
                width: 75%;
@@ -203,7 +232,7 @@
           position: relative;
           width: 100%;
           height: 6px;
-          margin-top: 16px;
+          margin-top: 12px;
           background-color: rgba(0, 0, 0, 0.12);
           border-radius: 28px;
 
@@ -211,7 +240,7 @@
                content: "";
                display: inline-block;
                position: absolute;
-               width: 100%;
+               width: 90%;
                height: 6px;
                background: $VIO-BLUE-GRAD;
                border-radius: 28px;
@@ -220,7 +249,7 @@
 
           &_second {
                &::before {
-                    width: 60%;
+                    width: 75%;
                }
           }
 
@@ -232,13 +261,13 @@
 
           &_fourth {
                &::before {
-                    width: 60%;
+                    width: 65%;
                }
           }
 
           &_fifth {
                &::before {
-                    width: 95%;
+                    width: 30%;
                }
           }
      }
@@ -282,10 +311,6 @@ body.dark {
                tr {
                     td {
                          color: $WHITE;
-
-                         &::before {
-                              border: 2px solid $WHITE !important;
-                         }
 
                          p,
                          time {

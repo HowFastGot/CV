@@ -1,17 +1,22 @@
 import { findDOM_node } from "./findDOM_node.js";
 
 
-export function smoothScroll(link) {
+export function smoothScroll(linkSelectors) {
 
-     link.addEventListener("click", (e) => {
-          e.preventDefault();
+     const links = findDOM_node(linkSelectors, "multiElems");
 
-          const targetId = link.getAttribute('href');
-          const targetElement = findDOM_node(targetId);
+     links.forEach(link => {
+          link.addEventListener("click", (e) => {
+               e.preventDefault();
 
-          targetElement.scrollIntoView({
-               behavior: 'smooth',
+               const targetId = link.getAttribute('href');
+               const targetElement = findDOM_node(targetId);
 
+               targetElement.scrollIntoView({
+                    behavior: 'smooth',
+
+               });
           });
      });
+
 }

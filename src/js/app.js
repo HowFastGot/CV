@@ -1,6 +1,7 @@
 import { showTooltip } from "./modules/tooltips.js";
 import { changePageTheme } from "./modules/theme.js";
 import { changePageLanguage } from "./modules/changePageLanguage.js"
+import { form } from "./modules/form.js";
 
 window.addEventListener("DOMContentLoaded", function () {
      "use strict"
@@ -8,6 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
      showTooltip(".menu-header__list");
      changePageTheme(".settings-popup")
      changePageLanguage(".settings-popup__lang-menu");
+     form("form");
 
      //-swiper initialize----
      var swiper = new Swiper(".mySwiper", {
@@ -26,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     spaceBetween: 120
                }
           },
-          injectStyles: ["background: red"]
+
      });
 
 });

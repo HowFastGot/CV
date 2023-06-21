@@ -7,7 +7,7 @@
      <title>Portfolio</title>
      <link rel="stylesheet" href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css">
      <link rel="stylesheet" href="css/style.min.css">
-     <base target="_blank">
+     <!-- <base target="_blank"> -->
 </head>
 
 <body>
@@ -141,42 +141,42 @@
                     <th>SKILL AND EXPERTISE</th>
                </tr>
           </thead>
-          <tbody>
+          <tbody class="experience-section__tbody tbody">
                <div class="experience-section__frame-own-photo">
                     <span class="experience-section__vertival-line"></span>
                </div>
                <tr>
                     <td>
-                         <strong>Creative Director</strong>
-                         <p>at Fourth Compnay</p>
-                         <time>2015 - Present</time>
+                         <strong>Front-End Developer</strong>
+                         <p>as a Freelancer</p>
+                         <time>2022 - Present</time>
                     </td>
-                    <td>
-                         <strong>UI Interface Design</strong>
+                    <td class="html-css">
+                         <strong>HTML / CSS</strong>
                          <div class="experience-section__skill-range experience-section__skill-range_first"></div>
                     </td>
 
                </tr>
                <tr>
                     <td>
-                         <strong>Director</strong>
-                         <p>at Fourth Compnay</p>
-                         <time>2015 - Present</time>
+                         <strong>Sales manager</strong>
+                         <p>at TrackEnsure Company</p>
+                         <time>2021 - Present</time>
                     </td>
-                    <td>
-                         <strong>UI Interface Design</strong>
+                    <td class="js">
+                         <strong>JavaScript ES6</strong>
                          <div class="experience-section__skill-range experience-section__skill-range_second"></div>
                     </td>
 
                </tr>
                <tr>
                     <td>
-                         <strong>Director</strong>
-                         <p>at Fourth Compnay</p>
-                         <time>2015 - Present</time>
+                         <strong>Service manager</strong>
+                         <p>at Comfy Company</p>
+                         <time>2019 - 2021</time>
                     </td>
-                    <td>
-                         <strong>UI Interface Design</strong>
+                    <td class="reactJs">
+                         <strong>ReactJS + Redux</strong>
                          <div class="experience-section__skill-range experience-section__skill-range_third"></div>
                     </td>
                </tr>
@@ -184,8 +184,8 @@
                     <td>
 
                     </td>
-                    <td>
-                         <strong>UI Interface Design</strong>
+                    <td class="ts">
+                         <strong>TypeScript</strong>
                          <div class="experience-section__skill-range experience-section__skill-range_fourth"></div>
                     </td>
                </tr>
@@ -193,8 +193,8 @@
                     <td>
 
                     </td>
-                    <td>
-                         <strong>UI Interface Design</strong>
+                    <td class="reactNative">
+                         <strong>React Native</strong>
                          <div class="experience-section__skill-range experience-section__skill-range_fifth"></div>
                     </td>
                </tr>
@@ -210,41 +210,71 @@
      <h4 class="works__title">Portfolio</h4>
      <div class="works__project-item">
           <figure class="works__project-img">
-               <img src="../img/main/crypto_project.jpeg" alt="Project image">
+               <img src="../img/main/projects/currency-ratio.jpeg" alt="Project image">
           </figure>
-          <div class="works__project-desc-block ">
-               <h6>VIN Decoder</h6>
-               <p class="works__description">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod laboriosam alias odit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod laboriosam alias odit.
-
-               </p>
+          <div class="works__project-desc-block">
+               <h6>Currency Ratio Calculator</h6>
+               <div class="works__description">
+                    <p>Online converter of currencies with the UAH base:</p>
+                    <ul>
+                         <li><abbr title="United States dollar">USD</abbr></li>
+                         <li><abbr title="European Monetary Unit">EURO</abbr></li>
+                         <li><abbr title="Bitcoin currency code">BTC</abbr></li>
+                    </ul>
+                    <p>
+                         Was developed the next functionalities:
+                    </p>
+                    <ul>
+                         <li>Calculation of currency ratio;</li>
+                         <li>Reverse/change target currency;</li>
+                         <li>Change API currency value in the 10% range;</li>
+                         <li>Reload currencies API;</li>
+                         <li>Preventing the loop requests;</li>
+                    </ul>
+               </div>
                <span>React</span>
+               <span>Redux</span>
                <span>TypeScript</span>
+               <span>Matetial UI</span>
                <nav class="works__links">
-                    <a href="#" class="works__git-link">Code</a>
-                    <a href="#" class="works__online-link">Live Demo</a>
+                    <a href="https://github.com/HowFastGot/currencyExchanger" class="works__git-link">Code</a>
+                    <a href="https://9c9yjs-3000.csb.app" class="works__online-link"><span>Live</span> Demo</a>
                </nav>
+               <div class="notification">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20" height="20" class="nx-mt-1">
+                         <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"></path>
+                    </svg>
+                    <span>Some issues with a server of API owner could be possible. Use <a
+                              href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru">CORS extension</a> to handle
+                         it! </span>
+               </div>
           </div>
      </div>
      <div class="works__project-item">
           <figure class="works__project-img">
-               <img src="../img/main/crypto_project.jpeg" alt="Project image">
+               <img src="../img/main/projects/vin_decoder.jpg" alt="Project image">
           </figure>
           <div class="works__project-desc-block ">
                <h6>VIN Decoder</h6>
                <p class="works__description">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod laboriosam alias odit.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod laboriosam alias odit.
+                    The website was designed for decoding car VIN numbers, saving the history of decoded numbers, and has 3 pages to describe each characteristic of the car.
 
                </p>
                <span>React</span>
                <span>TypeScript</span>
+               <span>React Router</span>
+               <span>Redux</span>
                <nav class="works__links">
-                    <a href="#" class="works__git-link">Code</a>
-                    <a href="#" class="works__online-link">Live Demo</a>
+                    <a href="https://github.com/HowFastGot/Vin_Numbers_Decoder" class="works__git-link">Code</a>
+                    <a href="https://sglldq-3000.csb.app" class="works__online-link"><span>Live</span> Demo</a>
                </nav>
           </div>
+     </div>
+     <div class="works__load-button-block load-button-block">
+          <button class="load-button-block__button-load">
+               Explore more
+          </button>
      </div>
 </section>
           <section class="page__certificates certificates" id="certificates">
@@ -320,10 +350,15 @@
           </label>
           <input class="form-block__input" type="text" name="name" id="name" required>
 
-          <label class="form-block__label" for="email">
-               What is your email? *
+          <label class="form-block__label" for="link">
+               What is your website link?
           </label>
-          <input class="form-block__input" type="text" name="email" id="email" required>
+          <input class="form-block__input" type="text" name="link" id="link">
+
+          <label class="form-block__label" for="email">
+               What is your email?*
+          </label>
+          <input class="form-block__input" type="email" name="email" id="email" required>
 
           <label class="form-block__label" for="message">
                Write your message here*
