@@ -1440,13 +1440,20 @@ body.dark .certificates h6 {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.form-block__label:not(:nth-child(7)) {
+.form-block__label:not(.form-block__label[for=message]) {
   top: 20px;
 }
 @media (max-width: 479.98px) {
   .form-block__label {
     font-size: 12px;
   }
+}
+.form-block__wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-block__wrapper input {
+  width: 100%;
 }
 .form-block__input {
   margin-top: 5px;
@@ -1462,7 +1469,7 @@ body.dark .certificates h6 {
 }
 @media (min-width: 479.98px) {
   .form-block__input:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 .form-block #message {
@@ -1508,6 +1515,19 @@ body.dark .certificates h6 {
 }
 .form-notification_err {
   background-color: red;
+}
+
+.reg-notification {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  padding: 1px 10px;
+  width: 100%;
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .button {

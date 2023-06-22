@@ -3,10 +3,11 @@ import { findDOM_node } from "./findDOM_node.js";
 const changeLablePosition = (formElement) => {
      const allFormInputs = formElement.querySelectorAll("input");
 
-     allFormInputs.forEach(input => {
+     allFormInputs.forEach((input) => {
           input.addEventListener("focus", (e) => {
                const label = e.target.previousElementSibling;
-               console.log(e)
+
+               if (label.tagName.toLowerCase() !== "label") return;
                label.style.top = "0";
 
           });

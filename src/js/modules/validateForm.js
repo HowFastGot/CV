@@ -1,71 +1,87 @@
+import { findDOM_node } from "./findDOM_node.js";
+
+function createNotificationElement(message) {
+     const notification = document.createElement('span');
+     notification.classList.add('reg-notification');
+     notification.textContent = message;
+     return notification;
+}
+
+function changeLabelColor(inputElement) {
+     const label = inputElement.previousElementSibling.previousElementSibling;
+
+     label.style.color = "red";
+     setTimeout(() => {
+          label.style.color = "";
+     }, 2000);
+}
+
+function deleteNotificationElement() {
+
+     setTimeout(() => {
+          findDOM_node(".reg-notification").remove();
+     }, 2000);
+
+}
+
+function addNotification(inputElement, message) {
+
+     const visibleNotification = findDOM_node(".reg-notification");
+
+     if (visibleNotification) return;
+
+     const notification = createNotificationElement(message);
+     inputElement.parentNode.insertBefore(notification, inputElement);
+     changeLabelColor(inputElement);
+
+     deleteNotificationElement();
+}
+
+const setValidateUserName = (e) => {
+     const inputElement = e.target;
+     const newChar = e.data;
+     const regExp = /^[a-zA-Zа-яА-Я\s]{1,}$/i;
+
+     if (inputElement.value.length === 0) {
+          inputElement.value = "";
+     } else {
+
+          if (regExp.test(newChar)) {
+               const firstLetterUp = inputElement.value.slice(0, 1).toUpperCase() + inputElement.value.slice(1);
+               inputElement.value = firstLetterUp;
+          } else {
+               const indexOfNewChar = inputElement.value.indexOf(newChar);
+
+               inputElement.value = inputElement.value.slice(0, indexOfNewChar) + inputElement.value.slice(indexOfNewChar + 1);
+               inputElement.focus();
+               addNotification(inputElement, "Write your name!");
+          }
+     }
+}
+
+const checkUserEmail = (e) => {
+     const inputElement = e.target;
+     const email = inputElement.value?.trim();
+     const regExpEmail = /^[\w.-]+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/;
+
+
+     if (email.length === 0) {
+          inputElement.value = "";
+     } else if (regExpEmail.test(email)) {
+          inputElement.value = email;
+     } else {
+          addNotification(inputElement, "Write the correct email!")
+          inputElement.focus();
+     }
+}
+
+
 export function validateForm() {
-     const nameInput = document.getElementById('name');
-     const websiteInput = document.getElementById('link');
+     const nameInput = document.getElementById('name');;
      const emailInput = document.getElementById('email');
-     const commentInput = document.getElementById('message');
 
-     const name = nameInput.value.trim();
-     const website = websiteInput.value.trim();
-     const email = emailInput.value.trim();
-     const comment = commentInput.value.trim();
 
-     // Функция для создания элемента уведомления
-     function createNotificationElement(message) {
-          const notification = document.createElement('div');
-          notification.classList.add('notification');
-          notification.textContent = message;
-          return notification;
-     }
+     nameInput.addEventListener("input", setValidateUserName);
+     emailInput.addEventListener("blur", checkUserEmail);
 
-     // Функция для добавления элемента уведомления над полем ввода
-     function addNotification(inputElement, notificationElement) {
-          inputElement.parentNode.insertBefore(notificationElement, inputElement);
-     }
-
-     // Проверка имени (не пустое)
-     if (name === '') {
-          const nameNotification = createNotificationElement('Введите имя!');
-          addNotification(nameInput, nameNotification);
-          nameInput.focus();
-          return false;
-     }
-
-     // Проверка ссылки на сайт (не пустая, должна начинаться с http:// или https://)
-     if (website === '') {
-          const websiteNotification = createNotificationElement('Введите ссылку на сайт!');
-          addNotification(websiteInput, websiteNotification);
-          websiteInput.focus();
-          return false;
-     }
-     if (!website.startsWith('http://') && !website.startsWith('https://')) {
-          const websiteNotification = createNotificationElement('Ссылка на сайт должна начинаться с http:// или https://');
-          addNotification(websiteInput, websiteNotification);
-          websiteInput.focus();
-          return false;
-     }
-
-     // Проверка email (не пустой, должен соответствовать простейшему паттерну)
-     if (email === '') {
-          const emailNotification = createNotificationElement('Введите email!');
-          addNotification(emailInput, emailNotification);
-          emailInput.focus();
-          return false;
-     }
-     if (!/^[\w.-]+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/.test(email)) {
-          const emailNotification = createNotificationElement('Введите корректный email!');
-          addNotification(emailInput, emailNotification);
-          emailInput.focus();
-          return false;
-     }
-
-     // Проверка комментария (не пустой)
-     if (comment === '') {
-          const commentNotification = createNotificationElement('Введите комментарий!');
-          addNotification(commentInput, commentNotification);
-          commentInput.focus();
-          return false;
-     }
-
-     // Форма прошла валидацию
-     return true;
 }

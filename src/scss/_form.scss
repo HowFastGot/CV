@@ -60,12 +60,22 @@
           cursor: pointer;
           transition: all 0.3s ease 0s;
 
-          &:not(:nth-child(7)) {
+          &:not(&[for="message"]) {
                top: 20px;
           }
 
           @media (max-width: $md3) {
                font-size: 12px;
+          }
+     }
+
+     &__wrapper {
+          position: relative;
+          margin-bottom: 20px;
+
+          input {
+
+               width: 100%;
           }
      }
 
@@ -83,7 +93,7 @@
                margin-bottom: 10px;
 
                @media (min-width: $md3) {
-                    margin-bottom: 40px;
+                    margin-bottom: 20px;
                }
           }
      }
@@ -133,4 +143,18 @@
      &_err {
           background-color: red;
      }
+}
+
+
+.reg-notification {
+     display: inline-block;
+     position: absolute;
+     top: 40px;
+     left: 0;
+     padding: 1px 10px;
+     width: 100%;
+     color: red;
+     text-align: center;
+     font-size: 12px;
+     background: rgb(255, 255, 255, 0.3);
 }
