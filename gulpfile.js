@@ -28,6 +28,7 @@ import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/FTP.js";
 
 import { source } from "./gulp/tasks/source.js";
+import { translations } from "./gulp/tasks/translations.js";
 
 // Наблюдатель за изминениями в файлах
 // Загружать данные на сервер при каждом изминении - gulp.series(html, ftp) - в нужную задачу(указан пример for html)
@@ -45,7 +46,7 @@ export { svgSprive }
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, source));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, source, translations));
 
 // Построение сценариев выполнения задач
 const start = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
