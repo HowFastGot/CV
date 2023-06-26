@@ -3,7 +3,6 @@ import { changePageTheme } from "./modules/theme.js";
 import { changePageLanguage } from "./modules/changePageLanguage.js"
 import { form } from "./modules/form.js";
 import { validateForm } from "./modules/validateForm.js";
-import { pageInternationalization } from "./modules/i18n-locales.js";
 
 window.addEventListener("DOMContentLoaded", function () {
      "use strict"
@@ -13,7 +12,6 @@ window.addEventListener("DOMContentLoaded", function () {
      changePageLanguage(".settings-popup__lang-menu");
      form("form");
      validateForm();
-     pageInternationalization("en");
 
      //-swiper initialize----
      var swiper = new Swiper(".mySwiper", {

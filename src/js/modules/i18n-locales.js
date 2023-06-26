@@ -1,6 +1,6 @@
 import Polyglot from "node-polyglot";
 
-const getLanguageDataObject = async (languageOfPage) => {
+const getAsyncLanguageDataObject = async (languageOfPage) => {
 
      try {
           const response = await fetch(`../translations/${languageOfPage}/locale.json`)
@@ -13,8 +13,9 @@ const getLanguageDataObject = async (languageOfPage) => {
 
 }
 
-const changeTextContentofPage = ({ English }) => {
-     const polyglot = new Polyglot({ phrases: English });
+const changeTextContentofPage = ({ English, Ukrainian, Russian }) => {
+
+     const polyglot = new Polyglot({ phrases: English ?? Ukrainian });
 
      const textBlocks = document.querySelectorAll("[data-i18n]");
 
@@ -28,8 +29,8 @@ const changeTextContentofPage = ({ English }) => {
 
 }
 
-export async function pageInternationalization(defaultLanguage = "en") {
+export async function pageInternationalization(choosenPageLang) {
 
-     const currentLanguageData = await getLanguageDataObject(defaultLanguage);
+     const currentLanguageData = await getAsyncLanguageDataObject(choosenPageLang);
      changeTextContentofPage(currentLanguageData)
 }  

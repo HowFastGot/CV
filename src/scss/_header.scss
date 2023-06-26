@@ -6,6 +6,8 @@
      &__row {
           @media (min-width: $md2) {
                display: flex;
+               align-items: center;
+               justify-content: center;
                gap: 0 25px;
           }
      }
@@ -31,8 +33,10 @@
      }
 
      &__img-block {
+          align-self: start;
           position: relative;
           width: 100%;
+          min-height: 480px;
           background: url("../img/icons/Header/Bitmap.jpg") center/cover no-repeat;
           border-radius: 28px;
 
@@ -104,10 +108,10 @@
                     pointer-events: all;
 
                     @media (max-width: $md2) {
-                         top: 58px;
-                         right: 17px;
+                         top: 50px;
+                         right: 13px;
                          border-radius: 0 0 10px 10px;
-                         background-color: #D1C4E9;
+                         background-color: #311B92;
                     }
                }
           }
@@ -133,6 +137,11 @@
                box-shadow: 0px 2px 14px #D1C4E9;
                border-radius: 0 16px 16px 0px
           }
+
+          @media (max-width: $md3) {
+               height: 50px;
+               top: 20px;
+          }
      }
 
      &__settings-icon {
@@ -149,12 +158,12 @@
      @media (max-width: $md2) {
           max-height: 302px;
      }
+
 }
 
 .menu-header {
 
      &__logo {
-
 
           @media (max-width: $md2) {
                display: none;
@@ -177,11 +186,23 @@
 
      &__item {
           position: relative;
+          width: 29px;
+          height: 29px;
+
+          img {
+               width: 100%;
+               height: 100%;
+          }
 
           @media (min-width: $md2) {
                &:not(:last-child) {
                     margin-bottom: 33px;
                }
+          }
+
+          @media (max-width: $md3) {
+               width: 20px;
+               height: 20px;
           }
 
      }
@@ -218,7 +239,7 @@
                line-height: calc(22 /12);
           }
 
-          @media (max-width: $md3) {
+          @media (max-width: 544px) {
                font-size: 16px;
                line-height: calc(22 /10);
           }
@@ -287,22 +308,19 @@ body.dark {
      }
 
      .header__settings-wrapper {
-          background-color: #311B92;
-          box-shadow: 0px 2px 14px #311B92;
-
           img {
                filter: brightness(700%);
           }
 
           .settings-popup {
-               background-color: #b6a9f1;
-               box-shadow: 0px 2px 14px #5d4da4;
 
-               .settings-popup__lang-menu {
-                    left: 20px;
-                    top: 30px;
-                    background-color: #b6a9f1;
-               }
+               .settings-popup__lang-menu {}
+          }
+
+          @media (max-width: $md2) {
+               color: #FFF;
+               background-color: #311B92;
+               box-shadow: 0px 2px 14px #311B92;
           }
 
      }

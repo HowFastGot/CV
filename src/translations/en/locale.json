@@ -14,6 +14,36 @@
 		"main-exp_skills": "SKILL AND EXPERTISE",
 		"main-exp_dev-job": "<strong>Front-End Developer</strong> <p>as a Freelancer</p> <time>2022 - Present</time>",
 		"main-exp_sales-job": "<strong>Sales manager</strong> <p>at TrackEnsure Company</p> <time>2021 - Present</time>",
-		"main-exp_service-job": "<strong>Service manager</strong> <p>at Comfy Company</p> <time>2019 - 2021</time>"
+		"main-exp_service-job": "<strong>Service manager</strong> <p>at Comfy Company</p> <time>2019 - 2021</time>",
+
+		"works-title": "Portfolio",
+		"works_project-currency": "Currency Ratio Calculator",
+		"works_project-currency-list": "Online converter of currencies with the UAH base:",
+		"works_functionalities": "Was developed the next functionalities:",
+		"works_calculation": "Calculation of currency ratio;",
+		"works_target": "Reverse/change target currency;",
+		"works_range": "Change API currency value in the 10% range;",
+		"works_reload": "Reload currencies API;",
+		"works_loop": "Preventing the loop requests;",
+		"works_project-code": "Code",
+		"works_project-live_demo": "<span>Live</span> Demo",
+		"works_caveat": "Some issues with a server of API owner could be possible. Use <a href=\"https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru\"> CORS extension </a> to handle",
+		"works_project-vin": "VIN Decoder",
+		"works_project-vin-desc": "The website was designed for decoding car VIN numbers, saving the history of decoded numbers, and has 3 pages to describe each characteristic of the car.",
+		"works_load-more": "Explore more",
+
+		"certificates_title": "Certificates",
+
+		"footer_name": "Yevhen <br>Skaretskiy",
+		"footer_field": "Frontend developer",
+		"footer_phone": "My personal contact:<span>+380 97 788 64 38</span>",
+		"footer_skype": "Say hello, on Skype: <span>Skaretskiy</span>",
+
+		"form-block_contact": "Contact <span> Me.</span>",
+		"form-block_name": "What is your name? *",
+		"form-block_link": "What is your website link?",
+		"form-block_email": "What is your email?*",
+		"form-block_message": "Write your message here",
+		"form-block_send-message": "send message"
 	}
 }
