@@ -10,8 +10,10 @@ function createNotificationElement(message) {
 function changeLabelColor(inputElement) {
      const label = inputElement.previousElementSibling.previousElementSibling;
 
+     inputElement.style.color = "red";
      label.style.color = "red";
      setTimeout(() => {
+          inputElement.style.color = "";
           label.style.color = "";
      }, 2000);
 }
@@ -40,7 +42,7 @@ function addNotification(inputElement, message) {
 const setValidateUserName = (e) => {
      const inputElement = e.target;
      const newChar = e.data;
-     const regExp = /^[a-zA-Zа-яА-Я\s]{1,}$/i;
+     const regExp = /^[a-zA-Zа-яА-Яії\s]{1,}$/i;
 
      if (inputElement.value.length === 0) {
           inputElement.value = "";

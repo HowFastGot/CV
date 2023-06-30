@@ -1,5 +1,8 @@
 import { findDOM_node } from "./findDOM_node.js";
-import { pageInternationalization } from "./i18n-locales.js";
+import { deleteAddedProjects } from "./loading-projects.js";
+import { changeProjectQuantityIndicator } from "./loading-projects.js";
+
+import Polyglot from "node-polyglot";
 
 const possiblePageLangs = {
      en: "en",
@@ -7,6 +10,21 @@ const possiblePageLangs = {
      ru: "ru"
 };
 
+const setDefaultActiveLangTrigger = () => {
+     const langTriggers = findDOM_node(".settings-popup__lang-item", "multiElems");
+     const currentPageLang = getCurrentPageLanguage();
+
+     langTriggers.forEach(trigger => {
+          const certainLangTriggerName = trigger.textContent.toLowerCase().trim();
+
+          if (certainLangTriggerName === currentPageLang) {
+               trigger.classList.add("active");
+               return;
+          }
+
+          trigger.classList.remove("active");
+     })
+}
 const changeActiveLangItem = (e) => {
      const target = e.currentTarget;
      const languageItemsArray = Array.from(target.children);;
@@ -32,18 +50,59 @@ const setUpSessionStorageLanguage = (language = "en") => {
 
      language && sessionStorage.setItem("language", possiblePageLangs[language]);
 }
+function getCurrentPageLanguage() {
+     return sessionStorage.getItem("language") ?? "en";
+}
+
+const getAsyncLanguageDataObject = async (languageOfPage) => {
+
+     try {
+          const response = await fetch(`../translations/${possiblePageLangs[languageOfPage]}/locale.json`)
+
+          return await response.json();
+
+     } catch (error) {
+          console.log(`Error occurs while loading language data object ${error.message}! Check getLanguageDataObject function!`)
+     }
+
+}
+
+const changeTextContentofPage = ({ English, Ukrainian, Russian }) => {
+
+     const polyglot = new Polyglot({ phrases: English ?? Ukrainian ?? Russian });
+
+     const textBlocks = document.querySelectorAll("[data-i18n]");
+
+     if (textBlocks && textBlocks.length < 1) return;
+
+     textBlocks.forEach((textBlock) => {
+          const elementKeyAttr = textBlock.dataset.i18n;
+
+          textBlock.innerHTML = polyglot.t(elementKeyAttr)
+     });
+
+}
+
+async function pageInternationalization(choosenPageLang) {
+
+     const currentLanguageData = await getAsyncLanguageDataObject(choosenPageLang);
+     changeTextContentofPage(currentLanguageData)
+}
 
 const comprehensiveFunction = (e) => {
 
      changeActiveLangItem(e);
-     pageInternationalization(sessionStorage.getItem("language"));
-}
+     pageInternationalization(getCurrentPageLanguage());
 
+     deleteAddedProjects();
+}
 
 export function changePageLanguage(languagesBlockSelector) {
      const parentLangBlock = findDOM_node(languagesBlockSelector);
 
-     setUpSessionStorageLanguage();
+     setUpSessionStorageLanguage(getCurrentPageLanguage() ?? possiblePageLangs.en);
+     pageInternationalization(getCurrentPageLanguage());
+     setDefaultActiveLangTrigger();
 
      parentLangBlock && parentLangBlock.addEventListener("click", comprehensiveFunction)
 

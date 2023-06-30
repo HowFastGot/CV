@@ -1,0 +1,49 @@
+{
+	"Russian": {
+		"header_hi": "Привет,",
+		"header_name": "Мое имя Евгений,",
+		"header_field": "Front-End Разработчик",
+		"header_location": "Местопроживание - <span>Украина</span>, больше <b>1.5 лет</b> опыта работы в IT компании.<br> Открытый, стресоустойчив и вдохновлен<wbr> тем что я делаю!</wbr>",
+
+		"main-rewards_englishLevel": "Английский B1",
+		"main-rewards_experience": "1.5 года <br> опыта розработки",
+		"main-rewards_hoursOfLessons": "111 часов <br> обучения",
+		"main-rewards_totalProjects": "23+ проектов",
+
+		"main-exp_workExperience": "Опыт Работы",
+		"main-exp_skills": "Умения и Экспертиза",
+		"main-exp_dev-job": "<strong>Front-End Разработчик</strong> <p>как Фрилансер</p> <time>2022 - н.в.</time>",
+		"main-exp_sales-job": "<strong>Sales manager</strong> <p>в компании TrackEnsure </p> <time>2021 - н.в.</time>",
+		"main-exp_service-job": "<strong>Service manager</strong> <p>в компании Comfy</p> <time>2019 - 2021</time>",
+
+		"works-title": "Портфолио",
+		"works_project-currency": "Калькулятор валют",
+		"works_project-currency-list": "Конвертация соотношения валют к базовой UAH:",
+		"works_functionalities": "Была разработана следующая функциональность:",
+		"works_calculation": "Рассчет соотношения валют;",
+		"works_target": "Изменение позиций стравниваемых валют;",
+		"works_range": "Изменение полученых валютных API данных в пределах 10%;",
+		"works_reload": "Обновление API данных;",
+		"works_loop": "Предотвращение отправки более 5 моментальных запросов;",
+		"works_project-code": "Код проэкта",
+		"works_project-live_demo": "<span>Live</span> Демонстрация",
+		"works_caveat": "Возможно сбоев на сервере API владельца. Используй <a href=\"https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru\"> расшрирение CORS</a> для их ришения",
+		"works_project-vin": "VIN Декодер",
+		"works_project-vin-desc": "Веб-сайт разработан для расшифровки VIN-номеров автомобиля, сохранения истории раскодированных номеров и имеет 3 страницы для описания каждой характеристики автомобиля.",
+		"works_load-more": "Загрузить больше",
+
+		"certificates_title": "Сертификаты",
+
+		"footer_name": "Скарецкий <br>Евгений",
+		"footer_field": "Frontend разработчик",
+		"footer_phone": "Mой телефонных номер:<span>+380 97 788 64 38</span>",
+		"footer_skype": "Напиши \"Привет\" в Skype: <span>Skaretskiy</span>",
+
+		"form-block_contact": "Связаться со <span> Мной.</span>",
+		"form-block_name": "Укажите ваше имя! *",
+		"form-block_link": "Ссылка на сайт вашей компании?",
+		"form-block_email": "Укажите ваш email адрес! *",
+		"form-block_message": "Напишите ваше сообщение",
+		"form-block_send-message": "Отправить"
+	}
+}

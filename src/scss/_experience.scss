@@ -59,12 +59,13 @@
           position: absolute;
           left: -182px;
           top: 456px;
-          height: 496px;
+          height: 495px;
           width: 2px;
           background-color: $BLUE;
 
           @media (max-width: 1211px) {
-               height: 615px;
+               height: 610px;
+
           }
 
           @media (max-width: 1139px) {

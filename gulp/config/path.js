@@ -18,6 +18,7 @@ export const path = {
 
           source: `${buildFolder}/assets/`,
           translations: `${buildFolder}/translations/`,
+          projects: `${buildFolder}/projects/`,
      },
      src: {
           js: `${srcFolder}/js/app.js`,
@@ -30,6 +31,7 @@ export const path = {
 
           source: `${srcFolder}/assets/**/*.*`,
           translations: `${srcFolder}/translations/**/*.*`,
+          projects: `${srcFolder}/projects/**/*.*`,
      },
      watch: {
           js: `${srcFolder}/js/**/*.js`,

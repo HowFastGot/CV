@@ -3,7 +3,7 @@
 		"header_hi": "Привіт,",
 		"header_name": "Моє ім'я Євген,",
 		"header_field": "Front-End Розробник",
-		"header_location": "Локація - <span>Ukraine</span>, більше ніж <b>1.5 роки</b> досвіду роботи в IT компанії.<br> Відкритий, стресостійкий та захоплений<wbr> своє справою !</wbr>",
+		"header_location": "Локація - <span>Україна</span>, більше ніж <b>1.5 роки</b> досвіду роботи в IT компанії.<br> Відкритий, стресостійкий та захоплений<wbr> своє справою !</wbr>",
 
 		"main-rewards_englishLevel": "Англійська B1",
 		"main-rewards_experience": "1.5 роки <br> досвіду розробки",
@@ -22,7 +22,7 @@
 		"works_functionalities": "Була розроблена наступна функціональність:",
 		"works_calculation": "Розрахунок співвідношення валют;",
 		"works_target": "Зміна відношення між обраними валютами",
-		"works_range": "Зміна отриманих валютниї API даних в межах 10%;",
+		"works_range": "Зміна отриманих валютних API даних в межах 10%;",
 		"works_reload": "Оновлення API даних;",
 		"works_loop": "Запобігання відправки більше ніж 5 моментальних запитів;",
 		"works_project-code": "Код проекту",
@@ -37,7 +37,7 @@
 		"footer_name": "Скарецький <br>Євген",
 		"footer_field": "Frontend розробник",
 		"footer_phone": "Mій номер телефону:<span>+380 97 788 64 38</span>",
-		"footer_skype": "Напиши 'Привіт' до Skype: <span>Skaretskiy</span>",
+		"footer_skype": "Напиши \"Привіт\" до Skype: <span>Skaretskiy</span>",
 
 		"form-block_contact": "Зв'язатись зі <span> Мною.</span>",
 		"form-block_name": "Вкажіть ваше ім'я! *",
