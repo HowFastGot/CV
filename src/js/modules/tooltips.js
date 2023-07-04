@@ -12,48 +12,42 @@ const createProperAttrs = (dataAttrText, tooltip) => {
                break;
           default:
                tooltip.setAttribute("href", `#${dataAttrText}`.toLocaleLowerCase())
-               smoothScroll(".menu-header__item a");
+               smoothScroll(tooltip,);
                break;
      }
 };
 
 const createTooltip = (e) => {
-     e.preventDefault();
-
-     if (!e.target.closest("header")) return;
-
      const target = e.target;
-     const visibleTooltip = findDOM_node(".tooltip");
-     const elementMenu = target.closest("li");
 
-
-     if (visibleTooltip) {
-          deleteTooltip(visibleTooltip, target);
-          return;
-     }
-
-
-     if (!elementMenu || !elementMenu?.classList.contains("menu-header__item")) return;
+     if (!target.closest("header")) return;
 
      const tooltip = document.createElement("a");
-     const dataAttrText = elementMenu.dataset.tooltip;
+     const dataAttrText = target.dataset.tooltip;
      tooltip.textContent = dataAttrText;
 
      createProperAttrs(dataAttrText, tooltip)
 
      tooltip.classList.add("tooltip");
-     elementMenu.append(tooltip);
 
+     addTooltip(target, tooltip)
 };
 
-const deleteTooltip = (tooltip, target) => {
-
-     if (tooltip && !target.classList.contains("tooltip")) {
-          tooltip.remove();
-     }
+function addTooltip(parentTooltipElement, tooltipElement) {
+     parentTooltipElement.append(tooltipElement);
 }
 
-export function showTooltip(menuSelector) {
+const deleteTooltip = () => {
+     document.querySelector(".tooltip").remove();
+}
 
-     document.addEventListener("mouseover", createTooltip);
+export function showTooltip() {
+
+     document.querySelectorAll(".menu-header__item").forEach(link => {
+          link.addEventListener("mouseenter", createTooltip);
+     });
+
+     document.querySelectorAll(".menu-header__item").forEach(link => {
+          link.addEventListener("mouseleave", deleteTooltip);
+     });
 }

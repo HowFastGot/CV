@@ -5,10 +5,16 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Portfolio</title>
+
+
+     <link rel="apple-touch-icon" sizes="180x180" href="../img/icons/head/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="../img/icons/head/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="../img/icons/head/favicon-16x16.png">
+
+
      <link rel="stylesheet" href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css">
      <link rel="stylesheet" href="css/style.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-     <base target="_blank">
 </head>
 
 <body>
@@ -20,8 +26,8 @@
                </a>
                <nav>
                     <ul class="menu-header__list">
-                         <li class="menu-header__item" tabindex="0" data-tooltip="Profile">
-                              <a href="#profile" id="Profile">
+                         <li class="menu-header__item" tabindex="0" data-tooltip="Interview">
+                              <a href="#interview">
                                    <img src="../img/icons/Header/ios-contact-outline.svg" alt="Profile icon">
                               </a>
                          </li>
@@ -35,10 +41,10 @@
                                    <img src=" ../img/icons/Header/ios-keypad.svg" alt="Keypad icon">
                               </a>
                          </li>
-                         <li class="menu-header__item" tabindex="0" data-tooltip="Send a message">
-                              <button href="#" id="#">
+                         <li class="menu-header__item" tabindex="0" data-tooltip="SendMessage">
+                              <a href="#sendmessage">
                                    <img src="../img/icons/Header/ios-chatboxes.svg" alt="Chatboxes icon">
-                              </button>
+                              </a>
                          </li>
                          <li class="menu-header__item" tabindex="0" data-tooltip="Download CV.pdf">
                               <a href="../assets/Frontend Skaretskiy Yevhen (EN).pdf" download>
@@ -145,9 +151,7 @@
                </tr>
           </thead>
           <tbody class="experience-section__tbody tbody">
-               <div class="experience-section__frame-own-photo">
-                    <span class="experience-section__vertival-line"></span>
-               </div>
+               <div class="experience-section__frame-own-photo"></div>
                <tr>
                     <td data-i18n="main-exp_dev-job">
                          <strong>Front-End Developer</strong>
@@ -317,6 +321,13 @@
           </div>
      </div>
 </section>
+          <section class="page__interview interview" id="interview">
+     <h2 class="interview__title">Interview</h2>
+     <div class="interview__iframe-wrapper" id="frame">
+          <iframe width="885" height="498" src="https://www.youtube.com/embed/sZvHJvsVT3M" title="1. Співбесіда Junior Fronted розробника | JavaScript React Developer"
+               frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     </div>
+</section>
      </main>
      <footer class="page__footer footer">
      <div class="footer__row _container">
@@ -357,7 +368,7 @@
           </div>
           <div class="footer__form-block form-block">
      <h5 data-i18n="form-block_contact">Contact <span> Me.</span></h5>
-     <form action="#" class="form-block__form">
+     <form action="#" class="form-block__form" id="sendmessage">
           <label class="form-block__label" for="name" data-i18n="form-block_name">
                What is your name? *
           </label>
@@ -407,7 +418,6 @@
      
      <script src="js/app.min.js" defer></script>
      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
-
 </body>
 
 </html>

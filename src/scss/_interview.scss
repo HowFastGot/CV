@@ -1,0 +1,33 @@
+.interview {
+
+     &__title {
+          font-family: "lato900";
+          font-size: 30px;
+          color: $WHITE;
+          text-align: center;
+     }
+
+
+     &__iframe-wrapper {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 498px;
+          margin: 40px 10px;
+
+          iframe {
+               height: 100%;
+          }
+
+          @media (max-width: $md2) {
+               height: 400px;
+
+
+          }
+
+          @media (max-width: $md3) {
+               height: 200px;
+          }
+     }
+}

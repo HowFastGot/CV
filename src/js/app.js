@@ -4,20 +4,19 @@ import { changePageLanguage } from "./modules/changePageLanguage.js"
 import { form } from "./modules/form.js";
 import { validateForm } from "./modules/validateForm.js";
 import { loadingProjects } from "./modules/loading-projects.js";
+import { handleFocusForm } from "./modules/handleFocusForm.js";
+
 
 window.addEventListener("DOMContentLoaded", function () {
      "use strict"
 
-     document.addEventListener("click", (e) => {
-          e.target.classList.add("animate__backInUp");
-     });
-
-     showTooltip(".menu-header__list");
+     showTooltip();
      changePageTheme(".settings-popup")
      changePageLanguage(".settings-popup__lang-menu");
      form("form");
      validateForm();
      loadingProjects(".load-button-block__button-load");
+     handleFocusForm();
 
      //-swiper initialize----
      new Swiper(".mySwiper", {
