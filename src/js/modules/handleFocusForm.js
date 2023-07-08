@@ -1,18 +1,16 @@
-import { findDOM_node } from "./findDOM_node.js";
-
+import {findDOM_node} from './findDOM_node.js';
 
 export function focusFormInput() {
-     const firstFormInput = findDOM_node(`#sendmessage input`);
-     firstFormInput.focus();
+	const firstFormInput = findDOM_node(`#sendmessage input`);
+	firstFormInput.focus();
 }
 
 export function handleFocusForm() {
-     document.querySelector("[data-tooltip=\"SendMessage\"] a").addEventListener("click", (e) => {
-          e.preventDefault();
+	const tooltip = document.querySelector('[data-tooltip="SendMessage"] a');
 
-          focusFormInput();
-     })
-};
+	tooltip.addEventListener('click', (e) => {
+		e.preventDefault();
 
-
-
+		focusFormInput();
+	});
+}

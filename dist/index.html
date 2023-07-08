@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,8 +17,8 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body>
-     <header class="header">
+	<body>
+		<header class="header">
      <div class="header__row _container">
           <div class="header__menu menu-header">
                <a href="#" class="menu-header__logo">
@@ -114,8 +114,8 @@
           </div>
           </section>
 </header>
-     <main class="page _container">
-          <section class="page__rewards rewards">
+		<main class="page _container">
+			<section class="page__rewards rewards">
      <ul class="rewards__list">
           <li class="rewards__item">
                <img src="../img/icons/reward/Group.svg" alt="English icon">
@@ -141,160 +141,610 @@
      </ul>
      <aside class="rewards__own-photo own-photo">
      </aside>
+</section> <section class="page__experience-section experience-section">
+	<table class="experience-section__table-row">
+		<thead>
+			<tr>
+				<th data-i18n="main-exp_workExperience">WORK EXPERIENCE</th>
+				<th data-i18n="main-exp_skills">SKILL AND EXPERTISE</th>
+			</tr>
+		</thead>
+		<tbody class="experience-section__tbody tbody">
+			<div class="experience-section__frame-own-photo"></div>
+			<tr>
+				<td data-i18n="main-exp_dev-job">
+					<strong>Front-End Developer</strong>
+					<p>as a Freelancer</p>
+					<time>2022 - Present</time>
+				</td>
+				<td class="html-css">
+					<strong>HTML / CSS</strong>
+					<div
+						class="experience-section__skill-range experience-section__skill-range_first"
+					></div>
+				</td>
+			</tr>
+			<tr>
+				<td data-i18n="main-exp_sales-job">
+					<strong>Sales manager</strong>
+					<p>at TrackEnsure Company</p>
+					<time>2021 - Present</time>
+				</td>
+				<td class="js">
+					<strong>JavaScript ES6</strong>
+					<div
+						class="experience-section__skill-range experience-section__skill-range_second"
+					></div>
+				</td>
+			</tr>
+			<tr>
+				<td data-i18n="main-exp_service-job">
+					<strong>Service manager</strong>
+					<p>at Comfy Company</p>
+					<time>2019 - 2021</time>
+				</td>
+				<td class="reactJs">
+					<strong>ReactJS + Redux</strong>
+					<div
+						class="experience-section__skill-range experience-section__skill-range_third"
+					></div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="ts">
+					<strong>TypeScript</strong>
+					<div
+						class="experience-section__skill-range experience-section__skill-range_fourth"
+					></div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="reactNative">
+					<strong>React Native</strong>
+					<div
+						class="experience-section__skill-range experience-section__skill-range_fifth"
+					></div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="chrome-extensions">
+					<strong>Chrome Extensions</strong>
+					<div
+						class="experience-section__skill-range experience-section__skill-range_sixth"
+					></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<aside class="experience-section__own-attr">
+		<figure>
+			<img src="../img/main/skar_ph.svg" alt="Own svg" />
+		</figure>
+	</aside>
 </section>
-          <section class="page__experience-section experience-section">
-     <table class="experience-section__table-row">
-          <thead>
-               <tr>
-                    <th data-i18n="main-exp_workExperience">WORK EXPERIENCE</th>
-                    <th data-i18n="main-exp_skills">SKILL AND EXPERTISE</th>
-               </tr>
-          </thead>
-          <tbody class="experience-section__tbody tbody">
-               <div class="experience-section__frame-own-photo"></div>
-               <tr>
-                    <td data-i18n="main-exp_dev-job">
-                         <strong>Front-End Developer</strong>
-                         <p>as a Freelancer</p>
-                         <time>2022 - Present</time>
-                    </td>
-                    <td class="html-css">
-                         <strong>HTML / CSS</strong>
-                         <div class="experience-section__skill-range experience-section__skill-range_first"></div>
-                    </td>
 
-               </tr>
-               <tr>
-                    <td data-i18n="main-exp_sales-job">
-                         <strong>Sales manager</strong>
-                         <p>at TrackEnsure Company</p>
-                         <time>2021 - Present</time>
-                    </td>
-                    <td class="js">
-                         <strong>JavaScript ES6</strong>
-                         <div class="experience-section__skill-range experience-section__skill-range_second"></div>
-                    </td>
+			<section class="page__works works" id="porfolio">
+	<h4 class="works__title section-title" data-i18n="works-title">Portfolio</h4>
+	<div class="works__project-wrapper">
+		<div class="works__project-item">
+			<figure class="works__project-img">
+				<img
+					src="../img/main/projects/currency-ratio.jpeg"
+					alt="Project image"
+				/>
+			</figure>
+			<div class="works__project-desc-block">
+				<h6 data-i18n="works_project-currency">Currency Ratio Calculator</h6>
+				<div class="works__description">
+					<p data-i18n="works_project-currency-list">
+						Online converter of currencies with the UAH base:
+					</p>
+					<ul>
+						<li><abbr title="United States dollar">USD</abbr></li>
+						<li><abbr title="European Monetary Unit">EURO</abbr></li>
+						<li><abbr title="Bitcoin currency code">BTC</abbr></li>
+					</ul>
+					<p data-i18n="works_functionalities">
+						Was developed the next functionalities:
+					</p>
+					<ul>
+						<li data-i18n="works_calculation">
+							Calculation of currency ratio;
+						</li>
+						<li data-i18n="works_target">Reverse/change target currency;</li>
+						<li data-i18n="works_range">
+							Change API currency value in the 10% range;
+						</li>
+						<li data-i18n="works_reload">Reload currencies API;</li>
+						<li data-i18n="works_loop">Preventing the loop requests;</li>
+					</ul>
+				</div>
+				<div class="works__tech-section">
+					<span>React</span>
+					<span>Redux</span>
+					<span>TypeScript</span>
+					<span>Matetial UI</span>
+				</div>
+				<nav class="works__links">
+					<a
+						href="https://github.com/HowFastGot/currencyExchanger"
+						class="works__git-link"
+						target="_blank"
+						data-i18n="works_project-code"
+						>Code</a
+					>
+					<a
+						href="https://9c9yjs-3000.csb.app"
+						class="works__online-link"
+						target="_blank"
+						data-i18n="works_project-live_demo"
+						><span>Live</span> Demo</a
+					>
+				</nav>
+				<div class="notification">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+						width="20"
+						height="20"
+						class="nx-mt-1"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+						></path>
+					</svg>
+					<span data-i18n="works_caveat"
+						>Some issues with a server of API owner could be possible. Use
+						<a
+							href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru"
+						>
+							CORS extension
+						</a>
+						to handle it!
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="works__project-item">
+			<figure class="works__project-img">
+				<img src="../img/main/projects/vin_decoder.jpg" alt="Project image" />
+			</figure>
+			<div class="works__project-desc-block">
+				<h6 data-i18n="works_project-vin">VIN Decoder</h6>
+				<p class="works__description" data-i18n="works_project-vin-desc">
+					The website was designed for decoding car VIN numbers, saving the
+					history of decoded numbers, and has 3 pages to describe each
+					characteristic of the car.
+				</p>
+				<div class="works__tech-section">
+					<span>React</span>
+					<span>TypeScript</span>
+					<span>React Router</span>
+					<span>Redux</span>
+				</div>
 
-               </tr>
-               <tr>
-                    <td data-i18n="main-exp_service-job">
-                         <strong>Service manager</strong>
-                         <p>at Comfy Company</p>
-                         <time>2019 - 2021</time>
-                    </td>
-                    <td class="reactJs">
-                         <strong>ReactJS + Redux</strong>
-                         <div class="experience-section__skill-range experience-section__skill-range_third"></div>
-                    </td>
-               </tr>
-               <tr>
-                    <td>
-
-                    </td>
-                    <td class="ts">
-                         <strong>TypeScript</strong>
-                         <div class="experience-section__skill-range experience-section__skill-range_fourth"></div>
-                    </td>
-               </tr>
-               <tr>
-                    <td>
-
-                    </td>
-                    <td class="reactNative">
-                         <strong>React Native</strong>
-                         <div class="experience-section__skill-range experience-section__skill-range_fifth"></div>
-                    </td>
-               </tr>
-          </tbody>
-     </table>
-     <aside class="experience-section__own-attr">
-          <figure>
-               <img src="../img/main/skar_ph.svg" alt="Own svg">
-          </figure>
-     </aside>
+				<nav class="works__links">
+					<a
+						href="https://github.com/HowFastGot/Vin_Numbers_Decoder"
+						class="works__git-link"
+						target="_blank"
+						data-i18n="works_project-code"
+						>Code</a
+					>
+					<a
+						href="https://33ycxl-3000.csb.app/"
+						class="works__online-link"
+						target="_blank"
+						data-i18n="works_project-live_demo"
+						><span>Live</span> Demo</a
+					>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="works__load-button-block load-button-block">
+		<span class="load-button-block__q-indicator">2 / 9</span>
+		<button class="load-button-block__button-load" data-i18n="works_load-more">
+			Explore more
+		</button>
+	</div>
 </section>
-          <section class="page__works works" id="porfolio">
-     <h4 class="works__title" data-i18n="works-title">Portfolio</h4>
-     <div class="works__project-wrapper">
-          <div class="works__project-item">
-               <figure class="works__project-img">
-                    <img src="../img/main/projects/currency-ratio.jpeg" alt="Project image">
-               </figure>
-               <div class="works__project-desc-block">
-                    <h6 data-i18n="works_project-currency">Currency Ratio Calculator</h6>
-                    <div class="works__description">
-                         <p data-i18n="works_project-currency-list">Online converter of currencies with the UAH base:</p>
-                         <ul>
-                              <li><abbr title="United States dollar">USD</abbr></li>
-                              <li><abbr title="European Monetary Unit">EURO</abbr></li>
-                              <li><abbr title="Bitcoin currency code">BTC</abbr></li>
-                         </ul>
-                         <p data-i18n="works_functionalities">
-                              Was developed the next functionalities:
-                         </p>
-                         <ul>
-                              <li data-i18n="works_calculation">Calculation of currency ratio;</li>
-                              <li data-i18n="works_target">Reverse/change target currency;</li>
-                              <li data-i18n="works_range">Change API currency value in the 10% range;</li>
-                              <li data-i18n="works_reload">Reload currencies API;</li>
-                              <li data-i18n="works_loop">Preventing the loop requests;</li>
-                         </ul>
-                    </div>
-                    <div class="works__tech-section">
-                         <span>React</span>
-                         <span>Redux</span>
-                         <span>TypeScript</span>
-                         <span>Matetial UI</span>
-                    </div>
-                    <nav class="works__links">
-                         <a href="https://github.com/HowFastGot/currencyExchanger" class="works__git-link" data-i18n="works_project-code">Code</a>
-                         <a href="https://9c9yjs-3000.csb.app" class="works__online-link" data-i18n="works_project-live_demo"><span>Live</span> Demo</a>
-                    </nav>
-                    <div class="notification">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20" height="20" class="nx-mt-1">
-                              <path fill-rule="evenodd" clip-rule="evenodd"
-                                   d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"></path>
-                         </svg>
-                         <span data-i18n="works_caveat">Some issues with a server of API owner could be possible. Use
-                              <a href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru">
-                                   CORS extension
-                              </a> to handle
-                              it!
-                         </span>
-                    </div>
-               </div>
-          </div>
-          <div class="works__project-item">
-               <figure class="works__project-img">
-                    <img src="../img/main/projects/vin_decoder.jpg" alt="Project image">
-               </figure>
-               <div class="works__project-desc-block ">
-                    <h6 data-i18n="works_project-vin">VIN Decoder</h6>
-                    <p class="works__description" data-i18n="works_project-vin-desc">
-                         The website was designed for decoding car VIN numbers, saving the history of decoded numbers, and has 3 pages to describe each characteristic of the car.
-                    </p>
-                    <div class="works__tech-section">
-                         <span>React</span>
-                         <span>TypeScript</span>
-                         <span>React Router</span>
-                         <span>Redux</span>
-                    </div>
+ <section class="page__education education-block">
+	<h5 class="education-block__title section-title">Education Proccess</h5>
+	<div class="education-block__row">
+		<div class="education-block__img-block img-block">
+			<div class="img-block__sticky-div">
+				<figure class="img-block__content">
+					<img
+						src="../img/main/projects/sport-equipment.png"
+						alt="Image"
+						class="img-block__first-img"
+					/>
+				</figure>
+			</div>
+		</div>
+		<div class="education-block__text-block education-text">
+			<ul class="education-text__tech-list">
+				<!-- HTML / CSS -->
+				<li class="education-text__tech-item">
+					<h6 class="education-text__tech-title">HTML / СSS</h6>
 
-                    <nav class="works__links">
-                         <a href="https://github.com/HowFastGot/Vin_Numbers_Decoder" class="works__git-link" data-i18n="works_project-code">Code</a>
-                         <a href="https://33ycxl-3000.csb.app/" class="works__online-link" data-i18n="works_project-live_demo"><span>Live</span> Demo</a>
-                    </nav>
-               </div>
-          </div>
-     </div>
-     <div class="works__load-button-block load-button-block">
-          <span class="load-button-block__q-indicator">2 / 9</span>
-          <button class="load-button-block__button-load" data-i18n="works_load-more">
-               Explore more
-          </button>
-     </div>
+					<ul class="education-text__resourse-list resourse-list">
+						<span class="resourse-list__information-title"
+							>Information sources:</span
+						>
+						<li class="resourse-list__item">
+							<h6>
+								<a
+									href="https://www.youtube.com/playlist?list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr"
+									target="_blank"
+									>A free of charge HTML and CSS course
+								</a>
+								on<span class="resourse-list__youtube"> YouTube</span> created
+								by Forever Freelancer
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> 1 month
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> 39 pcs
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									This course in 2021 introduced me to the concept of "Website
+									Development". The author's interesting approach and the room
+									for implementing my ideas into various design elements of a
+									website laid the foundation for my further development as a
+									Front-End developer.</span
+								>
+							</p>
+						</li>
+						<li class="resourse-list__item">
+							<h6>
+								<a href="http://htmlbook.ru" target="_blank"
+									>HTML and CSS book</a
+								>
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> 3 months
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> The whole book was read and its tasks
+								fulfilled
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									After completing the course, I still felt uncertain about my
+									own knowledge. To address this, I started performing practical
+									tasks after studying the theory from this book. This way, I
+									fully understand what I'm doing.</span
+								>
+							</p>
+						</li>
+						<li class="resourse-list__item">
+							<h6>
+								<a
+									href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+									target="_blank"
+									>MDM Web docs</a
+								>
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> Present time
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> Helps me on a daily basis.
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									I have been using it just to fresh up the knowledge, e.g while
+									I am struggling with a meaning of a certain attribute.
+								</span>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<!-- JavaScript -->
+				<li class="education-text__tech-item">
+					<h6 class="education-text__tech-title">JavaScript (ES6)</h6>
+
+					<ul class="education-text__resourse-list resourse-list">
+						<span class="resourse-list__information-title"
+							>Information sources:</span
+						>
+						<li class="resourse-list__item">
+							<h6>
+								<a href="https://javascript.info/" target="_blank"
+									>Learn.javascript book
+								</a>
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> 4 months.
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> all practical task were solved.
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									After completing the study of HTML and CSS theory, I started
+									reading this book and solving all the practical tasks after
+									each chapter. Within 4 months, I covered all the material. To
+									reinforce the learned theory and keep up with updates, I am
+									now rereading the book for the <b>third</b> time.</span
+								>
+							</p>
+						</li>
+						<li class="resourse-list__item">
+							<h6>
+								<a
+									href="https://www.udemy.com/course/javascript_practice/"
+									target="_blank"
+									>JavaScript practical course</a
+								>
+								by Ivan Petrichenko
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> 1 month 15 days
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> 64 lectures • 23h 43m total length
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									To reinforce my theoretical knowledge of JavaScript, I
+									enrolled in my first course that focuses on practical
+									application. Throughout the course, we developed three
+									projects, and afterwards, I rewrote the code for each of them
+									to solidify my understanding.</span
+								>
+							</p>
+						</li>
+						<li class="resourse-list__item">
+							<h6>
+								<a
+									href="https://www.udemy.com/course/javascript_full/"
+									target="_blank"
+									>Complete JavaScript + React course - from scratch to
+									results</a
+								>
+								by Ivan Petrichenko
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> 21 days for JavaScript section
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> 117 lectures • 33h 38m total length
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									After completing the first practical JavaScript course by this
+									author, I also studied the theoretical course. This helped me
+									gain a fresh perspective on the material I had already
+									learned.</span
+								>
+							</p>
+						</li>
+						<li class="resourse-list__item">
+							<h6>
+								<a href="https://www.codewars.com/users/SkarYv" target="_blank"
+									>Codewars</a
+								>
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> Present Time
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> Total Completed Kata:21 pcs, 6ku
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									Now, to enhance my practical skills, I am solving tasks on
+									this platform.
+								</span>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<!-- ReactJS -->
+				<li class="education-text__tech-item">
+					<h6 class="education-text__tech-title">ReactJS and Redux</h6>
+
+					<ul class="education-text__resourse-list resourse-list">
+						<span class="resourse-list__information-title"
+							>Information sources:</span
+						>
+						<li class="resourse-list__item">
+							<h6>
+								<a
+									href="https://www.udemy.com/course/javascript_full/"
+									target="_blank"
+									>Complete JavaScript + React course - from scratch to
+									results</a
+								>
+								by Ivan Petrichenko
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> 2 months for React+Redux sections
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> 97 lectures • 30h and 7m total length
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									I started learning React and Redux right away with the
+									author's course. The course helped me quickly understand the
+									purpose of using frameworks, reduced the struggle when reading
+									its documentation later on, and increased the speed of my
+									development process.</span
+								>
+							</p>
+						</li>
+						<li class="resourse-list__item">
+							<h6>
+								<a
+									href="https://www.udemy.com/course/javascript_full/"
+									target="_blank"
+									>React`s Documentation</a
+								>
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> Present Time
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> All chapters were read in 15 days.
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									After completing the course, to solidify the learned material,
+									I worked on a sufficient number of small projects. Then, in
+									order to gain a deeper understanding of the technology, I read
+									through all the documentation. This helped me grasp the
+									workings of the framework at a lower level (I hope a developer
+									is reading this*).</span
+								>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<!-- TypeScript -->
+				<li class="education-text__tech-item">
+					<h6 class="education-text__tech-title">TypeScript</h6>
+
+					<ul class="education-text__resourse-list resourse-list">
+						<span class="resourse-list__information-title"
+							>Information sources:</span
+						>
+						<li class="resourse-list__item">
+							<h6>
+								<a
+									href="https://www.udemy.com/course/modern_typescript/"
+									target="_blank"
+									>Complete course on modern TypeScript</a
+								>
+								by Ivan Petrichenko
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> 23 days
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> 100 lectures • 20h 18m total length
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>
+									To enhance my development efficiency, I also studied this
+									language. It helped me reduce the number of errors and the
+									time spent on debugging. Additionally, developing in this
+									language seems to assist in maintaining a clear code
+									structure.</span
+								>
+							</p>
+						</li>
+						<li class="resourse-list__item">
+							<h6>
+								<a
+									href="https://www.udemy.com/course/javascript_full/"
+									target="_blank"
+									>TypeScript`s Documentation</a
+								>
+							</h6>
+							<p class="education-text__additional-info">
+								<span>Duration:</span> Present Time
+							</p>
+							<p class="education-text__additional-info">
+								<span>Lessons:</span> I have been reading it
+							</p>
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<span>Description:</span>
+								<span>Still awkward to read it. Hope you would agree.</span>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<!-- Another stuff -->
+				<li class="education-text__tech-item">
+					<h6 class="education-text__tech-title">
+						Another stuff (Chrome extensions, Algoritms, React Native)
+					</h6>
+
+					<ul class="education-text__resourse-list resourse-list">
+						<span class="resourse-list__information-title">In a nutshell:</span>
+						<li class="resourse-list__item">
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<b>Chrome extensions</b> - My current IT company employer uses a
+								multifunctional web platform that requires a significant amount
+								of time and effort to work with. To optimize my work, I have
+								developed three browser extensions for Google Chrome that have
+								been incredibly helpful.
+							</p>
+							<br />
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<b>React Native</b> - I developed only one basic application out
+								of interest. I will continue to learn the technology as needed.
+							</p>
+							<br />
+							<p
+								class="education-text__additional-info education-text__additional-info_description"
+							>
+								<b>Algoritms</b> - I have read twice a book
+								<a
+									href="https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230"
+									target="_blank"
+									>Grokking Algorithms
+								</a>
+								by Aditya Bhargava. Does it mean I know smth?)
+							</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 </section>
-          <section class="page__certificates certificates" id="certificates">
+
+<!-- data-i18n="education-title" -->
+ <section class="page__certificates certificates" id="certificates">
      <h6 data-i18n="certificates_title">Certificates</h6>
      <div class="certificates__swiper own-swiper">
           <div class="own-swiper__certificate-swiper mySwiper">
@@ -321,15 +771,15 @@
           </div>
      </div>
 </section>
-          <section class="page__interview interview" id="interview">
+			<section class="page__interview interview" id="interview">
      <h2 class="interview__title">Interview</h2>
      <div class="interview__iframe-wrapper" id="frame">
           <iframe width="885" height="498" src="https://www.youtube.com/embed/sZvHJvsVT3M" title="1. Співбесіда Junior Fronted розробника | JavaScript React Developer"
                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
      </div>
 </section>
-     </main>
-     <footer class="page__footer footer">
+		</main>
+		<footer class="page__footer footer">
      <div class="footer__row _container">
           <div class="footer__contact-info contact-info">
                <div class="contact-info__name" data-i18n="footer_name">Yevhen <br>Skaretskiy</div>
@@ -398,26 +848,30 @@
      </form>
 </div>
      </div>
-</footer>
-     <template id="project-template">
-     <div class="works__project-item">
-          <figure class="works__project-img">
-               <img src="" alt="Project image">
-          </figure>
-          <div class="works__project-desc-block ">
-               <h6></h6>
-               <p class="works__description"></p>
-               <div class="works__tech-section"></div>
-               <nav class="works__links">
-                    <a href="" class="works__git-link">Code</a>
-                    <a href="" class="works__online-link"><span>Live</span>Demo</a>
-               </nav>
-          </div>
-     </div>
+</footer> <template id="project-template">
+	<div class="works__project-item">
+		<figure class="works__project-img">
+			<img src="" alt="Project image" />
+		</figure>
+		<div class="works__project-desc-block">
+			<h6></h6>
+			<p class="works__description"></p>
+			<div class="works__tech-section"></div>
+			<nav class="works__links">
+				<a href="" target="_blank" class="works__git-link">Code</a>
+				<a href="" target="_blank" class="works__online-link"
+					><span>Live</span>Demo</a
+				>
+			</nav>
+		</div>
+	</div>
 </template>
-     
-     <script src="js/app.min.js" defer></script>
-     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
-</body>
 
+		
+		<script src="js/app.min.js" defer></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+			defer
+		></script>
+	</body>
 </html>

@@ -1,110 +1,105 @@
-import { findDOM_node } from "./findDOM_node.js";
-import { deleteAddedProjects } from "./loading-projects.js";
-import { changeProjectQuantityIndicator } from "./loading-projects.js";
+import {findDOM_node} from './findDOM_node.js';
+import {deleteAddedProjects} from './loading-projects.js';
 
-import Polyglot from "node-polyglot";
+import Polyglot from 'node-polyglot';
 
 const possiblePageLangs = {
-     en: "en",
-     ua: "ua",
-     ru: "ru"
+	en: 'en',
+	ua: 'ua',
+	ru: 'ru',
 };
 
 const setDefaultActiveLangTrigger = () => {
-     const langTriggers = findDOM_node(".settings-popup__lang-item", "multiElems");
-     const currentPageLang = getCurrentPageLanguage();
+	const langTriggers = findDOM_node('.settings-popup__lang-item', 'multiElems');
+	const currentPageLang = getCurrentPageLanguage();
 
-     langTriggers.forEach(trigger => {
-          const certainLangTriggerName = trigger.textContent.toLowerCase().trim();
+	langTriggers.forEach((trigger) => {
+		const certainLangTriggerName = trigger.textContent.toLowerCase().trim();
 
-          if (certainLangTriggerName === currentPageLang) {
-               trigger.classList.add("active");
-               return;
-          }
+		if (certainLangTriggerName === currentPageLang) {
+			trigger.classList.add('active');
+			return;
+		}
 
-          trigger.classList.remove("active");
-     })
-}
+		trigger.classList.remove('active');
+	});
+};
 const changeActiveLangItem = (e) => {
-     const target = e.currentTarget;
-     const languageItemsArray = Array.from(target.children);;
+	const target = e.currentTarget;
+	const languageItemsArray = Array.from(target.children);
 
+	if (languageItemsArray.length < 1 || !languageItemsArray.includes(e.target))
+		return;
 
-     if (languageItemsArray.length < 1 || !languageItemsArray.includes(e.target)) return;
+	const indexOfClickedItem = languageItemsArray.indexOf(e.target);
 
-     const indexOfClickedItem = languageItemsArray.indexOf(e.target);
+	languageItemsArray.map((item, id) => {
+		item.classList.remove('active');
 
-     languageItemsArray.map((item, id) => {
-          item.classList.remove("active");
+		if (indexOfClickedItem === id) {
+			item.classList.add('active');
+		}
+	});
 
-          if (indexOfClickedItem === id) {
-               item.classList.add("active");
-          }
-     });
-
-     setUpSessionStorageLanguage(languageItemsArray[indexOfClickedItem].textContent.toLowerCase());
-
+	setUpSessionStorageLanguage(
+		languageItemsArray[indexOfClickedItem].textContent.toLowerCase()
+	);
 };
 
-const setUpSessionStorageLanguage = (language = "en") => {
-
-     language && sessionStorage.setItem("language", possiblePageLangs[language]);
-}
+const setUpSessionStorageLanguage = (language = 'en') => {
+	language && sessionStorage.setItem('language', possiblePageLangs[language]);
+};
 function getCurrentPageLanguage() {
-     return sessionStorage.getItem("language") ?? "en";
+	return sessionStorage.getItem('language') ?? 'en';
 }
 
 const getAsyncLanguageDataObject = async (languageOfPage) => {
+	try {
+		const response = await fetch(
+			`../translations/${possiblePageLangs[languageOfPage]}/locale.json`
+		);
 
-     try {
-          const response = await fetch(`../translations/${possiblePageLangs[languageOfPage]}/locale.json`)
+		return await response.json();
+	} catch (error) {
+		console.log(
+			`Error occurs while loading language data object ${error.message}! Check getLanguageDataObject function!`
+		);
+	}
+};
 
-          return await response.json();
+const changeTextContentofPage = ({English, Ukrainian, Russian}) => {
+	const polyglot = new Polyglot({phrases: English ?? Ukrainian ?? Russian});
 
-     } catch (error) {
-          console.log(`Error occurs while loading language data object ${error.message}! Check getLanguageDataObject function!`)
-     }
+	const textBlocks = document.querySelectorAll('[data-i18n]');
 
-}
+	if (textBlocks && textBlocks.length < 1) return;
 
-const changeTextContentofPage = ({ English, Ukrainian, Russian }) => {
+	textBlocks.forEach((textBlock) => {
+		const elementKeyAttr = textBlock.dataset.i18n;
 
-     const polyglot = new Polyglot({ phrases: English ?? Ukrainian ?? Russian });
-
-     const textBlocks = document.querySelectorAll("[data-i18n]");
-
-     if (textBlocks && textBlocks.length < 1) return;
-
-     textBlocks.forEach((textBlock) => {
-          const elementKeyAttr = textBlock.dataset.i18n;
-
-          textBlock.innerHTML = polyglot.t(elementKeyAttr)
-     });
-
-}
+		textBlock.innerHTML = polyglot.t(elementKeyAttr);
+	});
+};
 
 async function pageInternationalization(choosenPageLang) {
-
-     const currentLanguageData = await getAsyncLanguageDataObject(choosenPageLang);
-     changeTextContentofPage(currentLanguageData)
+	const currentLanguageData = await getAsyncLanguageDataObject(choosenPageLang);
+	changeTextContentofPage(currentLanguageData);
 }
 
 const comprehensiveFunction = (e) => {
+	changeActiveLangItem(e);
+	pageInternationalization(getCurrentPageLanguage());
 
-     changeActiveLangItem(e);
-     pageInternationalization(getCurrentPageLanguage());
-
-     deleteAddedProjects();
-}
+	deleteAddedProjects();
+};
 
 export function changePageLanguage(languagesBlockSelector) {
-     const parentLangBlock = findDOM_node(languagesBlockSelector);
+	const parentLangBlock = findDOM_node(languagesBlockSelector);
 
-     setUpSessionStorageLanguage(getCurrentPageLanguage() ?? possiblePageLangs.en);
-     pageInternationalization(getCurrentPageLanguage());
-     setDefaultActiveLangTrigger();
+	setUpSessionStorageLanguage(getCurrentPageLanguage() ?? possiblePageLangs.en);
+	pageInternationalization(getCurrentPageLanguage());
+	setDefaultActiveLangTrigger();
 
-     parentLangBlock && parentLangBlock.addEventListener("click", comprehensiveFunction)
-
-
+	parentLangBlock &&
+		parentLangBlock.addEventListener('click', comprehensiveFunction);
 }

@@ -25,6 +25,7 @@
 		"browser-sync": "latest",
 		"core-js": "latest",
 		"del": "latest",
+		"eslint": "^8.44.0",
 		"fs": "latest",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
@@ -58,5 +59,13 @@
 	"dependencies": {
 		"animate.css": "^4.1.1",
 		"node-polyglot": "^2.5.0"
+	},
+	"standard": {
+		"ignore": [
+			"/gulp/tasks",
+			"/gulp/config",
+			"/src/js/services",
+			"/src/js/modules"
+		]
 	}
 }

@@ -1,21 +1,22 @@
 //<Обнуление файлов / импорт переменных>====================================================================================================================================
-@import "_nullStyle";
-@import "_variables";
-@import "_fonts";
+@import '_nullStyle';
+@import '_variables';
+@import '_fonts';
 //<Обнуление файлов / импорт переменных>====================================================================================================================================
 
 //-<Подключаем файлы стилей>==============================================================
-@import "_header";
-@import "_rewards";
-@import "_experience";
-@import "_work-section";
-@import "_certificates";
-@import "_footer";
-@import "_form";
-@import "_UI";
-@import "_404page";
-@import "_settings-popup";
-@import "_interview";
+@import '_header';
+@import '_rewards';
+@import '_experience';
+@import '_work-section';
+@import '_certificates';
+@import '_footer';
+@import '_form';
+@import '_UI';
+@import '_404page';
+@import '_settings-popup';
+@import '_interview';
+@import '_education';
 //-</Подключаем файлы стилей>==============================================================
 
 //<Подключаем шрифты>=================================================================================================
@@ -31,100 +32,123 @@
 
 //-<Обнуление общиих параметров>-===================================================
 html {
-     scroll-behavior: smooth;
+	scroll-behavior: smooth;
+
+	&::-webkit-scrollbar {
+		width: 0.5em;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $GOLD;
+		border-radius: 9999px;
+
+		&:hover {
+			background-color: #c29d62;
+		}
+	}
 }
 
 body {
-     font-family: $font-family;
-     color: #000;
-     font-size: 14px;
+	font-family: $font-family;
+	color: #000;
+	font-size: 14px;
 
+	&._lock {
+		overflow: hidden;
+	}
 
-     &._lock {
-          overflow: hidden;
-     }
+	&.dark {
+		background-color: #303030;
 
-     &.dark {
-          background-color: #303030;
-          ;
-     }
+		.section-title {
+			color: $WHITE;
+		}
+	}
 }
 
 //-<Обнуление общих параметров>-===================================================
 
 //<Wrapper и Ограничивающий контейнер>-========================================================================
 .wrapper {
-     display: flex;
-     flex-direction: column;
-     min-height: 100%;
-     width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	width: 100%;
 }
 
 //---------------------------------------
 ._container {
-     position: relative;
-     max-width: $maxWidthContainer + px;
-     margin: 0 auto;
-     overflow: hidden;
+	position: relative;
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
 
-     @media (min-width: $md2) {
-          padding: 0 20px;
-     }
+	@media (min-width: $md2) {
+		padding: 0 20px;
+	}
 }
 
 //</Wrapper и Ограничивающий контейнер>========================================================================
 
-
 //-<Основная сетка>==================================================================
-.page {}
+.page {
+	.section-title {
+		font-family: 'lato900';
+		font-size: 30px;
+		color: $BLACK;
+		padding: 10px 20px;
+	}
+}
 
 .tooltip {
-     position: absolute;
-     z-index: 2;
-     right: -135px;
-     top: 50%;
-     transform: translateY(-50%);
+	position: absolute;
+	z-index: 2;
+	right: -135px;
+	top: 50%;
+	transform: translateY(-50%);
 
-     height: 44px;
-     width: 119px;
-     padding: 10px 0;
+	height: 44px;
+	width: 119px;
+	padding: 10px 0;
 
-     background: rgba(0, 0, 0, 0.5);
-     border-radius: 8px;
-     text-align: center;
-     cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	text-align: center;
+	cursor: pointer;
 
+	font-weight: 900;
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff !important;
 
-     font-weight: 900;
-     font-size: 14px;
-     line-height: 24px;
-     color: #FFFFFF !important;
+	&::before {
+		content: '';
+		display: inline-block;
 
-     &::before {
-          content: "";
-          display: inline-block;
+		position: absolute;
+		left: -24px;
+		top: 50%;
+		transform: translateY(-50%);
 
-          position: absolute;
-          left: -24px;
-          top: 50%;
-          transform: translateY(-50%);
+		width: 0;
+		height: 0;
 
-          width: 0;
-          height: 0;
-
-          border-style: solid;
-          border-width: 20.5px 0 20.5px 24px;
-          border-color: transparent;
-     }
+		border-style: solid;
+		border-width: 20.5px 0 20.5px 24px;
+		border-color: transparent;
+	}
 }
 
 #loading-dialog {
-     z-index: -1;
-     position: fixed;
-     left: 0;
-     top: 0;
-     height: 100vh;
-     width: 100vw;
+	z-index: -1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
 }
 
 //-<Основная сетка>==================================================================

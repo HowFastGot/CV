@@ -1,357 +1,346 @@
 .page {
+	&__works {
+		text-align: center;
 
-     &__works {
-          text-align: center;
-          padding: 0 10px;
-     }
+		@media (min-width: $md3) {
+			padding: 0 10px;
+		}
+	}
 }
 
 .works {
+	&__project-wrapper {
+	}
 
-     &__project-wrapper {}
+	&__title {
+		display: inline-block;
+		position: relative;
 
-     &__title {
-          display: inline-block;
-          position: relative;
-          font-family: "lato900";
-          font-size: 30px;
-          margin: 80px 0;
-          padding: 10px 20px;
-          border: 2px solid $BLUE;
-          border-radius: 5px;
-          box-shadow: 0px 17px 47px 2px rgba(101, 31, 255, 0.32);
+		margin: 80px 0;
 
-          &::after {
-               content: "";
-               display: inline-block;
-               position: absolute;
-               left: -221px;
-               top: 50%;
-               width: 220px;
-               height: 2px;
-               background-color: $BLUE;
+		border: 2px solid $BLUE;
+		border-radius: 5px;
+		box-shadow: 0px 17px 47px 2px rgba(101, 31, 255, 0.32);
 
-               @media (max-width: 1006px) {
-                    display: none;
-               }
-          }
+		&::after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: -221px;
+			top: 50%;
+			width: 220px;
+			height: 2px;
+			background-color: $BLUE;
 
-          @media (max-width: 1006px) {
-               display: block;
-               border: 0;
-               background: linear-gradient(141.51deg, #9C27B0 -18.34%, #651FFF 66.03%);
-               color: $WHITE;
-          }
+			@media (max-width: 1006px) {
+				display: none;
+			}
+		}
 
-          @media (max-width: $md2) {
-               margin: 40px 0;
-          }
-     }
+		@media (max-width: 1006px) {
+			display: block;
+			border: 0;
+			background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+			color: $WHITE;
+		}
 
-     &__project-item {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 20px;
+		@media (max-width: $md2) {
+			margin: 40px 0;
+		}
+	}
 
-          &:nth-child(even) {
-               flex-direction: row-reverse;
+	&__project-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
 
-               @media (max-width: $md3) {
-                    flex-direction: column;
-               }
-          }
+		&:nth-child(even) {
+			flex-direction: row-reverse;
 
-          &:not(:last-child) {
-               margin-bottom: 80px;
-          }
+			@media (max-width: $md3) {
+				flex-direction: column;
+			}
+		}
 
-          @media (max-width: $md3) {
-               flex-direction: column;
-          }
-     }
+		&:not(:last-child) {
+			margin-bottom: 80px;
+		}
 
-     &__project-img {
-          height: 300px;
-          width: 380px;
-          border-radius: 15px;
-          box-shadow: 2px 3px 6px #999;
-          overflow: hidden;
+		@media (max-width: $md3) {
+			flex-direction: column;
+		}
+	}
 
-          img {
-               width: 100%;
-               height: 100%;
-               object-fit: fill;
-          }
+	&__project-img {
+		height: 300px;
+		width: 380px;
+		border-radius: 15px;
+		box-shadow: 2px 3px 6px #999;
+		overflow: hidden;
 
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+		}
 
-          @media (max-width: 568px) {
-               height: 250px;
-               width: 300px;
+		@media (max-width: 568px) {
+			height: 250px;
+			width: 300px;
+		}
 
-          }
+		@media (min-width: $md3) {
+			align-self: start;
+		}
 
-          @media (min-width: $md3) {
-               align-self: start;
-          }
+		@media (max-width: $md3) {
+			height: 80%;
+			width: 80%;
+		}
+	}
 
-          @media (max-width: $md3) {
-               height: 80%;
-               width: 80%;
-          }
-     }
+	&__project-desc-block {
+		flex: 0 1 25%;
+		align-self: start;
+		padding: 0 10px;
 
-     &__project-desc-block {
-          flex: 0 1 25%;
-          align-self: start;
+		h6 {
+			font-family: 'lato900';
+			font-size: 19px;
+			text-transform: uppercase;
+			font-weight: 900;
+		}
 
-          h6 {
-               font-family: "lato900";
-               font-size: 19px;
-               text-transform: uppercase;
-               font-weight: 900;
-          }
+		span {
+			display: inline-block;
+			font-family: 'lato700';
+			line-height: 1.5;
 
-          span {
-               display: inline-block;
-               font-family: "lato700";
-               line-height: 1.5;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
 
-               &:not(:last-child) {
-                    margin-right: 20px;
-               }
-          }
-     }
+	&__description {
+		margin: 20px 0;
+		line-height: 1.5;
 
-     &__description {
-          margin: 20px 0;
-          line-height: 1.5;
+		p {
+			text-align: left;
+			line-height: 1.5;
+			margin-bottom: 10px;
+		}
 
-          p {
-               text-align: left;
-               line-height: 1.5;
-               margin-bottom: 10px;
-          }
+		ul {
+			margin: 10px;
 
-          ul {
-               margin: 10px;
+			li {
+				font-family: 'lato400';
 
-               li {
-                    font-family: "lato400";
+				list-style: circle !important;
+				text-align: left;
+				line-height: calc(18 / 15);
 
-                    list-style: circle !important;
-                    text-align: left;
-                    line-height: calc(18 /15);
+				abbr {
+					text-decoration: none;
+					font-family: 'lato900';
+				}
+			}
+		}
 
-                    abbr {
-                         text-decoration: none;
-                         font-family: "lato900";
-                    }
-               }
+		@media (min-width: $md3) {
+			text-align: left;
+		}
+	}
 
-          }
+	&__links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 100px;
+		margin-top: 20px;
+		white-space: nowrap;
 
-          @media (min-width: $md3) {
-               text-align: left;
-          }
-     }
+		@media (max-width: 665px) {
+			gap: 50px;
+		}
+	}
 
-     &__links {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 100px;
-          margin-top: 20px;
-          white-space: nowrap;
+	&__git-link {
+		position: relative;
+		transition: all 0.3s ease 0s;
 
+		&:hover {
+			transform: scale(1.1);
+		}
 
-          @media (max-width: 665px) {
-               gap: 50px;
-          }
-     }
+		&::before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 23px;
+			height: 23px;
+			margin-right: 5px;
+			background: url('../img/icons/work/github.svg') no-repeat center/cover;
+		}
+	}
 
-     &__git-link {
-          position: relative;
-          transition: all 0.3s ease 0s;
+	&__online-link {
+		transition: all 0.3s ease 0s;
 
+		span {
+			font-family: 'lato900';
+			color: $BLUE;
+		}
 
-          &:hover {
-               transform: scale(1.1);
-          }
+		&:hover {
+			transform: scale(1.1);
+		}
 
-          &::before {
-               content: "";
-               display: inline-block;
-               vertical-align: middle;
-               width: 23px;
-               height: 23px;
-               margin-right: 5px;
-               background: url("../img/icons/work/github.svg") no-repeat center/cover;
-          }
-     }
+		&::after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 18px;
+			height: 18px;
+			margin-left: 5px;
+			background: url('../img/icons/work/redirect.png') no-repeat center/cover;
+		}
+	}
 
-     &__online-link {
-          transition: all 0.3s ease 0s;
+	&__load-button-block {
+		position: relative;
+		margin-top: 100px;
 
-          span {
-               font-family: "lato900";
-               color: $BLUE;
-          }
+		span {
+			position: absolute;
+			display: inline-block;
+			left: 50%;
+			transform: translateX(-50%);
+			top: -26px;
+			color: $GOLD;
+			font-family: 'lato900';
+			padding: 7px 9px;
+			border-radius: 15px 15px 0 0;
+			box-shadow: inset 0 1px 5px 2px $GOLD;
+			transition: all 0.6s ease 0s;
+		}
 
-          &:hover {
-               transform: scale(1.1);
-          }
+		button {
+			text-transform: uppercase;
+			font-family: 'lato900';
+			border: 2px solid $GOLD;
+			padding: 10px 20px;
+			border-radius: 10px;
+			box-shadow: inset 0 8px 12px $GOLD, 0 5px 12px $GOLD;
+			transition: all 0.6s ease 0s;
 
-          &::after {
+			&:hover,
+			&:active {
+				transform: scale(0.95);
+				box-shadow: inset 0 2px 12px $GOLD, 0 2px 12px $GOLD;
+			}
+		}
 
-               content: "";
-               display: inline-block;
-               vertical-align: middle;
-               width: 18px;
-               height: 18px;
-               margin-left: 5px;
-               background: url("../img/icons/work/redirect.png") no-repeat center/cover;
+		&.delete {
+			button.load-button-block__button-load,
+			span {
+				border: 2px solid grey;
+				box-shadow: inset 0 8px 12px grey, 0 5px 12px grey;
+				color: grey;
+			}
 
-          }
-     }
-
-     &__load-button-block {
-          position: relative;
-          margin-top: 100px;
-
-          span {
-               position: absolute;
-               display: inline-block;
-               left: 50%;
-               transform: translateX(-50%);
-               top: -26px;
-               color: $GOLD;
-               font-family: "lato900";
-               padding: 7px 9px;
-               border-radius: 15px 15px 0 0;
-               box-shadow: inset 0 1px 5px 2px $GOLD;
-               transition: all 0.6s ease 0s;
-          }
-
-          button {
-               text-transform: uppercase;
-               font-family: "lato900";
-               border: 2px solid $GOLD;
-               padding: 10px 20px;
-               border-radius: 10px;
-               box-shadow: inset 0 8px 12px $GOLD, 0 5px 12px $GOLD ;
-               transition: all 0.6s ease 0s;
-
-               &:hover,
-               &:active {
-                    transform: scale(0.95);
-                    box-shadow: inset 0 2px 12px $GOLD, 0 2px 12px $GOLD ;
-               }
-          }
-
-          &.delete {
-
-               button.load-button-block__button-load,
-               span {
-                    border: 2px solid grey;
-                    box-shadow: inset 0 8px 12px grey, 0 5px 12px grey;
-                    color: grey;
-               }
-
-               button.load-button-block__button-load {
-                    &:hover {
-                         text-decoration: underline;
-                         border: 2px solid $GOLD;
-                         box-shadow: inset 0 8px 12px $GOLD, 0 5px 12px $GOLD;
-                         color: $GOLD;
-                    }
-               }
-          }
-     }
-
+			button.load-button-block__button-load {
+				&:hover {
+					text-decoration: underline;
+					border: 2px solid $GOLD;
+					box-shadow: inset 0 8px 12px $GOLD, 0 5px 12px $GOLD;
+					color: $GOLD;
+				}
+			}
+		}
+	}
 }
 
 .notification {
-     display: flex;
-     align-items: center;
-     justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-     margin-top: 15px;
-     padding: 5px;
-     background-color: #fff;
+	margin-top: 15px;
+	padding: 5px;
+	background-color: #fff;
 
+	background-color: rgb(30, 58, 138, 0.2);
+	border-radius: 10px;
+	font-size: 12px;
 
-     background-color: rgb(30, 58, 138, .2);
-     border-radius: 10px;
-     font-size: 12px;
+	svg {
+		width: 25px;
+		height: 25px;
+	}
 
-     svg {
-          width: 25px;
-          height: 25px;
-     }
+	span {
+		display: inline-block;
+		margin-left: 5px;
+		text-align: left;
+		color: rgb(30, 58, 138);
+	}
 
-     span {
-          display: inline-block;
-          margin-left: 5px;
-          text-align: left;
-          color: rgb(30, 58, 138);
-     }
-
-     a {
-          color: rgb(30, 58, 138);
-          text-decoration: underline;
-     }
+	a {
+		color: rgb(30, 58, 138);
+		text-decoration: underline;
+	}
 }
-
-
-
 
 //===Dark Theme===============================================================================
 body.dark {
-     .works {
-          color: $WHITE;
+	.works {
+		color: $WHITE;
 
-          h6,
-          h4,
-          &__tech-section {
-               color: $GOLD;
-          }
+		h6,
+		&__tech-section {
+			color: $GOLD;
+		}
 
-          &__project-img {
-               box-shadow: 2px 3px 6px 2px #4c4c4c;
-          }
+		&__project-img {
+			box-shadow: 2px 3px 6px 2px #4c4c4c;
+		}
 
-          &__git-link {
-               color: $WHITE;
+		&__git-link {
+			color: $WHITE;
 
-               &::before {
-                    background: url("../img/icons/work/jam_github.svg") no-repeat center/cover;
-               }
-          }
+			&::before {
+				background: url('../img/icons/work/jam_github.svg') no-repeat
+					center/cover;
+			}
+		}
 
-          &__online-link {
-               color: $WHITE;
+		&__online-link {
+			color: $WHITE;
 
-               &::after {
-                    background: url("../img/icons/work/outline_next.svg") no-repeat center/cover;
+			&::after {
+				background: url('../img/icons/work/outline_next.svg') no-repeat
+					center/cover;
+			}
+		}
 
-               }
-          }
+		&__load-button-block {
+			button {
+				color: $GOLD;
+			}
+		}
 
-          &__load-button-block {
-               button {
-                    color: $GOLD;
-               }
-          }
+		.notification {
+			span {
+				color: #d2cece;
+			}
 
-          .notification {
-               span {
-                    color: #d2cece;
-               }
-
-               a {
-                    color: $GOLD;
-               }
-          }
-     }
+			a {
+				color: $GOLD;
+			}
+		}
+	}
 }
