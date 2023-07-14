@@ -5,14 +5,23 @@
 	<body>
 		@@include('html/_header.html', {})
 		<main class="page _container">
-			@@include('html/_rewards.html', {}) @@include('html/_experience.html', {})
-			@@include('html/_work-section.html', {}) @@include('html/_education.html',
-			{}) @@include('html/_certificates.html', {})
+			@@include('html/_rewards.html', {})
+			<!-- Experience -->
+			@@include('html/_experience.html', {})
+			<!-- Work -->
+			@@include('html/_work-section.html', {})
+			<!-- Certificates -->
+			@@include('html/_certificates.html', {})
+			<!-- Education -->
+			@@include('html/_education.html', {})
+			<!--Interview -->
 			@@include('html/_interview.html',{})
 		</main>
-		@@include('html/_footer.html', {}) @@include('html/_projectTemplate.html',
-		{})
-		<!-- @@include('html/_loadingDialog.html', {}) -->
+		<!--Footer -->
+		@@include('html/_footer.html', {})
+		<!--Tempalte -->
+		@@include('html/_projectTemplate.html', {})
+
 		<script src="js/app.min.js" defer></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"

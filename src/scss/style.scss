@@ -89,6 +89,17 @@ body {
 	@media (min-width: $md2) {
 		padding: 0 20px;
 	}
+
+	@media (max-width: $md3) {
+		overflow: hidden;
+	}
+}
+
+._container-header {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
 }
 
 //</Wrapper и Ограничивающий контейнер>========================================================================

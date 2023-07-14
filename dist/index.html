@@ -18,57 +18,83 @@
 </head>
 
 	<body>
-		<header class="header">
-     <div class="header__row _container">
-          <div class="header__menu menu-header">
-               <a href="#" class="menu-header__logo">
-                    <img src="../img/icons/Header/Logo.svg" alt="Logo">
-               </a>
-               <nav>
-                    <ul class="menu-header__list">
-                         <li class="menu-header__item" tabindex="0" data-tooltip="Interview">
-                              <a href="#interview">
-                                   <img src="../img/icons/Header/ios-contact-outline.svg" alt="Profile icon">
-                              </a>
-                         </li>
-                         <li class="menu-header__item" tabindex="0" data-tooltip="Certificates">
-                              <a href="#certificates">
-                                   <img src="../img/icons/Header/ios-plus-outline.svg" alt="Plus icon">
-                              </a>
-                         </li>
-                         <li class="menu-header__item" tabindex="0" data-tooltip="Porfolio">
-                              <a href="#porfolio">
-                                   <img src=" ../img/icons/Header/ios-keypad.svg" alt="Keypad icon">
-                              </a>
-                         </li>
-                         <li class="menu-header__item" tabindex="0" data-tooltip="SendMessage">
-                              <a href="#sendmessage">
-                                   <img src="../img/icons/Header/ios-chatboxes.svg" alt="Chatboxes icon">
-                              </a>
-                         </li>
-                         <li class="menu-header__item" tabindex="0" data-tooltip="Download CV.pdf">
-                              <a href="../assets/Frontend Skaretskiy Yevhen (EN).pdf" download>
-                                   <img src="../img/icons/Header/ios-copy.svg" alt="Download icon">
-                              </a>
-                         </li>
-                         <li class="menu-header__item" tabindex="0" data-tooltip="Email message">
-                              <a href="mailto:yevhenskaretskiy@gmail.com">
-                                   <img src="../img/icons/Header/ios-email.svg" alt="Email icon">
-                              </a>
-                         </li>
-                    </ul>
-               </nav>
-          </div>
-          <div class="header__img-block">
-               <article class="header__intro-cart intro-cart">
-                    <h4 class="intro-cart__greeting" data-i18n="header_hi">Hi,</h4>
-                    <h6 class="intro-cart__personal-info" data-i18n="header_name">
-                         I am Yevhen, <wbr data-i18n="header_field">Front-End Developer</wbr>
-                    </h6>
-                    <p class="intro-cart__description" data-i18n="header_location">Location - <span>Ukraine</span>,
-                         more than <b>1.5 years</b> of experience of working in an IT company. <br> Open minded, patient and delighted
-                         with what <wbr>I do!</wbr></p>
-                    <nav class="intro-cart__socials-network">
+		<header class="header _container-header">
+	<div class="header__row">
+		<div class="header__menu menu-header">
+			<a href="#" class="menu-header__logo">
+				<img src="../img/icons/Header/Logo.svg" alt="Logo" />
+			</a>
+			<nav>
+				<ul class="menu-header__list">
+					<li class="menu-header__item" tabindex="0" data-tooltip="Interview">
+						<a href="#interview">
+							<img
+								src="../img/icons/Header/ios-contact-outline.svg"
+								alt="Profile icon"
+							/>
+						</a>
+					</li>
+					<li
+						class="menu-header__item"
+						tabindex="0"
+						data-tooltip="Certificates"
+					>
+						<a href="#certificates">
+							<img
+								src="../img/icons/Header/ios-plus-outline.svg"
+								alt="Plus icon"
+							/>
+						</a>
+					</li>
+					<li class="menu-header__item" tabindex="0" data-tooltip="Porfolio">
+						<a href="#porfolio">
+							<img
+								src=" ../img/icons/Header/ios-keypad.svg"
+								alt="Keypad icon"
+							/>
+						</a>
+					</li>
+					<li class="menu-header__item" tabindex="0" data-tooltip="SendMessage">
+						<a href="#sendmessage">
+							<img
+								src="../img/icons/Header/ios-chatboxes.svg"
+								alt="Chatboxes icon"
+							/>
+						</a>
+					</li>
+					<li
+						class="menu-header__item"
+						tabindex="0"
+						data-tooltip="Download CV.pdf"
+					>
+						<a href="../assets/Frontend Skaretskiy Yevhen (EN).pdf" download>
+							<img src="../img/icons/Header/ios-copy.svg" alt="Download icon" />
+						</a>
+					</li>
+					<li
+						class="menu-header__item"
+						tabindex="0"
+						data-tooltip="Email message"
+					>
+						<a href="mailto:yevhenskaretskiy@gmail.com">
+							<img src="../img/icons/Header/ios-email.svg" alt="Email icon" />
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__img-block">
+			<article class="header__intro-cart intro-cart">
+				<h4 class="intro-cart__greeting" data-i18n="header_hi">Hi,</h4>
+				<h6 class="intro-cart__personal-info" data-i18n="header_name">
+					I am Yevhen, <span data-i18n="header_field">Front-End Developer</span>
+				</h6>
+				<p class="intro-cart__description" data-i18n="header_location">
+					Location - <span>Ukraine</span>, more than <b>1.5 years</b> of
+					experience of working in an IT company. <br />
+					Open minded, patient and delighted with what I do!
+				</p>
+				<nav class="intro-cart__socials-network">
      <ul class="intro-cart__list-network">
           <li class="intro-cart__social-item social-item_instagram">
                <a href="https://www.instagram.com/skaretskiy">
@@ -92,12 +118,14 @@
           </li>
      </ul>
 </nav>
-               </article>
-               <div class="header__settings-wrapper" tabindex="1">
-                    <button class="header__settings-icon">
-                         <img src="../img/icons/Header/Settings.svg" alt="Settings">
-                    </button>
-                    <div class="page__settings settings-popup">
+			</article>
+		</div>
+
+		<div class="header__settings-wrapper" tabindex="1">
+			<button class="header__settings-icon">
+				<img src="../img/icons/Header/Settings.svg" alt="Settings" />
+			</button>
+			<div class="page__settings settings-popup">
      <div class="settings-popup__theme" tabindex="1">
      </div>
      <div class="settings-popup__lang" tabindex="1">
@@ -109,11 +137,10 @@
           </div>
      </div>
 </div>
-               </div>
-
-          </div>
-          </section>
+		</div>
+	</div>
 </header>
+
 		<main class="page _container">
 			<section class="page__rewards rewards">
      <ul class="rewards__list">
@@ -141,7 +168,9 @@
      </ul>
      <aside class="rewards__own-photo own-photo">
      </aside>
-</section> <section class="page__experience-section experience-section">
+</section>
+			<!-- Experience -->
+			<section class="page__experience-section experience-section">
 	<table class="experience-section__table-row">
 		<thead>
 			<tr>
@@ -226,6 +255,7 @@
 	</aside>
 </section>
 
+			<!-- Work -->
 			<section class="page__works works" id="porfolio">
 	<h4 class="works__title section-title" data-i18n="works-title">Portfolio</h4>
 	<div class="works__project-wrapper">
@@ -355,7 +385,37 @@
 		</button>
 	</div>
 </section>
- <section class="page__education education-block">
+
+			<!-- Certificates -->
+			<section class="page__certificates certificates" id="certificates">
+     <h6 data-i18n="certificates_title">Certificates</h6>
+     <div class="certificates__swiper own-swiper">
+          <div class="own-swiper__certificate-swiper mySwiper">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                         <img src="../img/main/UdemiJS.jpg" alt="JavaScript certificate">
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="../img/main/ENcertificate.jpg" alt="EnglishDOM certificate">
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="../img/main/UdemiJS+React.jpg" alt="React certificate">
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="../img/main/EN_pre_certificate.jpg" alt="EnglishDOM certificate">
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="../img/main/UdemiTS.jpg" alt="TypeScript certificate">
+                    </div>
+               </div>
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+
+          </div>
+     </div>
+</section>
+			<!-- Education -->
+			<section class="page__education education-block">
 	<h5 class="education-block__title section-title">Education Proccess</h5>
 	<div class="education-block__row">
 		<div class="education-block__img-block img-block">
@@ -372,10 +432,10 @@
 		<div class="education-block__text-block education-text">
 			<ul class="education-text__tech-list">
 				<!-- HTML / CSS -->
-				<li class="education-text__tech-item">
-					<h6 class="education-text__tech-title">HTML / СSS</h6>
+				<li class="education-text__tech-item" data-education_img_url="smth...">
+					<h6 class="education-text__tech-title activeTrigger">HTML / СSS</h6>
 
-					<ul class="education-text__resourse-list resourse-list">
+					<ul class="education-text__resourse-list resourse-list open-item">
 						<span class="resourse-list__information-title"
 							>Information sources:</span
 						>
@@ -460,7 +520,10 @@
 					</ul>
 				</li>
 				<!-- JavaScript -->
-				<li class="education-text__tech-item">
+				<li
+					class="education-text__tech-item"
+					data-education_img_url="template JS..."
+				>
 					<h6 class="education-text__tech-title">JavaScript (ES6)</h6>
 
 					<ul class="education-text__resourse-list resourse-list">
@@ -573,7 +636,10 @@
 					</ul>
 				</li>
 				<!-- ReactJS -->
-				<li class="education-text__tech-item">
+				<li
+					class="education-text__tech-item"
+					data-education_img_url="template React..."
+				>
 					<h6 class="education-text__tech-title">ReactJS and Redux</h6>
 
 					<ul class="education-text__resourse-list resourse-list">
@@ -640,7 +706,10 @@
 					</ul>
 				</li>
 				<!-- TypeScript -->
-				<li class="education-text__tech-item">
+				<li
+					class="education-text__tech-item"
+					data-education_img_url="template TS..."
+				>
 					<h6 class="education-text__tech-title">TypeScript</h6>
 
 					<ul class="education-text__resourse-list resourse-list">
@@ -699,7 +768,10 @@
 					</ul>
 				</li>
 				<!-- Another stuff -->
-				<li class="education-text__tech-item">
+				<li
+					class="education-text__tech-item"
+					data-education_img_url="template Mess..."
+				>
 					<h6 class="education-text__tech-title">
 						Another stuff (Chrome extensions, Algoritms, React Native)
 					</h6>
@@ -744,41 +816,25 @@
 </section>
 
 <!-- data-i18n="education-title" -->
- <section class="page__certificates certificates" id="certificates">
-     <h6 data-i18n="certificates_title">Certificates</h6>
-     <div class="certificates__swiper own-swiper">
-          <div class="own-swiper__certificate-swiper mySwiper">
-               <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                         <img src="../img/main/UdemiJS.jpg" alt="JavaScript certificate">
-                    </div>
-                    <div class="swiper-slide">
-                         <img src="../img/main/ENcertificate.jpg" alt="EnglishDOM certificate">
-                    </div>
-                    <div class="swiper-slide">
-                         <img src="../img/main/UdemiJS+React.jpg" alt="React certificate">
-                    </div>
-                    <div class="swiper-slide">
-                         <img src="../img/main/EN_pre_certificate.jpg" alt="EnglishDOM certificate">
-                    </div>
-                    <div class="swiper-slide">
-                         <img src="../img/main/UdemiTS.jpg" alt="TypeScript certificate">
-                    </div>
-               </div>
-               <div class="swiper-button-prev"></div>
-               <div class="swiper-button-next"></div>
 
-          </div>
-     </div>
-</section>
+			<!--Interview -->
 			<section class="page__interview interview" id="interview">
-     <h2 class="interview__title">Interview</h2>
-     <div class="interview__iframe-wrapper" id="frame">
-          <iframe width="885" height="498" src="https://www.youtube.com/embed/sZvHJvsVT3M" title="1. Співбесіда Junior Fronted розробника | JavaScript React Developer"
-               frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-     </div>
+	<h5 class="interview__title">Interview</h5>
+	<div class="interview__iframe-wrapper" id="frame">
+		<iframe
+			width="885"
+			height="498"
+			src="https://www.youtube.com/embed/sZvHJvsVT3M"
+			title="1. Співбесіда Junior Fronted розробника | JavaScript React Developer"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen
+		></iframe>
+	</div>
 </section>
+
 		</main>
+		<!--Footer -->
 		<footer class="page__footer footer">
      <div class="footer__row _container">
           <div class="footer__contact-info contact-info">
@@ -848,7 +904,9 @@
      </form>
 </div>
      </div>
-</footer> <template id="project-template">
+</footer>
+		<!--Tempalte -->
+		<template id="project-template">
 	<div class="works__project-item">
 		<figure class="works__project-img">
 			<img src="" alt="Project image" />
@@ -867,7 +925,7 @@
 	</div>
 </template>
 
-		
+
 		<script src="js/app.min.js" defer></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"

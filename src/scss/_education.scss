@@ -10,28 +10,31 @@
 	}
 
 	&__row {
-		display: flex;
-		justify-content: center;
-		align-items: start;
-		gap: 10px;
-
 		margin-top: 40px;
+
+		@media (min-width: $md3) {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: start;
+			gap: 10px;
+		}
 	}
 
 	&__img-block {
 		flex: 1 0 40%;
 		min-width: 150px;
 		text-align: center;
+
+		@media (max-width: $md3) {
+			display: none;
+		}
 	}
 
 	&__text-block {
-		flex: 1 1 40%;
-
-		@media (max-width: 455px) {
-			padding: 10px;
-			position: absolute;
-			background-color: #000;
-			opacity: 0.78;
+		@media (min-width: $md3) {
+			flex: 1 1 40%;
+			align-self: center;
 		}
 	}
 }
@@ -42,11 +45,25 @@
 	&__sticky-div {
 		position: relative;
 
-		height: 1800px;
+		height: 1810px;
+
+		@media (max-width: 1072px) {
+			height: 2210px;
+		}
+
+		@media (max-width: $md2) {
+			height: 2550px;
+		}
+
+		@media (max-width: 570px) {
+			height: 3000px;
+		}
 	}
 
 	&__content {
 		display: inline-block;
+		width: 100%;
+		max-width: 500px;
 		position: sticky;
 		top: 20px;
 
@@ -57,7 +74,7 @@
 
 	&__first-img {
 		width: 100%;
-		height: 450px;
+		height: 350px;
 		object-fit: fit;
 
 		@media (max-width: $md1) {
@@ -71,21 +88,19 @@
 .education-text {
 	&__tech-list {
 		color: $BLACK;
-
-		@media (max-width: 455px) {
-			color: $WHITE;
-		}
 	}
 
 	&__tech-item {
 		line-height: 1.4;
+
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
 	}
 
 	&__tech-title {
-		padding-bottom: 5px;
+		position: relative;
+		padding: 0 15px 10px 10px;
 		color: $GOLD;
 		font-size: 18px;
 		line-height: 1;
@@ -93,10 +108,25 @@
 		font-weight: 700;
 		border-bottom: 2px solid $GOLD;
 
-		@media (max-width: 455px) {
-			color: $WHITE;
-			border-bottom: 2px solid $WHITE;
-			text-align: center;
+		@media (max-width: $md3) {
+			&::after {
+				content: '';
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+
+				position: absolute;
+				right: 10px;
+				top: -5px;
+				background: url('../img/icons/education/arr-accordion.svg') center/cover
+					no-repeat;
+			}
+		}
+
+		&.activeTrigger {
+			&::after {
+				transform: rotate(180deg);
+			}
 		}
 	}
 
@@ -109,10 +139,9 @@
 			font-size: 14px;
 			text-decoration: underline;
 
-			@media (max-width: 455px) {
+			@media (max-width: $md3) {
 				font-size: 16px;
 				font-weight: 900;
-				color: #9570e6;
 			}
 		}
 	}
@@ -133,16 +162,11 @@
 		}
 	}
 }
+
 .resourse-list {
 	&__information-title {
 		font-family: 'lato400italic';
 		font-weight: 700;
-
-		@media (max-width: 455px) {
-			font-family: 'lato400';
-			font-weight: 400;
-			font-size: 18px;
-		}
 	}
 	&__item {
 		padding: 10px;
@@ -169,14 +193,52 @@
 					no-repeat;
 			}
 		}
-
-		@media (max-width: $md3) {
-			padding: 10px 0;
-		}
 	}
 
 	&__youtube {
 		color: red;
 		font-weight: 700;
 	}
+
+	@media (max-width: $md3) {
+		font-family: 'lato400';
+		font-weight: 400;
+		font-size: 18px;
+
+		&:not(.resourse-list.open-item) {
+			display: none;
+		}
+	}
+}
+
+//=======Dark Theme============================================================
+body.dark {
+	.education-text {
+		&__tech-list {
+			color: $WHITE;
+		}
+	}
+	.resourse-list {
+		&__item {
+			span:first-child {
+				color: green !important;
+			}
+
+			a {
+				display: inline-block;
+
+				&::before {
+					content: '';
+					background: url('../img/icons/education/share-arrow-wht.svg')
+							center/cover no-repeat,
+						transparent;
+				}
+			}
+		}
+	}
+}
+
+//==Change animation====================================================
+.animate__animated.animate__slideInDown {
+	--animate-duration: 0.3s;
 }

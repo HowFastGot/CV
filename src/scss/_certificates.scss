@@ -1,6 +1,7 @@
 .certificates {
-	margin-top: 50px;
+	margin: 50px auto 0;
 	position: relative;
+	width: 100%;
 	overflow: hidden;
 
 	h6 {
@@ -16,13 +17,13 @@
 .own-swiper {
 	position: relative;
 	width: 70%;
-	padding: 10px 120px;
 	margin: 0 auto;
-
+	padding: 10px 120px;
 	overflow: hidden;
 
 	&__certificate-swiper {
-		margin-top: 80px;
+		margin: 80px auto 0;
+		width: 100%;
 
 		@media (max-width: $md3) {
 			margin-top: 30px;

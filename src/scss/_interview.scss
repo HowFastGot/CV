@@ -1,19 +1,33 @@
 .interview {
 	&__title {
+		visibility: hidden;
+
 		font-family: 'lato900';
 		font-size: 30px;
 		color: $BLACK;
 		text-align: center;
+
+		transition: all 0.3s ease 0s;
+
+		&.animate__animated {
+			visibility: visible;
+		}
 	}
 
 	&__iframe-wrapper {
+		visibility: hidden;
+
 		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 498px;
 		margin: 40px 10px;
+		transition: all 0.3s ease 0s;
 
+		&.animate__animated {
+			visibility: visible;
+		}
 		iframe {
 			height: 100%;
 		}
@@ -24,6 +38,16 @@
 
 		@media (max-width: $md3) {
 			height: 200px;
+		}
+	}
+}
+
+//===========Dark======================================
+
+body.dark {
+	.interview {
+		&__title {
+			color: $WHITE;
 		}
 	}
 }
