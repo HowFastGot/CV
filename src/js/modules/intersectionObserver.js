@@ -27,6 +27,13 @@ function getKindOfAnimation(targetElementType) {
 	}
 }
 
+function changeEducationImg(interSectionTargetElement) {
+	interSectionTargetElement
+		.closest('.education-block__row')
+		.querySelector('img')
+		.setAttribute('src', interSectionTargetElement.dataset.education_img_url);
+}
+
 function animateTargetElement(interSectionTargetElement) {
 	interSectionTargetElement.classList.add(
 		'animate__animated',
@@ -41,7 +48,7 @@ function handleEducationItemsScroll(entries) {
 
 	if (!isIntersecting) return;
 
-	console.log(interSectionTargetElement.dataset.education_img_url);
+	changeEducationImg(interSectionTargetElement);
 }
 
 function handleScrollIntersection(entries) {
@@ -62,7 +69,7 @@ function getCreatedIntersectionObserver(isMultiElemsObserve) {
 	};
 	const configEducationSectionObject = {
 		root: null,
-		rootMargin: '50px',
+		rootMargin: '0px',
 		threshold: 1,
 	};
 

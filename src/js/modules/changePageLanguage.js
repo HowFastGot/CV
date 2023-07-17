@@ -1,3 +1,4 @@
+import {changePositionPseudoWorkTitle} from './changePositionPseudoTitle.js';
 import {findDOM_node} from './findDOM_node.js';
 import {deleteAddedProjects} from './loading-projects.js';
 
@@ -41,14 +42,18 @@ const changeActiveLangItem = (e) => {
 		}
 	});
 
-	setUpSessionStorageLanguage(
-		languageItemsArray[indexOfClickedItem].textContent.toLowerCase()
-	);
+	const choosenLang = languageItemsArray[indexOfClickedItem].textContent
+		.toLowerCase()
+		.trim();
+
+	setUpSessionStorageLanguage(choosenLang);
+	changePositionPseudoWorkTitle(choosenLang);
 };
 
 const setUpSessionStorageLanguage = (language = 'en') => {
 	language && sessionStorage.setItem('language', possiblePageLangs[language]);
 };
+
 function getCurrentPageLanguage() {
 	return sessionStorage.getItem('language') ?? 'en';
 }
@@ -76,8 +81,11 @@ const changeTextContentofPage = ({English, Ukrainian, Russian}) => {
 
 	textBlocks.forEach((textBlock) => {
 		const elementKeyAttr = textBlock.dataset.i18n;
+		const translatedText = polyglot.t(elementKeyAttr);
 
-		textBlock.innerHTML = polyglot.t(elementKeyAttr);
+		if (elementKeyAttr === translatedText) return;
+
+		textBlock.innerHTML = translatedText;
 	});
 };
 
@@ -99,6 +107,8 @@ export function changePageLanguage(languagesBlockSelector) {
 	setUpSessionStorageLanguage(getCurrentPageLanguage() ?? possiblePageLangs.en);
 	pageInternationalization(getCurrentPageLanguage());
 	setDefaultActiveLangTrigger();
+
+	changePositionPseudoWorkTitle(getCurrentPageLanguage());
 
 	parentLangBlock &&
 		parentLangBlock.addEventListener('click', comprehensiveFunction);

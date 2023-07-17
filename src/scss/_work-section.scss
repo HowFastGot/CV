@@ -37,6 +37,11 @@
 			}
 		}
 
+		&.slavic-language::after {
+			left: -215px;
+			width: 215px;
+		}
+
 		@media (max-width: 1006px) {
 			display: block;
 			border: 0;

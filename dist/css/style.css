@@ -249,7 +249,7 @@ h6 {
   display: block !important;
   opacity: 1;
   top: 30px;
-  right: 25px;
+  right: -10px;
   overflow: visible;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
@@ -943,6 +943,10 @@ body.dark .experience-section__skill-range {
   .works__title::after {
     display: none;
   }
+}
+.works__title.slavic-language::after {
+  left: -215px;
+  width: 215px;
 }
 @media (max-width: 1006px) {
   .works__title {
@@ -1992,6 +1996,7 @@ body.dark .certificates h6 {
   font-size: 30px;
   color: #000000;
   text-align: center;
+  text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -2045,6 +2050,8 @@ body.dark .interview__title {
 
 .education-block__title {
   text-align: center;
+  text-transform: uppercase;
+  font-family: "lato900";
 }
 .education-block__row {
   margin-top: 40px;
@@ -2081,9 +2088,6 @@ body.dark .interview__title {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 40%;
             flex: 1 1 40%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
 }
 
@@ -2093,7 +2097,7 @@ body.dark .interview__title {
 }
 @media (max-width: 1072px) {
   .img-block__sticky-div {
-    height: 2210px;
+    height: 2310px;
   }
 }
 @media (max-width: 767.98px) {
@@ -2103,7 +2107,7 @@ body.dark .interview__title {
 }
 @media (max-width: 570px) {
   .img-block__sticky-div {
-    height: 3000px;
+    height: 3200px;
   }
 }
 .img-block__content {
@@ -2111,7 +2115,7 @@ body.dark .interview__title {
   width: 100%;
   max-width: 500px;
   position: sticky;
-  top: 20px;
+  top: 120px;
 }
 @media (max-width: 445px) {
   .img-block__content {
@@ -2120,19 +2124,17 @@ body.dark .interview__title {
 }
 .img-block__first-img {
   width: 100%;
-  height: 350px;
-  -o-object-fit: fit;
-     object-fit: fit;
-}
-@media (max-width: 991.98px) {
-  .img-block__first-img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
+  max-height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .education-text__tech-list {
-  color: #000000;
+  padding: 10px 5px;
+  color: #FFFFFF;
+  background: -o-linear-gradient(308.49deg, rgb(0, 0, 0), rgba(48, 47, 49, 0.8));
+  background: linear-gradient(141.51deg, rgb(0, 0, 0), rgba(48, 47, 49, 0.8));
+  border-radius: 15px 0 0 15px;
 }
 .education-text__tech-item {
   line-height: 1.4;
@@ -2196,6 +2198,9 @@ body.dark .interview__title {
     padding: 0;
   }
 }
+.education-text__additional-info_description b {
+  color: #D6BD96;
+}
 
 .resourse-list__information-title {
   font-family: "lato400italic";
@@ -2221,7 +2226,7 @@ body.dark .interview__title {
   width: 10px;
   height: 10px;
   margin-right: 5px;
-  background: url("../img/icons/education/share-arrow.svg") center/cover no-repeat;
+  background: url("../img/icons/education/share-arrow-wht.svg") center/cover no-repeat;
 }
 .resourse-list__youtube {
   color: red;
@@ -2239,17 +2244,13 @@ body.dark .interview__title {
 }
 
 body.dark .education-text__tech-list {
-  color: #FFFFFF;
+  background: none;
 }
 body.dark .resourse-list__item span:first-child {
-  color: green !important;
+  color: #D6BD96 !important;
 }
 body.dark .resourse-list__item a {
   display: inline-block;
-}
-body.dark .resourse-list__item a::before {
-  content: "";
-  background: url("../img/icons/education/share-arrow-wht.svg") center/cover no-repeat, transparent;
 }
 
 .animate__animated.animate__slideInDown {
@@ -2344,7 +2345,7 @@ body.dark .section-title {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   text-align: center;
-  cursor: pointer;
+  cursor: pointer !important;
   font-weight: 900;
   font-size: 14px;
   line-height: 24px;
