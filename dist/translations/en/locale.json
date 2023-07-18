@@ -1,8 +1,7 @@
 {
 	"English": {
 		"header_hi": "Hi,",
-		"header_name": "I am Yevhen,",
-		"header_field": "Front-End Developer",
+		"header_name": "I am Yevhen, <span>Front-End Developer</span>",
 		"header_location": "Location - <span>Ukraine</span>, more than <b>1.5 years</b> of experience of working in an IT company. <br> Open minded, patient and delighted with what <wbr>I do!</wbr>",
 
 		"main-rewards_englishLevel": "B1 English",

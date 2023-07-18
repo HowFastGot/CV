@@ -1,6 +1,4 @@
-function isMultiElements(collection) {
-	return collection.length > 1;
-}
+import {isMultiElements} from './isMultiElements.js';
 
 function retrivePropsObjectNeeded(scrollEventObj) {
 	const {isIntersecting, target: interSectionTargetElement} = scrollEventObj;

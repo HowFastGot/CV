@@ -7,9 +7,11 @@ import {loadingProjects} from './modules/loading-projects.js';
 import {handleFocusForm} from './modules/handleFocusForm.js';
 import {accordion} from './modules/accordion.js';
 import {interSectionScrollHandler} from './modules/intersectionObserver.js';
+import {animatePageElements} from './modules/animatePageElements.js';
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function (event) {
 	'use strict';
+	animatePageElements(event);
 
 	showTooltip();
 	changePageTheme('.settings-popup');

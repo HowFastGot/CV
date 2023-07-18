@@ -1,8 +1,7 @@
 {
 	"Russian": {
 		"header_hi": "Привет,",
-		"header_name": "Мое имя Евгений,",
-		"header_field": "Front-End Разработчик",
+		"header_name": "Мое имя Евгений, <span>Front-End Разработчик</span>",
 		"header_location": "Местопроживание - <span>Украина</span>, больше <b>1.5 лет</b> опыта работы в IT компании.<br> Открытый, стресоустойчив и вдохновлен<wbr> тем что я делаю!</wbr>",
 
 		"main-rewards_englishLevel": "Английский B1",

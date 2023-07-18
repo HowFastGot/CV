@@ -116,7 +116,6 @@ body {
 
 .tooltip {
 	position: absolute;
-	z-index: 2;
 	right: -135px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -154,7 +153,6 @@ body {
 }
 
 #loading-dialog {
-	z-index: -1;
 	position: fixed;
 	left: 0;
 	top: 0;

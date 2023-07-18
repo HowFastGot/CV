@@ -1,8 +1,7 @@
 {
 	"Ukrainian": {
 		"header_hi": "Привіт,",
-		"header_name": "Моє ім'я Євген,",
-		"header_field": "Front-End Розробник",
+		"header_name": "Моє ім'я Євген, <span>Front-End Розробник</span>",
 		"header_location": "Локація - <span>Україна</span>, більше ніж <b>1.5 роки</b> досвіду роботи в IT компанії.<br> Відкритий, стресостійкий та захоплений<wbr> своє справою !</wbr>",
 
 		"main-rewards_englishLevel": "Англійська B1",

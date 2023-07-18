@@ -12,14 +12,18 @@
 	}
 
 	&__menu {
-		margin: 5px 12px 10px 12px;
+		margin: 5px 25px 10px 5px;
+
+		nav {
+			margin: 0 auto;
+		}
 
 		@media (min-width: $md3) {
 			margin-top: 11px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			align-items: space-between;
+			align-items: center;
 			gap: 16px;
 		}
 
@@ -43,7 +47,6 @@
 			min-height: 312px;
 			border-radius: 0px;
 			top: -80px;
-			z-index: -1;
 		}
 	}
 
@@ -81,8 +84,11 @@
 		top: 20px;
 
 		img {
-			@media (max-width: $md2) {
-				filter: brightness(20%);
+			@media (min-width: $md3) {
+				width: 30px;
+			}
+			@media (min-width: $md2) {
+				filter: brightness(900%);
 			}
 
 			@media (max-width: $md3) {
@@ -109,7 +115,7 @@
 					top: 50px;
 					right: 13px;
 					border-radius: 0 0 10px 10px;
-					background-color: #311b92;
+					background-color: #d1c4e9;
 				}
 			}
 		}
@@ -140,6 +146,7 @@
 	}
 
 	&__settings-icon {
+		visibility: hidden;
 		transition: all 0.7s ease 0s;
 
 		&:hover,
@@ -163,38 +170,49 @@
 	}
 
 	&__list {
-		padding: 30px 25px;
+		position: relative;
+		width: 100%;
+		padding: 25px;
+
 		background: $PurpleNav;
 		box-shadow: 0px 0px 14px #d1c4e9;
 		border-radius: 16px 0 0 16px;
+		z-index: 5;
 
 		@media (max-width: $md2) {
 			display: flex;
-			justify-content: space-between;
+			justify-content: left;
 			align-items: center;
-			padding: 15px 20px 15px 10px;
+			gap: 55px;
+			padding: 15px 60px 15px 15px;
+		}
+
+		@media (max-width: $md2) {
+			gap: 10%;
+		}
+		@media (max-width: $md3) {
+			gap: 13%;
 		}
 	}
 
 	&__item {
 		position: relative;
-		width: 29px;
-		height: 29px;
+		min-width: 20px;
 
 		img {
 			width: 100%;
 			height: 100%;
+			object-fit: contain;
+		}
+
+		@media (max-width: $md2) {
+			max-width: 29px;
 		}
 
 		@media (min-width: $md2) {
 			&:not(:last-child) {
 				margin-bottom: 33px;
 			}
-		}
-
-		@media (max-width: $md3) {
-			width: 20px;
-			height: 20px;
 		}
 	}
 }
@@ -269,24 +287,14 @@
 	}
 }
 
-.social-item {
-	&_instagram {
-	}
-
-	&_telegram {
-	}
-
-	&_linkedin {
-	}
-
-	&_git {
-	}
-}
-
-//<Dark>====================================================================================================================================
+//<Dark>==========================================================================
 
 body.dark {
 	.menu-header {
+		&__logo {
+			filter: brightness(990%);
+		}
+
 		&__list {
 			background-color: $PurpleNav_dark;
 			box-shadow: 0px 2px 14px #311b92;
@@ -298,6 +306,11 @@ body.dark {
 			}
 		}
 	}
+	.menu-header__list {
+		@media (min-width: $md2) {
+			background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+		}
+	}
 
 	.header__settings-wrapper {
 		img {
@@ -305,14 +318,56 @@ body.dark {
 		}
 
 		.settings-popup {
-			.settings-popup__lang-menu {
-			}
+			background-color: #fff;
 		}
 
 		@media (max-width: $md2) {
 			color: #fff;
 			background-color: #311b92;
 			box-shadow: 0px 2px 14px #311b92;
+		}
+	}
+}
+
+//=======Animation=======================
+body {
+	&.dark,
+	&.light {
+		.header__intro-cart {
+			visibility: hidden;
+
+			&.animate__backInUp {
+				visibility: visible;
+			}
+		}
+
+		header .intro-cart__socials-network {
+			visibility: hidden !important;
+
+			&.animate__slideInDown {
+				visibility: visible !important;
+			}
+		}
+		.header__settings-icon {
+			animation-delay: 0.5s;
+			&.animate__rotateIn {
+				visibility: visible;
+			}
+		}
+
+		.menu-header__list {
+			visibility: hidden;
+
+			&.animate__backInLeft {
+				visibility: visible;
+			}
+		}
+		.menu-header__logo {
+			visibility: hidden;
+
+			&.animate__bounceIn {
+				visibility: visible;
+			}
 		}
 	}
 }

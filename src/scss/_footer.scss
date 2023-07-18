@@ -1,148 +1,128 @@
 .footer {
-     padding: 20px 50px;
-     background: linear-gradient(141.51deg, #9C27B0 -18.34%, #651FFF 66.03%);
-     color: aliceblue;
+	padding: 20px 50px;
+	background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+	color: aliceblue;
 
-     @media (min-width: $md1) {
-          padding: 40px 100px;
-     }
+	@media (min-width: $md1) {
+		padding: 40px 100px;
+	}
 
-     @media (max-width: 510px) {
-          padding: 20px;
-     }
+	@media (max-width: 510px) {
+		padding: 20px;
+	}
 
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+	}
 
-     &__row {
-          display: flex;
-          justify-content: space-between;
-          align-items: start;
-     }
+	&__contact-info {
+		margin-top: 50px;
+		text-align: center;
 
-     &__contact-info {
-          margin-top: 100px;
-          text-align: center;
+		@media (max-width: $md1) {
+			margin-top: 50px;
+		}
 
-          @media (max-width: $md1) {
-               margin-top: 50px;
-          }
+		@media (max-width: $md3) {
+			margin-top: 20px;
+		}
+	}
 
-          @media (max-width: $md3) {
-               margin-top: 20px;
-          }
-     }
-
-     & a,
-     button {
-          color: aliceblue;
-     }
+	& a,
+	button {
+		color: aliceblue;
+	}
 }
 
 .contact-info {
+	&__name {
+		position: relative;
+		margin-top: 30px;
+		font-family: 'lato900';
+		color: $GOLD;
+		font-size: 40px;
+		line-height: calc(58 / 48);
 
-     &__name {
-          position: relative;
-          font-family: "lato900";
-          color: $GOLD;
-          font-size: 48px;
-          line-height: calc(58/48);
+		&::before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: -100px;
+			left: 50%;
+			width: 100px;
+			height: 100px;
+			transform: translateX(-50%);
+			background: url('../img/icons/Footer/Name-Logi.svg') no-repeat
+				center/cover;
 
-          &::before {
-               content: "";
-               display: inline-block;
-               position: absolute;
-               top: -100px;
-               left: 50%;
-               width: 100px;
-               height: 100px;
-               transform: translateX(-50%);
-               background: url("../img/icons/Footer/Name-Logi.svg") no-repeat center/cover;
+			@media (max-width: $md3) {
+				width: 50px;
+				height: 50px;
+				top: -50px;
+			}
+		}
 
-               @media (max-width: $md1) {
-                    width: 50px;
-                    height: 50px;
-                    top: -40px;
-               }
+		@media (max-width: $md3) {
+			font-size: 22px;
+			line-height: calc(38 / 28);
+		}
+	}
 
-               @media (max-width: $md3) {
-                    width: 20px;
-                    height: 20px;
-                    top: -20px;
-               }
-          }
+	&__ocupation {
+		font-weight: 400;
+		font-size: 22px;
+		line-height: calc(26 / 22);
 
-          @media (max-width: $md3) {
-               font-size: 28px;
-               line-height: calc(38/28);
-          }
+		@media (max-width: $md1) {
+			font-size: 14px;
+			line-height: calc(18 / 14);
+		}
 
-          @media (max-width: $md3) {
-               font-size: 18px;
-               line-height: calc(28/18);
-          }
+		@media (max-width: $md3) {
+			font-size: 9px;
+			line-height: calc(13 / 9);
+		}
+	}
 
-     }
+	.intro-cart__list-network {
+		justify-content: center;
+		margin: 15px 0;
 
-     &__ocupation {
-          font-weight: 400;
-          font-size: 22px;
-          line-height: calc(26 /22);
+		@media (max-width: $md3) {
+			flex-wrap: wrap;
+			gap: 8px;
 
-          @media (max-width: $md1) {
-               font-size: 14px;
-               line-height: calc(18 /14);
-          }
+			li {
+				flex: 0 1 30%;
+			}
+		}
+	}
 
-          @media (max-width: $md3) {
-               font-size: 9px;
-               line-height: calc(13 /9);
-          }
+	nav:last-child {
+		margin-top: 10px;
 
+		@media (max-width: $md3) {
+			font-size: 10px;
+		}
+	}
 
-     }
+	&__number,
+	&__skype {
+		display: block;
+		line-height: 30px;
+		text-align: left;
+	}
 
-     .intro-cart__list-network {
-          justify-content: center;
-          margin: 15px 0;
+	span {
+		color: $GOLD;
+		margin-left: 20px;
 
-          @media (max-width: $md3) {
-               flex-wrap: wrap;
-               gap: 8px;
-               position: absolute;
-               bottom: -10px;
-               left: -10px;
-
-               li {
-                    flex: 0 1 30%;
-               }
-
-          }
-     }
-
-     nav:last-child {
-          margin-top: 10px;
-
-          @media (max-width: $md3) {
-               font-size: 10px;
-          }
-     }
-
-     &__number,
-     &__skype {
-          display: block;
-          line-height: 30px;
-          text-align: left;
-
-
-     }
-
-     span {
-          color: $GOLD;
-          margin-left: 20px;
-
-          @media (max-width: $md1) {
-               display: block;
-               text-align: left;
-               margin: 0;
-          }
-     }
+		@media (max-width: $md1) {
+			display: block;
+			text-align: left;
+			margin: 0;
+		}
+	}
 }
