@@ -1,14 +1,15 @@
 {
 	"name": "window",
 	"version": "1.0.0",
-	"description": "",
+	"private": true,
+	"homepage": "https://howfastgot.github.io/CV/",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
 		"dev": "gulp",
 		"build": "gulp build --build",
 		"svgSprive": "gulp svgSprive",
-		"deploy": "gulp deployFTP --build",
+		"deploy": "gh-pages -d dist",
 		"zip": "gulp deployZIP --build"
 	},
 	"author": "",
@@ -58,6 +59,7 @@
 	},
 	"dependencies": {
 		"animate.css": "^4.1.1",
+		"gh-pages": "^5.0.0",
 		"node-polyglot": "^2.5.0"
 	},
 	"standard": {

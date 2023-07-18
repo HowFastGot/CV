@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+	<meta http-equiv="Content-Language" content="en" />
+	<meta http-equiv="Content-Language" content="ru" />
 	<meta charset="UTF-8" />
+	<meta
+		name="description"
+		content="Я веб-разработчик (Frontend developer) и дизайнер с опытом работы в создании веб-сайтов. Сайт содержит моё портфолио, выполненные проекты, ссылки на соцсети, контактную форму."
+	/>
+	<meta
+		name="keywords"
+		content="веб-разработчик, портфолио, работы, проекты, Frontend, website portfolio"
+	/>
+	<meta property="og:title" content="Ваше имя - Веб-разработчик и дизайнер" />
+	<meta
+		property="og:description"
+		content="Я веб-разработчик (Frontend developer) и дизайнер с опытом работы в создании веб-сайтов. Сайт содержит моё портфолио, выполненные проекты, ссылки на соцсети, контактную форму. Ознакомьтесь с моими работами и свяжитесь со мной, чтобы обсудить ваши проекты."
+	/>
+	<meta property="og:image" content="/src/img/main/projects/zlatmax.png" />
+	<meta property="og:url" content="#" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Portfolio</title>
+	<title>Skaretskiy Portfolio</title>
 
 	<link
 		rel="apple-touch-icon"
@@ -26,12 +43,12 @@
 
 	<link
 		rel="stylesheet"
-		href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css"
+		href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css?_v=20230718210639"
 	/>
-	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230718210639" />
 	<link
 		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20230718210639"
 	/>
 </head>
 
@@ -201,7 +218,7 @@
           </li>
           <li class="rewards__item rewards__item_own-photo">
                <figure class="own-photo__block">
-                    <img src="../img/own-photo/Me.jpg" alt="Own photo" class="own-photo__img">
+                    <picture><source srcset="../img/own-photo/Me.webp" type="image/webp"><img src="../img/own-photo/Me.jpg" alt="Own photo" class="own-photo__img"></picture>
                </figure>
           </li>
           <li class="rewards__item">
@@ -390,7 +407,7 @@
 		</div>
 		<div class="works__project-item">
 			<figure class="works__project-img">
-				<img src="../img/main/projects/vin_decoder.jpg" alt="Project image" />
+				<picture><source srcset="../img/main/projects/vin_decoder.webp" type="image/webp"><img src="../img/main/projects/vin_decoder.jpg" alt="Project image" /></picture>
 			</figure>
 			<div class="works__project-desc-block">
 				<h6 data-i18n="works_project-vin">VIN Decoder</h6>
@@ -435,32 +452,38 @@
 
 			<!-- Certificates -->
 			<section class="page__certificates certificates" id="certificates">
-     <h6 data-i18n="certificates_title">Certificates</h6>
-     <div class="certificates__swiper own-swiper">
-          <div class="own-swiper__certificate-swiper mySwiper">
-               <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                         <img src="../img/main/UdemiJS.jpg" alt="JavaScript certificate">
-                    </div>
-                    <div class="swiper-slide">
-                         <img src="../img/main/ENcertificate.jpg" alt="EnglishDOM certificate">
-                    </div>
-                    <div class="swiper-slide">
-                         <img src="../img/main/UdemiJS+React.jpg" alt="React certificate">
-                    </div>
-                    <div class="swiper-slide">
-                         <img src="../img/main/EN_pre_certificate.jpg" alt="EnglishDOM certificate">
-                    </div>
-                    <div class="swiper-slide">
-                         <img src="../img/main/UdemiTS.jpg" alt="TypeScript certificate">
-                    </div>
-               </div>
-               <div class="swiper-button-prev"></div>
-               <div class="swiper-button-next"></div>
-
-          </div>
-     </div>
+	<h6 data-i18n="certificates_title">Certificates</h6>
+	<div class="certificates__swiper own-swiper">
+		<div class="own-swiper__certificate-swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<picture><source srcset="../img/main/UdemiJS.webp" type="image/webp"><img src="../img/main/UdemiJS.jpg" alt="JavaScript certificate" /></picture>
+				</div>
+				<div class="swiper-slide">
+					<img
+						src="../img/main/ENcertificate.jpg"
+						alt="EnglishDOM certificate"
+					/>
+				</div>
+				<div class="swiper-slide">
+					<picture><source srcset="../img/main/UdemiJS+React.webp" type="image/webp"><img src="../img/main/UdemiJS+React.jpg" alt="React certificate" /></picture>
+				</div>
+				<div class="swiper-slide">
+					<img
+						src="../img/main/EN_pre_certificate.jpg"
+						alt="EnglishDOM certificate"
+					/>
+				</div>
+				<div class="swiper-slide">
+					<picture><source srcset="../img/main/UdemiTS.webp" type="image/webp"><img src="../img/main/UdemiTS.jpg" alt="TypeScript certificate" /></picture>
+				</div>
+			</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
 </section>
+
 			<!-- Education -->
 			<section class="page__education education-block">
 	<h5 class="education-block__title section-title" data-i18n="education-title">
@@ -1095,7 +1118,7 @@
 </template>
 
 
-		<script src="js/app.min.js" defer></script>
+		<script src="js/app.min.js?_v=20230718210639" defer></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
 			defer
