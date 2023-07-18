@@ -1,0 +1,186 @@
+{
+	"projects": {
+		"3": {
+			"en": {
+				"title": "CV website of a target expert",
+				"description": "The website was created as a CV of target expert Daria Vovk. The website presents a list of services, portfolio and experience of a specialist.</br> Via this website we can contact the expert, follow to her social media, discover her achievements and so on.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>ReactJS</span>",
+				"codeLink": "https://github.com/HowFastGot/portfolio-target",
+				"liveDemoLink": "https://www.vovk-digital.com",
+				"imgURL": "../img/main/projects/targetolog.jpg"
+			},
+			"ua": {
+				"title": "CV-портфоліо таргетолога",
+				"description": "Веб-сайт створено як CV таргетолога Дарії Вовк. На сайті представлений перелік послуг, портфоліо та досвід спеціаліста.</br> За допомогою цього веб-сайту ми можемо зв’язатися з експертом, стежити за її новинами в соціальних мережах, дізнатися про її досягнення тощо.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>ReactJS</span>",
+				"codeLink": "https://github.com/HowFastGot/portfolio-target",
+				"liveDemoLink": "https://www.vovk-digital.com",
+				"imgURL": "../img/main/projects/targetolog.jpg"
+			},
+			"ru": {
+				"title": "CV-портфолио таргетолога",
+				"description": "Веб-сайт создан як CV таргетолога Дарии Вовк. На сайте представлен перелік по, портфолио и досвід спеціаліста.</br> Через этот веб-сайт мы можем связаться с экспертом, подписаться на ее социальные сети, узнать о ее достижениях и так далее.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>ReactJS</span>",
+				"codeLink": "https://github.com/HowFastGot/portfolio-target",
+				"liveDemoLink": "https://www.vovk-digital.com",
+				"imgURL": "../img/main/projects/targetolog.jpg"
+			}
+		},
+		"4": {
+			"en": {
+				"title": "Cafe Pizza",
+				"description": "The full functionality for online order placement by customers has been developed. On the main page, it is possible to filter pizzas by type, choose various sizes, and select the type of crust. A shopping cart has been implemented, allowing customers to modify the quantity of added items.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>ReactJS</span> <span>Redux</span> <span>React Router</span> <span>Jest</span>",
+				"codeLink": "https://github.com/HowFastGot/Pizza-project",
+				"liveDemoLink": "https://r4fj2r-3000.csb.app/",
+				"imgURL": "../img/main/projects/pizza.png"
+			},
+			"ua": {
+				"title": "Cafe Pizza",
+				"description": "Був створенний повноцінний функціонал для оформлення онлайн замовлень клієнтами. На головній сторінці можливо відфільтрувати піци за типом, обрати різні розміри та тип тіста. Реалізована корзина товару в якій можливо змінювати кількість доданого товару.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>ReactJS</span> <span>Redux</span> <span>React Router</span> <span>Jest</span>",
+				"codeLink": "https://github.com/HowFastGot/Pizza-project",
+				"liveDemoLink": "https://r4fj2r-3000.csb.app/",
+				"imgURL": "../img/main/projects/pizza.png"
+			},
+			"ru": {
+				"title": "Cafe Pizza",
+				"description": "Была разработана полноценная функциональность для оформления онлайн заказов клиентами. На главной странице возможно отфильтровать пиццы по типу, выбрать различные размеры и тип теста. Реализована корзина товара, в которой можно изменять количество добавленного товара.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>ReactJS</span> <span>Redux</span> <span>React Router</span> <span>Jest</span>",
+				"codeLink": "https://github.com/HowFastGot/Pizza-project",
+				"liveDemoLink": "https://r4fj2r-3000.csb.app/",
+				"imgURL": "../img/main/projects/pizza.png"
+			}
+		},
+		"5": {
+			"en": {
+				"title": "Pictures Shop",
+				"description": "The website serves as an online webstore for a pictures collection. It provides a platform where visitors can browse and purchase a wide range of high-quality pictures. The website features a comprehensive gallery showcasing the collection, allowing users to explore and discover various categories and themes.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>SwiperJS</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Pictures_orders",
+				"liveDemoLink": "https://zrw839-3000.csb.app/",
+				"imgURL": "../img/main/projects/Pictures_store.png"
+			},
+			"ua": {
+				"title": "Онлайн магазин картин",
+				"description": "Веб-сайт слугує онлайн-магазином для колекції фотографій. Він надає платформу, де відвідувачі можуть переглядати та купувати широкий вибір високоякісних зображень. Веб-сайт містить повну галерею, що демонструє колекцію, що дозволяє користувачам досліджувати та відкривати для себе різні категорії та теми.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>SwiperJS</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Pictures_orders",
+				"liveDemoLink": "https://zrw839-3000.csb.app/",
+				"imgURL": "../img/main/projects/Pictures_store.png"
+			},
+			"ru": {
+				"title": "Онлайн магазин картин",
+				"description": "Веб-сайт служит интернет-магазином для коллекции изображений. Он предоставляет платформу, на которой посетители могут просматривать и покупать широкий спектр высококачественных изображений. На веб-сайте представлена обширная галерея, демонстрирующая коллекцию, позволяющая пользователям исследовать и находить различные категории и темы.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>SwiperJS</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Pictures_orders",
+				"liveDemoLink": "https://zrw839-3000.csb.app/",
+				"imgURL": "../img/main/projects/Pictures_store.png"
+			}
+		},
+		"6": {
+			"en": {
+				"title": "Wise Window Shop",
+				"description": "Seamless and convenient platform for all your window needs. A customer can easily explore and discover a wide range of windows tailored to your specific requirements. With this website, customers can effortlessly find the perfect windows to enhance the beauty, functionality, and energy efficiency of your space.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>JQuery</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Irvas_service",
+				"liveDemoLink": "https://h6l6g3-3000.csb.app/",
+				"imgURL": "../img/main/projects/Window-shop.png"
+			},
+			"ua": {
+				"title": "Онлайн магазин металопластикових вікон",
+				"description": "Безшовна та зручна платформа для всіх ваших віконних потреб. Клієнт може легко досліджувати та знаходити широкий асортимент вікон, адаптованих до ваших конкретних вимог. За допомогою цього веб-сайту клієнти можуть легко знайти ідеальні вікна, щоб підвищити красу, функціональність та енергоефективність вашого простору.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>JQuery</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Irvas_service",
+				"liveDemoLink": "https://h6l6g3-3000.csb.app/",
+				"imgURL": "../img/main/projects/Window-shop.png"
+			},
+			"ru": {
+				"title": "Онлайн магазин  металопластиковых окон",
+				"description": "Бесшовная и удобная платформа для всех ваших оконных потребностей. Клиент может легко изучить и открыть для себя широкий ассортимент окон, адаптированных к вашим конкретным требованиям. С помощью этого веб-сайта клиенты могут легко найти идеальные окна, чтобы улучшить красоту, функциональность и энергоэффективность вашего помещения.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>JQuery</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Pictures_orders",
+				"liveDemoLink": "https://h6l6g3-3000.csb.app/",
+				"imgURL": "../img/main/projects/Window-shop.png"
+			}
+		},
+		"7": {
+			"en": {
+				"title": "Sport equipment shop",
+				"description": "Four pages of an online sports equipment store have been developed: the home page, product page, shopping cart, and product catalog. The website incorporates all the functionality of an online store and includes interactive elements, sliders, and more.",
+				"technologies": "<span>SCSS</span> <span>HTML</span> <span>JavaScript</span> <span>SwiperJS</span>",
+				"codeLink": "https://github.com/HowFastGot/eCommerce_website",
+				"liveDemoLink": "https://98ngzs-3000.csb.app/",
+				"imgURL": "../img/main/projects/sport-equipment.png"
+			},
+			"ua": {
+				"title": "Онлайн магазин спортивного інвентаря",
+				"description": "Було розроблено 4 сторінки онлайн-магазину спортивного інвентаря (головна, сторінка товару, кошик, каталог товарів). На сайті реалізована вся функціональність онлайн-магазину, використовувалися інтерактивні елементи, слайдери і т.д.",
+				"technologies": "<span>SCSS</span> <span>HTML</span>",
+				"codeLink": "https://github.com/HowFastGot/eCommerce_website",
+				"liveDemoLink": "https://98ngzs-3000.csb.app/",
+				"imgURL": "../img/main/projects/sport-equipment.png"
+			},
+			"ru": {
+				"title": "Онлайн магазин спортивного инвентаря",
+				"description": "Было разработано 4 страницы онлайн-магазина спортивного инвентаря (главная, страница товара, корзина, каталог товаров). На сайте реализована вся функциональность онлайн-магазина, использовались интерактивные элементы, слайдеры и т.п.",
+				"technologies": "<span>SCSS</span> <span>HTML</span>",
+				"codeLink": "https://github.com/HowFastGot/eCommerce_website",
+				"liveDemoLink": "https://98ngzs-3000.csb.app/",
+				"imgURL": "../img/main/projects/sport-equipment.png"
+			}
+		},
+		"8": {
+			"en": {
+				"title": "Knives Shop",
+				"description": "During the development process, I encountered several challenges that tested my skills and determination. From designing an intuitive user interface to ensuring seamless navigation, I strived to create a visually appealing and user-friendly website. Optimizing the website for different devices and screen sizes was another hurdle that required meticulous attention to detail.",
+				"technologies": "<span>SCSS</span> <span>HTML</span>",
+				"codeLink": "https://github.com/HowFastGot/zlatmax_ecom_shop",
+				"liveDemoLink": "https://t44y3g-3000.csb.app/",
+				"imgURL": "../img/main/projects/zlatmax.png"
+			},
+			"ua": {
+				"title": "Онлайн магазин ножів",
+				"description": "У процесі розробки я зіткнувся з кількома труднощами, які перевірили мої навички та рішучість. Від розробки інтуїтивно зрозумілого інтерфейсу користувача до забезпечення безперебійної навігації я прагнув створити візуально привабливий і зручний веб-сайт. Оптимізація веб-сайту для різних пристроїв і розмірів екрана була ще однією перешкодою, яка потребувала прискіпливої уваги до деталей.",
+				"technologies": "<span>SCSS</span> <span>HTML</span>",
+				"codeLink": "https://github.com/HowFastGot/zlatmax_ecom_shop",
+				"liveDemoLink": "https://t44y3g-3000.csb.app/",
+				"imgURL": "../img/main/projects/zlatmax.png"
+			},
+			"ru": {
+				"title": "Онлайн магазин ножей",
+				"description": "В процессе разработки я столкнулся с рядом проблем, которые проверили мои навыки и решимость. От разработки интуитивно понятного пользовательского интерфейса до обеспечения плавной навигации я стремился создать визуально привлекательный и удобный веб-сайт. Оптимизация веб-сайта для различных устройств и размеров экрана была еще одним препятствием, требующим тщательного внимания к деталям.",
+				"technologies": "<span>SCSS</span> <span>HTML</span>",
+				"codeLink": "https://github.com/HowFastGot/zlatmax_ecom_shop",
+				"liveDemoLink": "https://t44y3g-3000.csb.app/",
+				"imgURL": "../img/main/projects/zlatmax.png"
+			}
+		},
+		"9": {
+			"en": {
+				"title": "IT School",
+				"description": "The website was created as a comprehensive platform for the IT School. It serves as a hub where visitors can access a wealth of information about the school's programs and offerings. The website features detailed descriptions of the courses available, along with information about the instructors and their expertise. Visitors can explore the curriculum, prerequisites, and outcomes of each course to make informed decisions about their learning journey.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>GULP</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Loan_slides",
+				"liveDemoLink": "https://pd37k7-3000.csb.app/",
+				"imgURL": "../img/main/projects/Loadn-slide-site.png"
+			},
+			"ua": {
+				"title": "IT Школа",
+				"description": "Сайт створено як комплексну платформу для ІТ-школи. Він служить центром, де відвідувачі можуть отримати доступ до величезної кількості інформації про програми та пропозиції школи. На веб-сайті є детальні описи доступних курсів, а також інформація про викладачів та їхній досвід. Відвідувачі можуть ознайомитися з навчальною програмою, попередніми умовами та результатами кожного курсу, щоб прийняти обґрунтовані рішення щодо свого навчального шляху.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>GULP</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Loan_slides",
+				"liveDemoLink": "https://pd37k7-3000.csb.app/",
+				"imgURL": "../img/main/projects/Loadn-slide-site.png"
+			},
+			"ru": {
+				"title": "IT Школа",
+				"description": "Сайт создавался как комплексная платформа для IT-школы. Он служит центром, где посетители могут получить доступ к большому количеству информации о школьных программах и предложениях. На веб-сайте представлены подробные описания доступных курсов, а также информация об инструкторах и их опыте. Посетители могут изучить учебную программу, предварительные условия и результаты каждого курса, чтобы принять обоснованное решение о своем пути обучения.",
+				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>GULP</span>",
+				"codeLink": "https://github.com/HowFastGot/website_Loan_slides",
+				"liveDemoLink": "https://pd37k7-3000.csb.app/",
+				"imgURL": "../img/main/projects/Loadn-slide-site.png"
+			}
+		}
+	}
+}
