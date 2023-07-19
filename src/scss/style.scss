@@ -67,6 +67,13 @@ body {
 		.section-title {
 			color: $WHITE;
 		}
+
+		.tooltip {
+			@media (max-width: $md2) {
+				background-color: $PurpleNav_dark;
+				color: $WHITE !important;
+			}
+		}
 	}
 }
 
@@ -149,6 +156,26 @@ body {
 		border-style: solid;
 		border-width: 20.5px 0 20.5px 24px;
 		border-color: transparent;
+	}
+
+	@media (max-width: $md2) {
+		height: 37px;
+		width: 79px;
+		padding: 5px 0;
+		left: 0;
+		top: 53px;
+		font-size: 12px;
+		line-height: 2;
+		vertical-align: middle;
+		background: $PurpleNav;
+		border-radius: 0 0 5px 5px;
+		color: $BLUE !important;
+	}
+
+	@media (max-width: $md3) {
+		height: 25px;
+		line-height: 1;
+		top: 45px;
 	}
 }
 

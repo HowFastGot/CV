@@ -1,7 +1,10 @@
 .page {
 	&__education {
 		margin: 60px 0;
-		padding: 0px 10px;
+
+		@media (min-width: $md3) {
+			padding: 0px 10px;
+		}
 	}
 }
 .education-block {
@@ -35,7 +38,7 @@
 
 	&__text-block {
 		@media (min-width: $md3) {
-			flex: 1 1 40%;
+			flex: 1 1 60%;
 		}
 	}
 }
@@ -75,7 +78,7 @@
 
 	&__first-img {
 		width: 100%;
-		max-height: 250px;
+		max-height: 200px;
 		object-fit: contain;
 	}
 }
@@ -92,6 +95,10 @@
 			rgb(48, 47, 49, 0.8)
 		);
 		border-radius: 15px 0 0 15px;
+
+		@media (max-width: $md3) {
+			padding: 10px 0px;
+		}
 	}
 
 	&__tech-item {
@@ -137,6 +144,7 @@
 	&__resourse-list {
 		font-size: 12px;
 		margin-top: 20px;
+		padding: 0 10px;
 
 		a {
 			color: $BLUE;

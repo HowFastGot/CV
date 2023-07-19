@@ -1,5 +1,5 @@
 import {findDOM_node} from './findDOM_node.js';
-
+import {smoothScroll} from './smoothScroll.js';
 const cache = new Map();
 
 const getCurrentPageLanguage = () => {
@@ -105,7 +105,7 @@ const setUpDefaultButtonAppirance = () => {
 	button.parentElement.classList.remove('delete');
 };
 
-export const deleteAddedProjects = () => {
+export const deleteAddedProjects = (button) => {
 	const allVisibleProjects = findDOM_node('.works__project-item', 'multiElems');
 
 	for (let i = allVisibleProjects.length - 1; i >= 2; i--) {
@@ -118,7 +118,7 @@ export const deleteAddedProjects = () => {
 			clearTimeout(timeId);
 		}, 800);
 	}
-
+	smoothScroll(null, button);
 	setUpDefaultButtonAppirance();
 	changeProjectQuantityIndicator();
 };

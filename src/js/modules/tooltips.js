@@ -33,15 +33,21 @@ const createTooltip = (e) => {
 	tooltip.classList.add('tooltip');
 
 	addTooltip(target, tooltip);
+
+	tooltip.addEventListener('click', deleteTooltip);
 };
 
 function addTooltip(parentTooltipElement, tooltipElement) {
 	parentTooltipElement.append(tooltipElement);
 }
 
-const deleteTooltip = () => {
-	document.querySelector('.tooltip').remove();
-};
+function deleteTooltip() {
+	const tooltip = document.querySelector('.tooltip');
+
+	if (!tooltip) return;
+
+	tooltip.remove();
+}
 
 export function showTooltip() {
 	document.querySelectorAll('.menu-header__item').forEach((link) => {
