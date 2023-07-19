@@ -2427,7 +2427,7 @@ body.dark .section-title {
           transform: translateY(-50%);
   height: 44px;
   width: 119px;
-  padding: 10px 0;
+  padding: 10px 5px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   text-align: center;
@@ -2469,7 +2469,8 @@ body.dark .section-title {
 }
 @media (max-width: 479.98px) {
   .tooltip {
-    height: 25px;
+    height: 20px;
+    font-size: 10px;
     line-height: 1;
     top: 45px;
   }
