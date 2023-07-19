@@ -118,9 +118,12 @@ export const deleteAddedProjects = (button) => {
 			clearTimeout(timeId);
 		}, 800);
 	}
-	smoothScroll(null, button);
 	setUpDefaultButtonAppirance();
 	changeProjectQuantityIndicator();
+
+	setTimeout(() => {
+		smoothScroll(null, button);
+	}, 200);
 };
 
 const handleLoadMoreProjects = async (e) => {
