@@ -16,11 +16,7 @@ function removeItemTitleClasse() {
 
 function openAcordionItem(item) {
 	item &&
-		item.classList.add(
-			'open-item',
-			'animate__animated',
-			'animate__slideInDown'
-		);
+		item.classList.add('open-item', 'animate__animated', 'animate__slideInUp');
 }
 
 function closeOpenedAccorionItems() {

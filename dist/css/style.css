@@ -465,6 +465,17 @@ h6 {
             justify-content: left;
   }
 }
+.intro-cart__social-item {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.intro-cart__social-item:hover, .intro-cart__social-item:active {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 body.dark .menu-header__logo {
   -webkit-filter: brightness(990%);
           filter: brightness(990%);
@@ -2224,7 +2235,7 @@ body.dark .interview__title {
 }
 .education-text__tech-title {
   position: relative;
-  padding: 0 15px 10px 10px;
+  padding: 0 30px 10px 10px;
   color: #d6bd96;
   font-size: 18px;
   line-height: 1;
@@ -2334,8 +2345,8 @@ body.dark .resourse-list__item a {
   display: inline-block;
 }
 
-.animate__animated.animate__slideInDown {
-  --animate-duration: 0.3s;
+.animate__animated.animate__slideInUp {
+  --animate-duration: 0.5s;
 }
 
 html {

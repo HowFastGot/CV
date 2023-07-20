@@ -2,6 +2,12 @@ import {findDOM_node} from './findDOM_node.js';
 import {smoothScroll} from './smoothScroll.js';
 const cache = new Map();
 
+function getProjectTemplateContent(selector) {
+	const templateContent = findDOM_node(selector).content.cloneNode(true);
+
+	return templateContent;
+}
+
 const getCurrentPageLanguage = () => {
 	return sessionStorage.getItem('language') ?? 'en';
 };
@@ -29,65 +35,84 @@ const asyncLoadProjects = async () => {
 	}
 };
 
-const addNewProject = ({
+async function asyncImageLoading(imgElement) {
+	return await new Promise((resolve, reject) => {
+		imgElement.addEventListener('load', (e) => {
+			return resolve(e);
+		});
+
+		imgElement.addEventListener('error', (e) => {
+			return reject(e);
+		});
+	});
+}
+
+function fillOutProjectTemplate(projectTempalte, sectionSelector, content) {
+	const sectionElement = findDOM_node(
+		sectionSelector,
+		null,
+		projectTempalte.firstElementChild
+	);
+
+	switch (sectionElement.tagName.toLowerCase()) {
+		case 'img':
+			sectionElement.setAttribute('src', content);
+			break;
+		case 'a':
+			sectionElement.setAttribute('href', content);
+			break;
+
+		default:
+			sectionElement.innerHTML = content;
+			break;
+	}
+}
+
+function initProjectItemStyle(template, visibility, position) {
+	template.style.visibility = visibility;
+	template.style.position = position;
+}
+function animateNewAddedProject(selector) {
+	const addedProject = document.querySelector(selector);
+	initProjectItemStyle(addedProject, 'visible', 'relative');
+
+	addedProject.classList.add('animate__animated', 'animate__backInUp');
+}
+
+async function asyncAddNewProject({
 	imgURL,
 	title,
 	description,
 	technologies,
 	codeLink,
 	liveDemoLink,
-}) => {
-	const templateContent =
-		findDOM_node('#project-template').content.cloneNode(true);
+}) {
 	const projectsContainer = findDOM_node('.works__project-wrapper');
+	const templateContent = getProjectTemplateContent('#project-template');
 
+	initProjectItemStyle(templateContent.firstElementChild, 'hidden', 'absolute');
+
+	fillOutProjectTemplate(templateContent, 'img', imgURL);
 	const img = findDOM_node('img', null, templateContent.firstElementChild);
-	img.setAttribute('src', imgURL);
 
-	const projectTitle = findDOM_node(
-		'h6',
-		null,
-		templateContent.firstElementChild
-	);
-	projectTitle.textContent = title;
-
-	const projectDescription = findDOM_node(
-		'.works__description',
-		null,
-		templateContent.firstElementChild
-	);
-	projectDescription.innerHTML = description;
-
-	const projectTechnologies = findDOM_node(
-		'.works__tech-section',
-		null,
-		templateContent.firstElementChild
-	);
-	projectTechnologies.innerHTML = technologies;
-
-	const projectCodeLink = findDOM_node(
-		'.works__git-link',
-		null,
-		templateContent.firstElementChild
-	);
-	projectCodeLink.setAttribute('href', codeLink);
-
-	const projectLiveDemoLink = findDOM_node(
-		'.works__online-link',
-		null,
-		templateContent.firstElementChild
-	);
-	projectLiveDemoLink.setAttribute('href', liveDemoLink);
+	fillOutProjectTemplate(templateContent, 'h6', title);
+	fillOutProjectTemplate(templateContent, '.works__description', description);
+	fillOutProjectTemplate(templateContent, '.works__tech-section', technologies);
+	fillOutProjectTemplate(templateContent, '.works__git-link', codeLink);
+	fillOutProjectTemplate(templateContent, '.works__online-link', liveDemoLink);
 
 	projectsContainer.appendChild(templateContent);
-	document
-		.querySelector('.works__project-item:last-child')
-		.classList.add('animate__animated', 'animate__backInUp');
-};
 
-export const changeProjectQuantityIndicator = (
-	indexOfNextLoadedProject = 10
-) => {
+	await asyncImageLoading(img)
+		.then(() => {
+			animateNewAddedProject('.works__project-item:last-child');
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+}
+
+export function changeProjectQuantityIndicator(indexOfNextLoadedProject = 10) {
 	const projectQuantityIndicator = findDOM_node(
 		'.load-button-block__q-indicator'
 	);
@@ -96,11 +121,9 @@ export const changeProjectQuantityIndicator = (
 		indexOfNextLoadedProject <= 9 ? indexOfNextLoadedProject : 2;
 
 	projectQuantityIndicator.textContent = `${nextQuantityVisibleProjects} / 9`;
-};
+}
 
-const setUpDefaultButtonAppirance = () => {
-	const button = findDOM_node('.load-button-block__button-load');
-
+const setUpDefaultButtonAppirance = (button) => {
 	button.textContent = 'Explore more';
 	button.parentElement.classList.remove('delete');
 };
@@ -118,37 +141,47 @@ export const deleteAddedProjects = (button) => {
 			clearTimeout(timeId);
 		}, 800);
 	}
-	setUpDefaultButtonAppirance();
+	setUpDefaultButtonAppirance(button);
 	changeProjectQuantityIndicator();
 
 	setTimeout(() => {
 		smoothScroll(null, button);
-	}, 200);
+	}, 900);
 };
 
+function changeLoadButton(button, indexOfNextLoadedProject, isLoading) {
+	if (isLoading) {
+		button.textContent = 'Loading...';
+		button.parentElement.classList.add('delete');
+	}
+	if (indexOfNextLoadedProject > 8) {
+		button.textContent = 'Remove the added projects';
+		button.parentElement.classList.add('delete');
+	}
+}
 const handleLoadMoreProjects = async (e) => {
 	const targetButton = e.target;
 	const indexOfNextLoadedProject = getQuantityVisibleProjects() + 1;
 
 	if (indexOfNextLoadedProject > 9) {
 		deleteAddedProjects(targetButton);
-		setUpDefaultButtonAppirance();
+		setUpDefaultButtonAppirance(targetButton);
 		return;
 	}
 
-	changeProjectQuantityIndicator(indexOfNextLoadedProject);
+	changeLoadButton(targetButton, null, true);
 
 	const currentLang = getCurrentPageLanguage();
-
-	if (indexOfNextLoadedProject > 8) {
-		targetButton.textContent = 'Remove the added projects';
-		targetButton.parentElement.classList.add('delete');
-	}
-
 	const {projects} = cache.get('projects') ?? (await asyncLoadProjects());
 	const projectObj = projects[indexOfNextLoadedProject][currentLang];
 
-	addNewProject(projectObj);
+	asyncAddNewProject(projectObj)
+		.then(() => {
+			changeProjectQuantityIndicator(indexOfNextLoadedProject);
+			changeLoadButton(targetButton, indexOfNextLoadedProject, null);
+			setUpDefaultButtonAppirance(targetButton);
+		})
+		.catch((err) => console.log(err));
 };
 
 export function loadingProjects(loadButtonSelector) {

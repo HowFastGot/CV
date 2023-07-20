@@ -26,8 +26,8 @@ const setDefaultActiveLangTrigger = () => {
 	});
 };
 const changeActiveLangItem = (e) => {
-	const target = e.currentTarget;
-	const languageItemsArray = Array.from(target.children);
+	const currentTarget = e.currentTarget;
+	const languageItemsArray = Array.from(currentTarget.children);
 
 	if (languageItemsArray.length < 1 || !languageItemsArray.includes(e.target))
 		return;

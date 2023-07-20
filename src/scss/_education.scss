@@ -111,7 +111,7 @@
 
 	&__tech-title {
 		position: relative;
-		padding: 0 15px 10px 10px;
+		padding: 0 30px 10px 10px;
 		color: $GOLD;
 		font-size: 18px;
 		line-height: 1;
@@ -248,6 +248,6 @@ body.dark {
 }
 
 //==Change animation====================================================
-.animate__animated.animate__slideInDown {
-	--animate-duration: 0.3s;
+.animate__animated.animate__slideInUp {
+	--animate-duration: 0.5s;
 }
