@@ -465,6 +465,17 @@ h6 {
             justify-content: left;
   }
 }
+.intro-cart__social-item {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.intro-cart__social-item:hover, .intro-cart__social-item:active {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 body.dark .menu-header__logo {
   -webkit-filter: brightness(990%);
           filter: brightness(990%);
