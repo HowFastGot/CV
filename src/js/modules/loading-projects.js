@@ -154,6 +154,7 @@ function changeLoadButton(button, indexOfNextLoadedProject, isLoading) {
 		button.textContent = 'Loading...';
 		button.parentElement.classList.add('delete');
 	}
+
 	if (indexOfNextLoadedProject > 8) {
 		button.textContent = 'Remove the added projects';
 		button.parentElement.classList.add('delete');
@@ -177,9 +178,9 @@ const handleLoadMoreProjects = async (e) => {
 
 	asyncAddNewProject(projectObj)
 		.then(() => {
+			setUpDefaultButtonAppirance(targetButton);
 			changeProjectQuantityIndicator(indexOfNextLoadedProject);
 			changeLoadButton(targetButton, indexOfNextLoadedProject, null);
-			setUpDefaultButtonAppirance(targetButton);
 		})
 		.catch((err) => console.log(err));
 };

@@ -11,6 +11,7 @@ import {animatePageElements} from './modules/animatePageElements.js';
 
 window.addEventListener('DOMContentLoaded', function (event) {
 	'use strict';
+
 	animatePageElements(event);
 
 	showTooltip();
