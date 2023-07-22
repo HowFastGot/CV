@@ -73,7 +73,7 @@ const getAsyncLanguageDataObject = async (languageOfPage) => {
 		console.log(
 			`Error occurs while loading language data object ${error.message}! Check getLanguageDataObject function!`
 		);
-		errorPopup();
+		// errorPopup();
 	}
 };
 

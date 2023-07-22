@@ -32,7 +32,7 @@ const asyncLoadProjects = async () => {
 
 		return response;
 	} catch (error) {
-		errorPopup();
+		// errorPopup();
 		console.log('Error occured while loading the projects data', error.message);
 	}
 };
@@ -110,7 +110,7 @@ async function asyncAddNewProject({
 			animateNewAddedProject('.works__project-item:last-child');
 		})
 		.catch((err) => {
-			errorPopup();
+			// errorPopup();
 			console.log('Error while asyncImageLoading', err.message);
 		});
 }
@@ -192,7 +192,7 @@ const handleLoadMoreProjects = async (e) => {
 			changeLoadButton(targetButton, indexOfNextLoadedProject, null);
 		})
 		.catch((err) => {
-			errorPopup(errorPopup);
+			// errorPopup(errorPopup);
 			console.log('Error while asyncAddNewProject', err);
 		});
 };
