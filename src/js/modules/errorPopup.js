@@ -10,16 +10,18 @@ export function errorPopup() {
     position: fixed;
     left: 0;
     top: 0;
-    line-height: 100vh;
+    height: 100vh;
     width: 100vw;
     z-index: 999;
     background-color: red;
     opacity: .8;
 
     text-align: center;
+    line-height: 1.5;
+    padding: 40vh 10vw;
     color: white;
     white-space: wrap;
-    font-size: 40px;
+    font-size: 30px;
   `;
 
 	body.style.overflow = 'hidden';

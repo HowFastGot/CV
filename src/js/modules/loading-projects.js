@@ -1,6 +1,6 @@
 import {findDOM_node} from './findDOM_node.js';
 import {smoothScroll} from './smoothScroll.js';
-import {errorPopup} from './loading-popup.js';
+import {errorPopup} from './errorPopup.js';
 const cache = new Map();
 
 function getProjectTemplateContent(selector) {

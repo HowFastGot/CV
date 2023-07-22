@@ -1,4 +1,5 @@
 import {changePositionPseudoWorkTitle} from './changePositionPseudoTitle.js';
+import {errorPopup} from './errorPopup.js';
 import {findDOM_node} from './findDOM_node.js';
 import {
 	deleteAddedProjects,
@@ -72,6 +73,7 @@ const getAsyncLanguageDataObject = async (languageOfPage) => {
 		console.log(
 			`Error occurs while loading language data object ${error.message}! Check getLanguageDataObject function!`
 		);
+		errorPopup();
 	}
 };
 
