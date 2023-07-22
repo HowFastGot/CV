@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=G-B22VYWWNCP"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-B22VYWWNCP');
+	</script>
 	<meta http-equiv="Content-Language" content="en" />
 	<meta http-equiv="Content-Language" content="ru" />
 	<meta charset="UTF-8" />
@@ -43,12 +56,12 @@
 
 	<link
 		rel="stylesheet"
-		href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css"
+		href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css?_v=20230722113801"
 	/>
-	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230722113801" />
 	<link
 		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20230722113801"
 	/>
 </head>
 
@@ -218,7 +231,7 @@
           </li>
           <li class="rewards__item rewards__item_own-photo">
                <figure class="own-photo__block">
-                    <img src="../img/own-photo/Me.jpg" alt="Own photo" class="own-photo__img">
+                    <picture><source srcset="../img/own-photo/Me.webp" type="image/webp"><img src="../img/own-photo/Me.jpg" alt="Own photo" class="own-photo__img"></picture>
                </figure>
           </li>
           <li class="rewards__item">
@@ -407,7 +420,7 @@
 		</div>
 		<div class="works__project-item">
 			<figure class="works__project-img">
-				<img src="../img/main/projects/vin_decoder.jpg" alt="Project image" />
+				<picture><source srcset="../img/main/projects/vin_decoder.webp" type="image/webp"><img src="../img/main/projects/vin_decoder.jpg" alt="Project image" /></picture>
 			</figure>
 			<div class="works__project-desc-block">
 				<h6 data-i18n="works_project-vin">VIN Decoder</h6>
@@ -457,7 +470,7 @@
 		<div class="own-swiper__certificate-swiper mySwiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img src="../img/main/UdemiJS.jpg" alt="JavaScript certificate" />
+					<picture><source srcset="../img/main/UdemiJS.webp" type="image/webp"><img src="../img/main/UdemiJS.jpg" alt="JavaScript certificate" /></picture>
 				</div>
 				<div class="swiper-slide">
 					<img
@@ -466,7 +479,7 @@
 					/>
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/main/UdemiJS+React.jpg" alt="React certificate" />
+					<picture><source srcset="../img/main/UdemiJS+React.webp" type="image/webp"><img src="../img/main/UdemiJS+React.jpg" alt="React certificate" /></picture>
 				</div>
 				<div class="swiper-slide">
 					<img
@@ -475,7 +488,7 @@
 					/>
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/main/UdemiTS.jpg" alt="TypeScript certificate" />
+					<picture><source srcset="../img/main/UdemiTS.webp" type="image/webp"><img src="../img/main/UdemiTS.jpg" alt="TypeScript certificate" /></picture>
 				</div>
 			</div>
 			<div class="swiper-button-prev"></div>
@@ -1118,7 +1131,7 @@
 </template>
 
 
-		<script src="js/app.min.js"></script>
+		<script src="js/app.min.js?_v=20230722113801"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
 			defer

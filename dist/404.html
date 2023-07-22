@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=G-B22VYWWNCP"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-B22VYWWNCP');
+	</script>
 	<meta http-equiv="Content-Language" content="en" />
 	<meta http-equiv="Content-Language" content="ru" />
 	<meta charset="UTF-8" />
@@ -21,7 +34,7 @@
 	<meta property="og:url" content="https://skaretskiy.uk" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>error page</title>
+	<title>Error 404. html page</title>
 
 	<link
 		rel="apple-touch-icon"
@@ -43,31 +56,32 @@
 
 	<link
 		rel="stylesheet"
-		href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css"
+		href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css?_v=20230722113801"
 	/>
-	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230722113801" />
 	<link
 		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20230722113801"
 	/>
 </head>
 
 
-<body>
-     <main class="page__error error-page">
-          <section class="error-page__section">
-               <div class="error-page__row">
-                    <figure class="error-page__img-block">
-                         <img src="./img/404page/Title.jpg" alt="Error page image">
-                    </figure>
-                    <div class="error-page__text-block">
-                         <div class="error-page__tille">This page could not be found</div>
-                         <p class="error-page__subtitile">You can either stay and chill here, or go back to the beginning.</p>
-                         <a href="/" class="button">Back</a>
-                    </div>
-               </div>
-          </section>
-     </main>
-</body>
-
+	<body>
+		<main class="page__error error-page">
+			<section class="error-page__section">
+				<div class="error-page__row">
+					<figure class="error-page__img-block">
+						<picture><source srcset="./img/404page/Title.webp" type="image/webp"><img src="./img/404page/Title.jpg" alt="Error page image" /></picture>
+					</figure>
+					<div class="error-page__text-block">
+						<div class="error-page__tille">This page could not be found</div>
+						<p class="error-page__subtitile">
+							You can either stay and chill here, or go back to the beginning.
+						</p>
+						<a href="/" class="button">Back</a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
