@@ -1,4 +1,5 @@
 import {changePositionPseudoWorkTitle} from './changePositionPseudoTitle.js';
+import {getResource} from '../services/requests.js';
 import {errorPopup} from './errorPopup.js';
 import {findDOM_node} from './findDOM_node.js';
 import {
@@ -63,17 +64,15 @@ function getCurrentPageLanguage() {
 }
 
 const getAsyncLanguageDataObject = async (languageOfPage) => {
-	try {
-		const response = await fetch(
-			`../translations/${possiblePageLangs[languageOfPage]}/locale.json`
-		);
+	const languageJSONPath = `../translations/${possiblePageLangs[languageOfPage]}/locale.json`;
 
-		return await response.json();
+	try {
+		const res = await getResource(languageJSONPath);
+
+		return res;
 	} catch (error) {
-		console.log(
-			`Error occurs while loading language data object ${error.message}! Check getLanguageDataObject function!`
-		);
-		// errorPopup();
+		errorPopup();
+		console.error(`Ошибка доступа к fetch: ${languageJSONPath}!`);
 	}
 };
 

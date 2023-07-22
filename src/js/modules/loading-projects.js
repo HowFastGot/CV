@@ -1,6 +1,8 @@
 import {findDOM_node} from './findDOM_node.js';
 import {smoothScroll} from './smoothScroll.js';
 import {errorPopup} from './errorPopup.js';
+import {getResource} from '../services/requests.js';
+
 const cache = new Map();
 
 function getProjectTemplateContent(selector) {
@@ -24,16 +26,16 @@ const cacheServerResponse = (response) => {
 };
 
 const asyncLoadProjects = async () => {
+	const projectJSONUrl = '../projects/projects.json';
 	try {
-		const rowResponse = await fetch('../projects/projects.json');
-		const response = await rowResponse.json();
+		const response = await getResource(projectJSONUrl);
 
 		cacheServerResponse(response);
 
 		return response;
 	} catch (error) {
-		// errorPopup();
-		console.log('Error occured while loading the projects data', error.message);
+		errorPopup();
+		console.error(`Ошибка доступа к fetch: ${projectJSONUrl}!`);
 	}
 };
 
@@ -110,7 +112,7 @@ async function asyncAddNewProject({
 			animateNewAddedProject('.works__project-item:last-child');
 		})
 		.catch((err) => {
-			// errorPopup();
+			errorPopup();
 			console.log('Error while asyncImageLoading', err.message);
 		});
 }
@@ -182,7 +184,9 @@ const handleLoadMoreProjects = async (e) => {
 	changeLoadButton(targetButton, null, true);
 
 	const currentLang = getCurrentPageLanguage();
+
 	const {projects} = cache.get('projects') ?? (await asyncLoadProjects());
+
 	const projectObj = projects[indexOfNextLoadedProject][currentLang];
 
 	asyncAddNewProject(projectObj)
@@ -192,7 +196,6 @@ const handleLoadMoreProjects = async (e) => {
 			changeLoadButton(targetButton, indexOfNextLoadedProject, null);
 		})
 		.catch((err) => {
-			// errorPopup(errorPopup);
 			console.log('Error while asyncAddNewProject', err);
 		});
 };
