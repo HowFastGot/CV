@@ -1,6 +1,9 @@
 import {changePositionPseudoWorkTitle} from './changePositionPseudoTitle.js';
 import {findDOM_node} from './findDOM_node.js';
-import {deleteAddedProjects} from './loading-projects.js';
+import {
+	deleteAddedProjects,
+	changeProjectQuantityIndicator,
+} from './loading-projects.js';
 
 import Polyglot from 'node-polyglot';
 
@@ -99,6 +102,7 @@ const comprehensiveFunction = (e) => {
 	pageInternationalization(getCurrentPageLanguage());
 
 	deleteAddedProjects();
+	changeProjectQuantityIndicator();
 };
 
 export function changePageLanguage(languagesBlockSelector) {

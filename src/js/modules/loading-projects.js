@@ -1,5 +1,6 @@
 import {findDOM_node} from './findDOM_node.js';
 import {smoothScroll} from './smoothScroll.js';
+import {errorPopup} from './loading-popup.js';
 const cache = new Map();
 
 function getProjectTemplateContent(selector) {
@@ -31,6 +32,7 @@ const asyncLoadProjects = async () => {
 
 		return response;
 	} catch (error) {
+		errorPopup();
 		console.log('Error occured while loading the projects data', error.message);
 	}
 };
@@ -108,7 +110,8 @@ async function asyncAddNewProject({
 			animateNewAddedProject('.works__project-item:last-child');
 		})
 		.catch((err) => {
-			console.log(err);
+			errorPopup();
+			console.log('Error while asyncImageLoading', err.message);
 		});
 }
 
@@ -124,11 +127,13 @@ export function changeProjectQuantityIndicator(indexOfNextLoadedProject = 10) {
 }
 
 const setUpDefaultButtonAppirance = (button) => {
+	if (!button) return;
+
 	button.textContent = 'Explore more';
 	button.parentElement.classList.remove('delete');
 };
 
-export const deleteAddedProjects = (button) => {
+export function deleteAddedProjects() {
 	const allVisibleProjects = findDOM_node('.works__project-item', 'multiElems');
 
 	for (let i = allVisibleProjects.length - 1; i >= 2; i--) {
@@ -141,13 +146,17 @@ export const deleteAddedProjects = (button) => {
 			clearTimeout(timeId);
 		}, 800);
 	}
+}
+
+function handleProjectDeleting(button) {
+	deleteAddedProjects();
 	setUpDefaultButtonAppirance(button);
 	changeProjectQuantityIndicator();
 
 	setTimeout(() => {
 		smoothScroll(null, button);
 	}, 900);
-};
+}
 
 function changeLoadButton(button, indexOfNextLoadedProject, isLoading) {
 	if (isLoading) {
@@ -165,7 +174,7 @@ const handleLoadMoreProjects = async (e) => {
 	const indexOfNextLoadedProject = getQuantityVisibleProjects() + 1;
 
 	if (indexOfNextLoadedProject > 9) {
-		deleteAddedProjects(targetButton);
+		handleProjectDeleting(targetButton);
 		setUpDefaultButtonAppirance(targetButton);
 		return;
 	}
@@ -182,7 +191,10 @@ const handleLoadMoreProjects = async (e) => {
 			changeProjectQuantityIndicator(indexOfNextLoadedProject);
 			changeLoadButton(targetButton, indexOfNextLoadedProject, null);
 		})
-		.catch((err) => console.log(err));
+		.catch((err) => {
+			errorPopup(errorPopup);
+			console.log('Error while asyncAddNewProject', err);
+		});
 };
 
 export function loadingProjects(loadButtonSelector) {
