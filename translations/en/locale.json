@@ -26,7 +26,7 @@
 		"works_loop": "Preventing the loop requests;",
 		"works_project-code": "Code",
 		"works_project-live_demo": "<span>Live</span> Demo",
-		"works_caveat": "Some issues with a server of API owner could be possible. Use <a href=\"https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru\"> CORS extension </a> to handle",
+		"works_caveat": "Some issues with a server of API owner could be possible. Use <a href=\"https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru\"> CORS extension </a> to handle it!",
 		"works_project-vin": "VIN Decoder",
 		"works_project-vin-desc": "The website was designed for decoding car VIN numbers, saving the history of decoded numbers, and has 3 pages to describe each characteristic of the car.",
 		"works_load-more": "Explore more",
