@@ -117,15 +117,15 @@ async function asyncAddNewProject({
 		});
 }
 
-export function changeProjectQuantityIndicator(indexOfNextLoadedProject = 10) {
+export function changeProjectQuantityIndicator(indexOfNextLoadedProject = 11) {
 	const projectQuantityIndicator = findDOM_node(
 		'.load-button-block__q-indicator'
 	);
 
 	const nextQuantityVisibleProjects =
-		indexOfNextLoadedProject <= 9 ? indexOfNextLoadedProject : 2;
+		indexOfNextLoadedProject <= 10 ? indexOfNextLoadedProject : 2;
 
-	projectQuantityIndicator.textContent = `${nextQuantityVisibleProjects} / 9`;
+	projectQuantityIndicator.textContent = `${nextQuantityVisibleProjects} / 10`;
 }
 
 const setUpDefaultButtonAppirance = (button) => {
@@ -166,7 +166,7 @@ function changeLoadButton(button, indexOfNextLoadedProject, isLoading) {
 		button.parentElement.classList.add('delete');
 	}
 
-	if (indexOfNextLoadedProject > 8) {
+	if (indexOfNextLoadedProject > 9) {
 		button.textContent = 'Remove the added projects';
 		button.parentElement.classList.add('delete');
 	}
@@ -175,7 +175,7 @@ const handleLoadMoreProjects = async (e) => {
 	const targetButton = e.target;
 	const indexOfNextLoadedProject = getQuantityVisibleProjects() + 1;
 
-	if (indexOfNextLoadedProject > 9) {
+	if (indexOfNextLoadedProject > 10) {
 		handleProjectDeleting(targetButton);
 		setUpDefaultButtonAppirance(targetButton);
 		return;

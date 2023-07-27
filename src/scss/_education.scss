@@ -89,11 +89,7 @@
 	&__tech-list {
 		padding: 10px 5px;
 		color: $WHITE;
-		background: linear-gradient(
-			141.51deg,
-			rgba(0, 0, 0, 1),
-			rgb(48, 47, 49, 0.8)
-		);
+		background: $VIO-BLUE-GRAD;
 		border-radius: 15px 0 0 15px;
 
 		@media (max-width: $md3) {
@@ -147,7 +143,8 @@
 		padding: 0 10px;
 
 		a {
-			color: $BLUE;
+			color: $BLACK;
+			font-family: 'lato900';
 			font-size: 14px;
 			text-decoration: underline;
 
@@ -241,6 +238,7 @@ body.dark {
 			}
 
 			a {
+				color: $PurpleNav;
 				display: inline-block;
 			}
 		}

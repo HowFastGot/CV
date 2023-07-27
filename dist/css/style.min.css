@@ -2230,8 +2230,8 @@ body.dark .interview__title {
 .education-text__tech-list {
   padding: 10px 5px;
   color: #ffffff;
-  background: -o-linear-gradient(308.49deg, rgb(0, 0, 0), rgba(48, 47, 49, 0.8));
-  background: linear-gradient(141.51deg, rgb(0, 0, 0), rgba(48, 47, 49, 0.8));
+  background: -o-linear-gradient(308.49deg, #9c27b0 -18.34%, #651fff 66.03%);
+  background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
   border-radius: 15px 0 0 15px;
 }
 @media (max-width: 479.98px) {
@@ -2278,7 +2278,8 @@ body.dark .interview__title {
   padding: 0 10px;
 }
 .education-text__resourse-list a {
-  color: #651fff;
+  color: #000000;
+  font-family: "lato900";
   font-size: 14px;
   text-decoration: underline;
 }
@@ -2354,6 +2355,7 @@ body.dark .resourse-list__item span:first-child {
   color: #d6bd96 !important;
 }
 body.dark .resourse-list__item a {
+  color: #d1c4e9;
   display: inline-block;
 }
 
