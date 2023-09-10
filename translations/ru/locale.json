@@ -16,19 +16,15 @@
 		"main-exp_service-job": "<strong>Service manager</strong> <p>в компании Comfy</p> <time>2019 - 2021</time>",
 
 		"works-title": "Портфолио",
-		"works_project-currency": "Калькулятор валют",
-		"works_project-currency-list": "Конвертация соотношения валют к базовой UAH:",
-		"works_functionalities": "Была разработана следующая функциональность:",
-		"works_calculation": "Рассчет соотношения валют;",
-		"works_target": "Изменение позиций стравниваемых валют;",
-		"works_range": "Изменение полученых валютных API данных в пределах 10%;",
-		"works_reload": "Обновление API данных;",
-		"works_loop": "Предотвращение отправки более 5 моментальных запросов;",
+
+		"works_project-pet": "Kitten Caturday",
+		"works_project-pet-desc": "Интерактивный веб-сайт, который служит центром для всех любителей кошек. Проект сосредоточен на кошках разных пород и позволяет пользователям делиться своими фотографиями кошек, а также голосовать за своих любимых представителей кошачьего мира.",
+
+		"works_project-promt": "AI Promtopia",
+		"works_project-promt-desc": "Promptopia - это открытый инструмент искусственного интеллекта для создания творческих подсказок в современном мире, который позволяет открывать, создавать и делиться творчими заданиями.",
+
 		"works_project-code": "Код проэкта",
 		"works_project-live_demo": "<span>Live</span> Демонстрация",
-		"works_caveat": "Возможно сбоев на сервере API владельца. Используй <a href=\"https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru\"> расшрирение CORS</a> для их ришения",
-		"works_project-vin": "VIN Декодер",
-		"works_project-vin-desc": "Веб-сайт разработан для расшифровки VIN-номеров автомобиля, сохранения истории раскодированных номеров и имеет 3 страницы для описания каждой характеристики автомобиля.",
 		"works_load-more": "Загрузить больше",
 
 		"certificates_title": "Сертификаты",

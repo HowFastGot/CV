@@ -16,19 +16,16 @@
 		"main-exp_service-job": "<strong>Service manager</strong> <p>at Comfy Company</p> <time>2019 - 2021</time>",
 
 		"works-title": "Portfolio",
-		"works_project-currency": "Currency Ratio Calculator",
-		"works_project-currency-list": "Online converter of currencies with the UAH base:",
-		"works_functionalities": "Was developed the next functionalities:",
-		"works_calculation": "Calculation of currency ratio;",
-		"works_target": "Reverse/change target currency;",
-		"works_range": "Change API currency value in the 10% range;",
-		"works_reload": "Reload currencies API;",
-		"works_loop": "Preventing the loop requests;",
+
+		"works_project-pet": "Pets Caturday",
+		"works_project-pet-desc": "Interactive website that serves as a hub for all cat enthusiasts. The project focuses on cats of different breeds and allows users to share their own cat photos as well as vote for their favorite feline representatives.",
+
+		"works_project-promt": "AI Promtopia",
+		"works_project-promt-desc": "Promptopia is an open-source AI prompting tool for modern world to discover, create, and share creative prompts.",
+
 		"works_project-code": "Code",
 		"works_project-live_demo": "<span>Live</span> Demo",
-		"works_caveat": "Some issues with a server of API owner could be possible. Use <a href=\"https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru\"> CORS extension </a> to handle it!",
-		"works_project-vin": "VIN Decoder",
-		"works_project-vin-desc": "The website was designed for decoding car VIN numbers, saving the history of decoded numbers, and has 3 pages to describe each characteristic of the car.",
+
 		"works_load-more": "Explore more",
 
 		"certificates_title": "Certificates",

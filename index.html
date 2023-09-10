@@ -57,12 +57,12 @@
 
 	<link
 		rel="stylesheet"
-		href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css"
+		href="assets/css-swiper/cdn.jsdelivr.net_npm_swiper@9_swiper-bundle.min.css?_v=20230910172435"
 	/>
-	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230910172435" />
 	<link
 		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?_v=20230910172435"
 	/>
 </head>
 
@@ -232,7 +232,7 @@
           </li>
           <li class="rewards__item rewards__item_own-photo">
                <figure class="own-photo__block">
-                    <img src="../img/own-photo/Me.jpg" alt="Own photo" class="own-photo__img">
+                    <picture><source srcset="../img/own-photo/Me.webp" type="image/webp"><img src="../img/own-photo/Me.jpg" alt="Own photo" class="own-photo__img"></picture>
                </figure>
           </li>
           <li class="rewards__item">
@@ -340,59 +340,38 @@
 		<div class="works__project-item">
 			<figure class="works__project-img">
 				<img
-					src="../img/main/projects/currency-ratio.jpeg"
+					src="../img/main/projects/caturday_screen.jpg"
 					alt="Project image"
 				/>
 			</figure>
 			<div class="works__project-desc-block">
-				<h6 data-i18n="works_project-currency">Currency Ratio Calculator</h6>
-				<div class="works__description">
-					<p data-i18n="works_project-currency-list">
-						Online converter of currencies with the UAH base:
-					</p>
-					<ul>
-						<li><abbr title="United States dollar">USD</abbr></li>
-						<li><abbr title="European Monetary Unit">EURO</abbr></li>
-						<li><abbr title="Bitcoin currency code">BTC</abbr></li>
-					</ul>
-					<p data-i18n="works_functionalities">
-						Was developed the next functionalities:
-					</p>
-					<ul>
-						<li data-i18n="works_calculation">
-							Calculation of currency ratio;
-						</li>
-						<li data-i18n="works_target">Reverse/change target currency;</li>
-						<li data-i18n="works_range">
-							Change API currency value in the 10% range;
-						</li>
-						<li data-i18n="works_reload">Reload currencies API;</li>
-						<li data-i18n="works_loop">Preventing the loop requests;</li>
-					</ul>
+				<h6 data-i18n="works_project-pet">Pets Caturday</h6>
+				<div class="works__description" data-i18n="works_project-pet-desc">
+					Interactive website that serves as a hub for all cat enthusiasts. The project focuses on cats of different breeds and allows users to share their own cat photos as well as vote for their favorite feline representatives.
 				</div>
 				<div class="works__tech-section">
-					<span>React</span>
-					<span>Redux</span>
+					<span>NextJs</span>
 					<span>TypeScript</span>
-					<span>Matetial UI</span>
+					<span>Tailwind CSS</span>
+					<span>Plaiceholder</span>
 				</div>
 				<nav class="works__links">
 					<a
-						href="https://github.com/HowFastGot/currencyExchanger"
+						href="https://github.com/HowFastGot/caturday_nextjs"
 						class="works__git-link"
 						target="_blank"
 						data-i18n="works_project-code"
 						>Code</a
 					>
 					<a
-						href="https://9c9yjs-3000.csb.app"
+						href="https://caturday-nextjs.vercel.app"
 						class="works__online-link"
 						target="_blank"
 						data-i18n="works_project-live_demo"
 						><span>Live</span> Demo</a
 					>
 				</nav>
-				<div class="notification">
+				<!-- <div class="notification">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
@@ -416,37 +395,37 @@
 						</a>
 						to handle it!
 					</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="works__project-item">
 			<figure class="works__project-img">
-				<img src="../img/main/projects/vin_decoder.jpg" alt="Project image" />
+				<picture><source srcset="../img/main/projects/auth_app.webp" type="image/webp"><img src="../img/main/projects/auth_app.jpg" alt="Project image" /></picture>
 			</figure>
 			<div class="works__project-desc-block">
-				<h6 data-i18n="works_project-vin">VIN Decoder</h6>
-				<p class="works__description" data-i18n="works_project-vin-desc">
-					The website was designed for decoding car VIN numbers, saving the
-					history of decoded numbers, and has 3 pages to describe each
-					characteristic of the car.
+				<h6 data-i18n="works_project-promt">AI Promtopia</h6>
+				<p class="works__description" data-i18n="works_project-promt-desc">
+					Promptopia is an open-source AI prompting tool for modern world to discover, create, and share creative prompts.
 				</p>
 				<div class="works__tech-section">
-					<span>React</span>
+					<span>NextJS</span>
 					<span>TypeScript</span>
-					<span>React Router</span>
-					<span>Redux</span>
+					<span>MongoDB</span>
+					<span>Mongoos</span>
+					<span>Next-auth</span>
+					<span>Sass</span>
 				</div>
 
 				<nav class="works__links">
 					<a
-						href="https://github.com/HowFastGot/Vin_Numbers_Decoder"
+						href="https://github.com/HowFastGot/nextJs_app"
 						class="works__git-link"
 						target="_blank"
 						data-i18n="works_project-code"
 						>Code</a
 					>
 					<a
-						href="https://33ycxl-3000.csb.app/"
+						href="https://next-js-app-tan-one.vercel.app"
 						class="works__online-link"
 						target="_blank"
 						data-i18n="works_project-live_demo"
@@ -457,7 +436,7 @@
 		</div>
 	</div>
 	<div class="works__load-button-block load-button-block">
-		<span class="load-button-block__q-indicator">2 / 10</span>
+		<span class="load-button-block__q-indicator">2 / 12</span>
 		<button class="load-button-block__button-load" data-i18n="works_load-more">
 			Explore more
 		</button>
@@ -471,7 +450,7 @@
 		<div class="own-swiper__certificate-swiper mySwiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<img src="../img/main/UdemiJS.jpg" alt="JavaScript certificate" />
+					<picture><source srcset="../img/main/UdemiJS.webp" type="image/webp"><img src="../img/main/UdemiJS.jpg" alt="JavaScript certificate" /></picture>
 				</div>
 				<div class="swiper-slide">
 					<img
@@ -480,7 +459,7 @@
 					/>
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/main/UdemiJS+React.jpg" alt="React certificate" />
+					<picture><source srcset="../img/main/UdemiJS+React.webp" type="image/webp"><img src="../img/main/UdemiJS+React.jpg" alt="React certificate" /></picture>
 				</div>
 				<div class="swiper-slide">
 					<img
@@ -489,7 +468,7 @@
 					/>
 				</div>
 				<div class="swiper-slide">
-					<img src="../img/main/UdemiTS.jpg" alt="TypeScript certificate" />
+					<picture><source srcset="../img/main/UdemiTS.webp" type="image/webp"><img src="../img/main/UdemiTS.jpg" alt="TypeScript certificate" /></picture>
 				</div>
 			</div>
 			<div class="swiper-button-prev"></div>
@@ -1077,6 +1056,7 @@
                          <span>Skaretskiy</span>
                     </a>
                </nav>
+               <p class="footer__copyright">© Всі права захищені <span>2021–2023</span></p>
           </div>
           <div class="footer__form-block form-block">
      <h5 data-i18n="form-block_contact">Contact <span> Me.</span></h5>
@@ -1132,7 +1112,7 @@
 </template>
 
 
-		<script src="js/app.min.js"></script>
+		<script src="js/app.min.js?_v=20230910172435"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
 			defer
