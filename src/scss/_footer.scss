@@ -3,12 +3,34 @@
 	background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
 	color: aliceblue;
 
+	._container {
+		overflow: visible;
+	}
+
+	&__copyright {
+		margin-top: 30px;
+		text-align: left;
+		white-space: nowrap;
+
+		span {
+			display: inline !important;
+		}
+
+		@media (max-width: 405px) {
+			position: absolute;
+			left: 50%;
+			bottom: -30px;
+			transform: translateX(-50%);
+		}	
+	}
+
 	@media (min-width: $md1) {
-		padding: 40px 100px;
+		padding: 25px 100px;
 	}
 
 	@media (max-width: 510px) {
-		padding: 20px;
+		padding: 10px;
+		padding-bottom: 50px;
 	}
 
 	&__row {
@@ -20,6 +42,7 @@
 	&__contact-info {
 		margin-top: 50px;
 		text-align: center;
+
 
 		@media (max-width: $md1) {
 			margin-top: 50px;

@@ -2,6 +2,58 @@
 	"projects": {
 		"3": {
 			"en": {
+				"title": "CURRENCY RATIO CALCULATOR",
+				"description": "<p data-i18n='works_project-currency-list'>Online converter of currencies with the UAH base:</p><ul><li><abbr title='United States dollar'>USD</abbr></li><li><abbr title='European Monetary Unit'>EURO</abbr></li><li><abbr title='Bitcoin currency code'>BTC</abbr></li></ul><p data-i18n='works_functionalities'>Was developed the next functionalities:</p><ul><li data-i18n='works_calculation'>Calculation of currency ratio;</li><li data-i18n='works_target'>Reverse/change target currency;</li><li data-i18n='works_range'>Change API currency value in the 10% range;</li><li data-i18n='works_reload'>Reload currencies API;</li><li data-i18n='works_loop'>Preventing the loop requests;</li></ul>",
+				"technologies": "<span>ReactJS</span> <span>Redux</span> <span>TypeScript</span> <span>Matetial UI</span>",
+				"codeLink": "https://github.com/HowFastGot/currencyExchanger",
+				"liveDemoLink": "#",
+				"imgURL": "../img/main/projects/currency-ratio.jpeg"
+			},
+			"ua": {
+				"title": "КАЛЬКУЛЯТОР ВАЛЮТ",
+				"description": "<p data-i18n='works_project-currency-list'>Конвертація валют по відношенню до UAH:</p><ul><li><abbr title='United States dollar'>USD</abbr></li><li><abbr title='European Monetary Unit'>EURO</abbr></li><li><abbr title='Bitcoin currency code'>BTC</abbr></li></ul><p data-i18n='works_functionalities'>Була розроблена наступна функціональність:</p><ul><li data-i18n='works_calculation'>Розрахунок співвідношення валют;</li><li data-i18n='works_target'>Зміна відношення між обраними валютами</li>li data-i18n='works_range'>Зміна отриманих валютних API даних в межах 10%;</li><li data-i18n='works_reload'>Оновлення API даних;</li><li data-i18n='works_loop'>Запобігання відправки більше ніж 5 моментальних запитів;</li></ul>",
+				"technologies": "<span>ReactJS</span> <span>Redux</span> <span>TypeScript</span> <span>Matetial UI</span>",
+				"codeLink": "https://github.com/HowFastGot/currencyExchanger",
+				"liveDemoLink": "#",
+				"imgURL": "../img/main/projects/currency-ratio.jpeg"
+			},
+			"ru": {
+				"title": "КАЛЬКУЛЯТОР ВАЛЮТ",
+				"description": "<p data-i18n='works_project-currency-list'>Конвертация соотношения валют к базовой UAH:</p><ul><li><abbr title='United States dollar'>USD</abbr></li><li><abbr title='European Monetary Unit'>EURO</abbr></li><li><abbr title='Bitcoin currency code'>BTC</abbr></li></ul><p data-i18n='works_functionalities'>Была разработана следующая функциональность:</p><ul><li data-i18n='works_calculation'>Рассчет соотношения валют;</li><li data-i18n='works_target'>Изменение позиций стравниваемых валют;</li><li data-i18n='works_range'>Изменение полученых валютных API данных в пределах 10%;</li><li data-i18n='works_reload'>Обновление API данных;</li><li data-i18n='works_loop'>Предотвращение отправки более 5 моментальных запросов;</li></ul>",
+				"technologies": "<span>ReactJS</span> <span>Redux</span> <span>TypeScript</span> <span>Matetial UI</span>",
+				"codeLink": "https://github.com/HowFastGot/currencyExchanger",
+				"liveDemoLink": "#",
+				"imgURL": "../img/main/projects/currency-ratio.jpeg"
+			}
+		},
+		"4": {
+			"en": {
+				"title": "VIN DECODER",
+				"description": "The website was designed for decoding car VIN numbers, saving the history of decoded numbers, and has 3 pages to describe each characteristic of the car.",
+				"technologies": "<span>React Router</span> <span>SCSS</span> <span>TypeScript</span> <span>ReactJS</span> <span>Redux</span>",
+				"codeLink": "https://github.com/HowFastGot/Vin_Numbers_Decoder",
+				"liveDemoLink": "#",
+				"imgURL": "../img/main/projects/vin_decoder.jpg"
+			},
+			"ua": {
+				"title": "VIN ДЕКОДЕР",
+				"description": "Веб-сайт розроблений для розшифровки VIN-номерів автомобіля, збереження історії розкодованих номерів і має 3 сторінки для опису кожної характеристики автомобіля.",
+				"technologies": "<span>React Router</span> <span>SCSS</span> <span>TypeScript</span> <span>ReactJS</span> <span>Redux</span>",
+				"codeLink": "https://github.com/HowFastGot/Vin_Numbers_Decoder",
+				"liveDemoLink": "#",
+				"imgURL": "../img/main/projects/vin_decoder.jpg"
+			},
+			"ru": {
+				"title": "VIN ДЕКОДЕР",
+				"description": "Веб-сайт разработан для расшифровки VIN-номеров автомобиля, сохранения истории раскодированных номеров и имеет 3 страницы для описания каждой характеристики автомобиля.",
+				"technologies": "<span>React Router</span> <span>SCSS</span> <span>TypeScript</span> <span>ReactJS</span> <span>Redux</span>",
+				"codeLink": "https://github.com/HowFastGot/Vin_Numbers_Decoder",
+				"liveDemoLink": "#",
+				"imgURL": "../img/main/projects/vin_decoder.jpg"
+			}
+		},
+		"5": {
+			"en": {
 				"title": "CV website of a target expert",
 				"description": "The website was created as a CV of target expert Daria Vovk. The website presents a list of services, portfolio and experience of a specialist.</br> Via this website we can contact the expert, follow to her social media, discover her achievements and so on.",
 				"technologies": "<span>SCSS</span> <span>JavaScript</span> <span>ReactJS</span>",
@@ -26,7 +78,7 @@
 				"imgURL": "../img/main/projects/targetolog.jpg"
 			}
 		},
-		"4": {
+		"6": {
 			"en": {
 				"title": "NFT Dashboard",
 				"description": "This website is a convenient and informative crypto dashboard designed for analyzing cryptocurrency data. Here, users can gain a comprehensive overview of the market situation, explore up-to-date charts and statistics, as well as identify major trends and changes.",
@@ -52,7 +104,7 @@
 				"imgURL": "../img/main/projects/crypto-dashboard.png"
 			}
 		},
-		"5": {
+		"7": {
 			"en": {
 				"title": "Cafe Pizza",
 				"description": "The full functionality for online order placement by customers has been developed. On the main page, it is possible to filter pizzas by type, choose various sizes, and select the type of crust. A shopping cart has been implemented, allowing customers to modify the quantity of added items.",
@@ -78,7 +130,7 @@
 				"imgURL": "../img/main/projects/pizza.png"
 			}
 		},
-		"6": {
+		"8": {
 			"en": {
 				"title": "Pictures Shop",
 				"description": "The website serves as an online webstore for a pictures collection. It provides a platform where visitors can browse and purchase a wide range of high-quality pictures. The website features a comprehensive gallery showcasing the collection, allowing users to explore and discover various categories and themes.",
@@ -104,7 +156,7 @@
 				"imgURL": "../img/main/projects/Pictures_store.png"
 			}
 		},
-		"7": {
+		"9": {
 			"en": {
 				"title": "Wise Window Shop",
 				"description": "Seamless and convenient platform for all your window needs. A customer can easily explore and discover a wide range of windows tailored to your specific requirements. With this website, customers can effortlessly find the perfect windows to enhance the beauty, functionality, and energy efficiency of your space.",
@@ -130,7 +182,7 @@
 				"imgURL": "../img/main/projects/Window-shop.png"
 			}
 		},
-		"8": {
+		"10": {
 			"en": {
 				"title": "Sport equipment shop",
 				"description": "Four pages of an online sports equipment store have been developed: the home page, product page, shopping cart, and product catalog. The website incorporates all the functionality of an online store and includes interactive elements, sliders, and more.",
@@ -156,7 +208,7 @@
 				"imgURL": "../img/main/projects/sport-equipment.png"
 			}
 		},
-		"9": {
+		"11": {
 			"en": {
 				"title": "Knives Shop",
 				"description": "During the development process, I encountered several challenges that tested my skills and determination. From designing an intuitive user interface to ensuring seamless navigation, I strived to create a visually appealing and user-friendly website. Optimizing the website for different devices and screen sizes was another hurdle that required meticulous attention to detail.",
@@ -182,7 +234,7 @@
 				"imgURL": "../img/main/projects/zlatmax.png"
 			}
 		},
-		"10": {
+		"12": {
 			"en": {
 				"title": "IT School",
 				"description": "The website was created as a comprehensive platform for the IT School. It serves as a hub where visitors can access a wealth of information about the school's programs and offerings. The website features detailed descriptions of the courses available, along with information about the instructors and their expertise. Visitors can explore the curriculum, prerequisites, and outcomes of each course to make informed decisions about their learning journey.",

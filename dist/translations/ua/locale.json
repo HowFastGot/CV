@@ -16,19 +16,15 @@
 		"main-exp_service-job": "<strong>Service manager</strong> <p>в компанії Comfy</p> <time>2019 - 2021</time>",
 
 		"works-title": "Портфоліо",
-		"works_project-currency": "Калькулятор валют",
-		"works_project-currency-list": "Конвертація валют по відношенню до UAH:",
-		"works_functionalities": "Була розроблена наступна функціональність:",
-		"works_calculation": "Розрахунок співвідношення валют;",
-		"works_target": "Зміна відношення між обраними валютами",
-		"works_range": "Зміна отриманих валютних API даних в межах 10%;",
-		"works_reload": "Оновлення API даних;",
-		"works_loop": "Запобігання відправки більше ніж 5 моментальних запитів;",
+
+		"works_project-pet": "Kitten Caturday",
+		"works_project-pet-desc": "Інтерактивний веб-сайт, який служить центром для всіх шанувальників кішок. Проект фокусується на кішках різних порід і дозволяє користувачам ділитися своїми фотографіями кішок, а також голосувати за своїх улюблених представників кошачого світу.",
+
+		"works_project-promt": "AI Promtopia",
+		"works_project-promt-desc": "Promptopia - це відкрите інструмент штучного інтелекту для створення та обміну творчими завданнями в сучасному світі.",
+
 		"works_project-code": "Код проекту",
 		"works_project-live_demo": "<span>Live</span> Демонстрація",
-		"works_caveat": "Можливе виникнення збоїв на сервері API власника. Використай <a href=\"https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=ru\"> розширення CORS</a> для їх вирішення",
-		"works_project-vin": "VIN Декодер",
-		"works_project-vin-desc": "Веб-сайт розроблений для розшифровки VIN-номерів автомобіля, збереження історії розкодованих номерів і має 3 сторінки для опису кожної характеристики автомобіля.",
 		"works_load-more": "Завантажити більше",
 
 		"certificates_title": "Сертифікати",

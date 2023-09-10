@@ -117,15 +117,15 @@ async function asyncAddNewProject({
 		});
 }
 
-export function changeProjectQuantityIndicator(indexOfNextLoadedProject = 11) {
+export function changeProjectQuantityIndicator(indexOfNextLoadedProject = 13) {
 	const projectQuantityIndicator = findDOM_node(
 		'.load-button-block__q-indicator'
 	);
 
 	const nextQuantityVisibleProjects =
-		indexOfNextLoadedProject <= 10 ? indexOfNextLoadedProject : 2;
+		indexOfNextLoadedProject <= 12 ? indexOfNextLoadedProject : 2;
 
-	projectQuantityIndicator.textContent = `${nextQuantityVisibleProjects} / 10`;
+	projectQuantityIndicator.textContent = `${nextQuantityVisibleProjects} / 12`;
 }
 
 const setUpDefaultButtonAppirance = (button) => {
@@ -138,6 +138,7 @@ const setUpDefaultButtonAppirance = (button) => {
 export function deleteAddedProjects() {
 	const allVisibleProjects = findDOM_node('.works__project-item', 'multiElems');
 
+	// Should be left just 2 projects
 	for (let i = allVisibleProjects.length - 1; i >= 2; i--) {
 		const certainProject = allVisibleProjects[i];
 		certainProject.classList.add('animate__animated', 'animate__bounceOut');
@@ -166,20 +167,13 @@ function changeLoadButton(button, indexOfNextLoadedProject, isLoading) {
 		button.parentElement.classList.add('delete');
 	}
 
-	if (indexOfNextLoadedProject > 9) {
+	if (indexOfNextLoadedProject > 11) {
 		button.textContent = 'Remove the added projects';
 		button.parentElement.classList.add('delete');
 	}
 }
-const handleLoadMoreProjects = async (e) => {
+const handleLoadMoreProjects = async (e, indexOfNextLoadedProject) => {
 	const targetButton = e.target;
-	const indexOfNextLoadedProject = getQuantityVisibleProjects() + 1;
-
-	if (indexOfNextLoadedProject > 10) {
-		handleProjectDeleting(targetButton);
-		setUpDefaultButtonAppirance(targetButton);
-		return;
-	}
 
 	changeLoadButton(targetButton, null, true);
 
@@ -202,6 +196,17 @@ const handleLoadMoreProjects = async (e) => {
 
 export function loadingProjects(loadButtonSelector) {
 	const loadingBtn = findDOM_node(loadButtonSelector);
+	const totalProjectQuantity = 12;
 
-	loadingBtn && loadingBtn.addEventListener('click', handleLoadMoreProjects);
+	loadingBtn &&
+		loadingBtn.addEventListener('click', (e) => {
+			const btn = e.target;
+			const indexOfNextLoadedProject = getQuantityVisibleProjects() + 1; // two are visible and + 1 is next;
+
+			if (indexOfNextLoadedProject > totalProjectQuantity) {
+				handleProjectDeleting(btn);
+			} else {
+				handleLoadMoreProjects(e, indexOfNextLoadedProject);
+			}
+		});
 }
