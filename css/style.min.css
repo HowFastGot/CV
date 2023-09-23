@@ -712,7 +712,7 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 .experience-section__frame-own-photo {
   position: relative;
   min-width: 233px;
-  top: -465px;
+  top: -503px;
   left: 432px;
   height: 360.5px;
   width: 243px;
@@ -742,7 +742,7 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 }
 @media (max-width: 1211px) {
   .experience-section__frame-own-photo {
-    top: -570px;
+    top: -608px;
   }
 }
 @media (max-width: 1006px) {
@@ -840,6 +840,9 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 .experience-section__table-row tbody tr td:last-child.ts::before {
   background: url("../img/icons/experience/ts.svg") no-repeat center/cover;
 }
+.experience-section__table-row tbody tr td:last-child.next::before {
+  background: url("../img/icons/experience/next.svg") no-repeat center/cover;
+}
 .experience-section__table-row tbody tr td:last-child.reactNative::before {
   background: url("../img/icons/experience/react-native.svg") no-repeat center/cover;
 }
@@ -857,7 +860,7 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
   position: absolute;
   left: -13px;
   top: -9px;
-  height: 583px;
+  height: 660px;
   width: 2px;
   background-color: #651fff;
 }
@@ -865,7 +868,7 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
   .experience-section__table-row tbody::before {
     top: -114px;
     left: -12px;
-    height: 688px;
+    height: 765px;
   }
 }
 @media (max-width: 1143px) {
@@ -946,7 +949,7 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
   border-radius: 28px;
 }
 .experience-section__skill-range_second::before {
-  width: 75%;
+  width: 85%;
 }
 .experience-section__skill-range_third::before {
   width: 80%;
@@ -954,11 +957,14 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 .experience-section__skill-range_fourth::before {
   width: 65%;
 }
+.experience-section__skill-range_next::before {
+  width: 85%;
+}
 .experience-section__skill-range_fifth::before {
   width: 30%;
 }
 .experience-section__skill-range_sixth::before {
-  width: 45%;
+  width: 59%;
 }
 .experience-section__own-attr {
   position: absolute;
