@@ -2,17 +2,18 @@
 	"Russian": {
 		"header_hi": "Привет,",
 		"header_name": "Мое имя Евгений, <span>Front-End Разработчик</span>",
-		"header_location": "Местопроживание - <span>Украина</span>, больше <b>1.5 лет</b> опыта работы в IT компании.<br> Открытый, стресоустойчив и вдохновлен<wbr> тем что я делаю!</wbr>",
+		"header_location": "Местопроживание - <span>Украина</span>, больше <b>2х лет</b> опыта работы в IT компании.<br> Открытый, стресоустойчив и вдохновлен<wbr> тем что я делаю!</wbr>",
 
 		"main-rewards_englishLevel": "Английский B1",
-		"main-rewards_experience": "1.5 года <br> опыта розработки",
+		"main-rewards_experience": "2 года <br> опыта розработки",
 		"main-rewards_hoursOfLessons": "111 часов <br> обучения",
 		"main-rewards_totalProjects": "23+ проектов",
 
 		"main-exp_workExperience": "Опыт Работы",
 		"main-exp_skills": "Умения и Экспертиза",
-		"main-exp_dev-job": "<strong>Front-End Разработчик</strong> <p>как Фрилансер</p> <time>2022 - н.в.</time>",
-		"main-exp_sales-job": "<strong>Sales manager</strong> <p>в компании TrackEnsure </p> <time>2021 - н.в.</time>",
+		"main-exp_preframer-job": "<strong>Frontend Developer</strong> <p>Preframer Inc</p> <time>Июнь 2023 - н.в</time>",
+		"main-exp_dev-job": "<strong>Front-End Разработчик</strong> <p>как Фрилансер</p> <time>Ноябрь 2021 - Август 2023</time>",
+		"main-exp_sales-job": "<strong>Sales manager</strong> <p>в компании TrackEnsure </p> <time>Август 2021 - Август 2023</time>",
 		"main-exp_service-job": "<strong>Service manager</strong> <p>в компании Comfy</p> <time>2019 - 2021</time>",
 
 		"works-title": "Портфолио",

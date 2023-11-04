@@ -2,17 +2,18 @@
 	"Ukrainian": {
 		"header_hi": "Привіт,",
 		"header_name": "Моє ім'я Євген, <span>Front-End Розробник</span>",
-		"header_location": "Локація - <span>Україна</span>, більше ніж <b>1.5 роки</b> досвіду роботи в IT компанії.<br> Відкритий, стресостійкий та захоплений<wbr> своєю справою !</wbr>",
+		"header_location": "Локація - <span>Україна</span>, більше ніж <b>2 роки</b> досвіду роботи в IT компанії.<br> Відкритий, стресостійкий та захоплений<wbr> своєю справою !</wbr>",
 
 		"main-rewards_englishLevel": "Англійська B1",
-		"main-rewards_experience": "1.5 роки <br> досвіду розробки",
+		"main-rewards_experience": "2 роки <br> досвіду розробки",
 		"main-rewards_hoursOfLessons": "111 годин <br> навчаня",
 		"main-rewards_totalProjects": "23+ проектів",
 
 		"main-exp_workExperience": "Досвід Роботи",
 		"main-exp_skills": "Навички та Експертиза",
-		"main-exp_dev-job": "<strong>Front-End Розробник</strong> <p>як Фрілансер</p> <time>2022 - т.ч.</time>",
-		"main-exp_sales-job": "<strong>Sales manager</strong> <p>в компанії TrackEnsure </p> <time>2021 - т.ч.</time>",
+		"main-exp_preframer-job": "<strong>Frontend Developer</strong> <p>Preframer Inc</p> <time>Червень 2023 - т.ч</time>",
+		"main-exp_dev-job": "<strong>Front-End Розробник</strong> <p>як Фрілансер</p> <time>Листопад 2021 - Серпень 2023</time>",
+		"main-exp_sales-job": "<strong>Sales manager</strong> <p>в компанії TrackEnsure </p> <time>Серпень 2021 - Серпень 2023</time>",
 		"main-exp_service-job": "<strong>Service manager</strong> <p>в компанії Comfy</p> <time>2019 - 2021</time>",
 
 		"works-title": "Портфоліо",

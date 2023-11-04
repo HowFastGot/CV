@@ -712,7 +712,7 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 .experience-section__frame-own-photo {
   position: relative;
   min-width: 233px;
-  top: -503px;
+  top: -543px;
   left: 432px;
   height: 360.5px;
   width: 243px;
@@ -759,11 +759,11 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 .experience-section__table-row tbody {
   position: relative;
 }
-.experience-section__table-row tbody tr:nth-child(-n+3) td:first-child {
+.experience-section__table-row tbody tr:nth-child(-n+4) td:first-child {
   width: 40%;
   padding-left: 10px;
 }
-.experience-section__table-row tbody tr:nth-child(-n+3) td:first-child::before {
+.experience-section__table-row tbody tr:nth-child(-n+4) td:first-child::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -777,12 +777,12 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
   border-radius: 50%;
 }
 @media (max-width: 1146px) {
-  .experience-section__table-row tbody tr:nth-child(-n+3) td:first-child::before {
+  .experience-section__table-row tbody tr:nth-child(-n+4) td:first-child::before {
     left: -18px;
   }
 }
 @media (max-width: 991.98px) {
-  .experience-section__table-row tbody tr:nth-child(-n+3) td:first-child::before {
+  .experience-section__table-row tbody tr:nth-child(-n+4) td:first-child::before {
     left: -10px;
     top: 7px;
     width: 13px;
@@ -790,8 +790,8 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
   }
 }
 @media (max-width: 479.98px) {
-  .experience-section__table-row tbody tr:nth-child(-n+3) td:first-child p,
-  .experience-section__table-row tbody tr:nth-child(-n+3) td:first-child time {
+  .experience-section__table-row tbody tr:nth-child(-n+4) td:first-child p,
+  .experience-section__table-row tbody tr:nth-child(-n+4) td:first-child time {
     font-size: 8px;
   }
 }
@@ -831,6 +831,9 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 .experience-section__table-row tbody tr td:last-child.html-css::before {
   background: url("../img/icons/experience/html_css.svg") no-repeat center/cover;
 }
+.experience-section__table-row tbody tr td:last-child.jira::before {
+  background: center/76% 90% url("../img/icons/experience/jira.svg") no-repeat;
+}
 .experience-section__table-row tbody tr td:last-child.js::before {
   background: url("../img/icons/experience/js.svg") no-repeat center/cover;
 }
@@ -860,15 +863,15 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
   position: absolute;
   left: -13px;
   top: -9px;
-  height: 660px;
+  height: 741px;
   width: 2px;
   background-color: #651fff;
 }
 @media (max-width: 1211px) {
   .experience-section__table-row tbody::before {
-    top: -114px;
+    top: -73px;
     left: -12px;
-    height: 765px;
+    height: 805px;
   }
 }
 @media (max-width: 1143px) {
@@ -950,6 +953,9 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 }
 .experience-section__skill-range_second::before {
   width: 85%;
+}
+.experience-section__skill-range_second-jira::before {
+  width: 82%;
 }
 .experience-section__skill-range_third::before {
   width: 80%;
