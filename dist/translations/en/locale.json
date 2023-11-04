@@ -1,18 +1,19 @@
 {
 	"English": {
 		"header_hi": "Hi,",
-		"header_name": "I am Yevhen, <span>Front-End Developer</span>",
-		"header_location": "Location - <span>Ukraine</span>, more than <b>1.5 years</b> of experience of working in an IT company. <br> Open minded, patient and delighted with what <wbr>I do!</wbr>",
+		"header_name": "I am Yevhen, <span>Frontend Developer</span>",
+		"header_location": "Location - <span>Ukraine</span>, more than <b>2 years</b> of experience of working in an IT company. <br> Open minded, patient and delighted with what <wbr>I do!</wbr>",
 
 		"main-rewards_englishLevel": "B1 English",
-		"main-rewards_experience": "1.5 year <br> of experience",
+		"main-rewards_experience": "2 years <br> of experience",
 		"main-rewards_hoursOfLessons": "111 hours <br>educational lessons",
-		"main-rewards_totalProjects": "23+ projects",
+		"main-rewards_totalProjects": "27+ projects",
 
 		"main-exp_workExperience": "WORK EXPERIENCE",
 		"main-exp_skills": "SKILL AND EXPERTISE",
-		"main-exp_dev-job": "<strong>Front-End Developer</strong> <p>as a Freelancer</p> <time>2022 - Present</time>",
-		"main-exp_sales-job": "<strong>Sales manager</strong> <p>at TrackEnsure Company</p> <time>2021 - Present</time>",
+		"main-exp_preframer-job": "<strong>Frontend Developer</strong> <p>Preframer Inc</p> <time>June 2023 - Present</time>",
+		"main-exp_dev-job": "<strong>Frontend Developer</strong> <p>as a Freelancer</p> <time>Nov 2021 - Aug 2023</time>",
+		"main-exp_sales-job": "<strong>Sales manager</strong> <p>at TrackEnsure Company</p> <time>Aug 2021 - Aug 2023/time>",
 		"main-exp_service-job": "<strong>Service manager</strong> <p>at Comfy Company</p> <time>2019 - 2021</time>",
 
 		"works-title": "Portfolio",
@@ -35,7 +36,7 @@
 		"education-html_css": "<a href=\"https://www.youtube.com/playlist?list=PLM6XATa8CAG4F9nAIYNS5oAiPotxwLFIr\" target=\"_blank\">A free of charge HTML and CSS course </a> on<span class=\"resourse-list__youtube\"> YouTube</span> created by Forever Freelancer",
 		"education-html_duration": "<span>Duration:</span> 1 month",
 		"education-html_lessons": "<span>Lessons:</span> 39 pcs",
-		"education-html_description": "<span>Description:</span> <span> This course in 2021 introduced me to the concept of \"Website Development\". The author's interesting approach and the room for implementing my ideas into various design elements of a website laid the foundation for my further development as a Front-End developer.</span",
+		"education-html_description": "<span>Description:</span> <span> This course in 2021 introduced me to the concept of \"Website Development\". The author's interesting approach and the room for implementing my ideas into various design elements of a website laid the foundation for my further development as a Frontend developer.</span",
 		"education-html_book": "HTML and CSS book",
 		"education-html_book_duration": "<span>Duration:</span> 3 months",
 		"education-html_book_info": "<span>Lessons:</span> The whole book was read and its tasks fulfilled",

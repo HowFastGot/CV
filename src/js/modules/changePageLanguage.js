@@ -95,6 +95,7 @@ const changeTextContentofPage = ({English, Ukrainian, Russian}) => {
 
 async function pageInternationalization(choosenPageLang) {
 	const currentLanguageData = await getAsyncLanguageDataObject(choosenPageLang);
+	console.log(currentLanguageData);
 	changeTextContentofPage(currentLanguageData);
 }
 

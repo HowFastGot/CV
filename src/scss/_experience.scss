@@ -15,7 +15,7 @@
 	&__frame-own-photo {
 		position: relative;
 		min-width: 233px;
-		top: -465px;
+		top: -543px;
 		left: 432px;
 		height: 360.5px;
 		width: 243px;
@@ -46,7 +46,7 @@
 		}
 
 		@media (max-width: 1211px) {
-			top: -570px;
+			top: -608px;
 		}
 
 		@media (max-width: 1006px) {
@@ -64,7 +64,7 @@
 			position: relative;
 
 			tr {
-				&:nth-child(-n + 3) {
+				&:nth-child(-n + 4) {
 					td:first-child {
 						width: 40%;
 						padding-left: 10px;
@@ -144,6 +144,9 @@
 						background: url('../img/icons/experience/html_css.svg') no-repeat
 							center/cover;
 					}
+					&.jira::before {
+						background: center / 76% 90% url('../img/icons/experience/jira.svg')  no-repeat;
+					}
 
 					&.js::before {
 						background: url('../img/icons/experience/js.svg') no-repeat
@@ -159,6 +162,11 @@
 						background: url('../img/icons/experience/ts.svg') no-repeat
 							center/cover;
 					}
+					&.next::before {
+						background: url('../img/icons/experience/next.svg') no-repeat
+							center/cover;
+					}
+					
 
 					&.reactNative::before {
 						background: url('../img/icons/experience/react-native.svg')
@@ -182,14 +190,14 @@
 				position: absolute;
 				left: -13px;
 				top: -9px;
-				height: 583px;
+				height: 741px;
 				width: 2px;
 				background-color: $BLUE;
 
 				@media (max-width: 1211px) {
-					top: -114px;
+					top: -73px;
 					left: -12px;
-					height: 688px;
+					height: 805px;
 				}
 
 				@media (max-width: 1143px) {
@@ -275,7 +283,12 @@
 
 		&_second {
 			&::before {
-				width: 75%;
+				width: 85%;
+			}
+		}
+		&_second-jira {
+			&::before {
+				width: 82%;
 			}
 		}
 
@@ -291,6 +304,12 @@
 			}
 		}
 
+		&_next {
+			&::before {
+				width: 85%;
+			}
+		}
+
 		&_fifth {
 			&::before {
 				width: 30%;
@@ -299,7 +318,7 @@
 
 		&_sixth {
 			&::before {
-				width: 45%;
+				width: 59%;
 			}
 		}
 	}
