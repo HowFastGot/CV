@@ -3,11 +3,8 @@ import {smoothScroll} from './smoothScroll.js';
 const createProperAttrs = (dataAttrText, tooltip) => {
 	switch (dataAttrText) {
 		case 'Download CV.pdf':
-			tooltip.setAttribute(
-				'href',
-				'../assets/Frontend Skaretskiy Yevhen (EN).pdf'
-			);
-			tooltip.setAttribute('download', 'Frontend Skaretskiy Yevhen (EN)');
+			tooltip.setAttribute('href', '../assets/Frontend Skaretskiy Yevhen.pdf');
+			tooltip.setAttribute('download', 'Frontend Skaretskiy Yevhen');
 			break;
 		case 'Email message':
 			tooltip.setAttribute('href', 'mailto:yevhenskaretskiy@gmail.com');
