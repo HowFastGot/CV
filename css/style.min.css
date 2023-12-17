@@ -31,7 +31,7 @@ aside {
 html,
 body {
   height: 100%;
-  min-width: 100%;
+  width: 100%;
   font-family: "lato400";
   font-size: 100%;
   line-height: 1;
@@ -689,8 +689,8 @@ body.dark .menu-header__logo.animate__bounceIn, body.light .menu-header__logo.an
 .own-photo__img {
   height: 100%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .page__experience-section {
@@ -1389,10 +1389,13 @@ body.dark .works .notification a {
   overflow: hidden;
 }
 .certificates h6 {
+  padding: 10px 20px;
   font-family: "lato900";
   font-size: 30px;
   text-align: center;
+  border-radius: 5px;
 }
+
 .own-swiper {
   position: relative;
   width: 70%;
@@ -1528,6 +1531,12 @@ body.dark .works .notification a {
 
 body.dark .certificates h6 {
   color: #ffffff;
+}
+@media (max-width: 1006px) {
+  body.dark .certificates h6 {
+    background: -o-linear-gradient(308.49deg, #9c27b0 -18.34%, #651fff 66.03%);
+    background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+  }
 }
 
 .footer {
@@ -2119,6 +2128,8 @@ body.dark .certificates h6 {
 
 .interview__title {
   visibility: hidden;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-family: "lato900";
   font-size: 30px;
   color: #000000;
@@ -2171,6 +2182,12 @@ body.dark .certificates h6 {
 body.dark .interview__title {
   color: #ffffff;
 }
+@media (max-width: 1006px) {
+  body.dark .interview__title {
+    background: -o-linear-gradient(308.49deg, #9c27b0 -18.34%, #651fff 66.03%);
+    background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+  }
+}
 
 .page__education {
   margin: 60px 0;
@@ -2182,6 +2199,8 @@ body.dark .interview__title {
 }
 
 .education-block__title {
+  padding: 10px 20px;
+  border-radius: 5px;
   text-align: center;
   text-transform: uppercase;
   font-family: "lato900";
@@ -2393,11 +2412,93 @@ body.dark .resourse-list__item a {
   color: #d1c4e9;
   display: inline-block;
 }
+@media (max-width: 1006px) {
+  body.dark .education-block__title {
+    background: -o-linear-gradient(308.49deg, #9c27b0 -18.34%, #651fff 66.03%);
+    background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+  }
+}
 
 .animate__animated.animate__slideInUp {
   --animate-duration: 0.5s;
 }
 
+#scrollButton {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  border-radius: 100%;
+  overflow: hidden;
+  z-index: 20;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-animation: jumpAndPause 10s infinite;
+          animation: jumpAndPause 10s infinite;
+}
+#scrollButton svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes jumpAndPause {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: inset 1px 1px 4px #d6bd96;
+            box-shadow: inset 1px 1px 4px #d6bd96;
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: inset 1px 1px 4px #d6bd96;
+            box-shadow: inset 1px 1px 4px #d6bd96;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@keyframes jumpAndPause {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: inset 1px 1px 4px #d6bd96;
+            box-shadow: inset 1px 1px 4px #d6bd96;
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: inset 1px 1px 4px #d6bd96;
+            box-shadow: inset 1px 1px 4px #d6bd96;
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -2416,6 +2517,9 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 body {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   font-family: "lato400";
   color: #000;
   font-size: 14px;
