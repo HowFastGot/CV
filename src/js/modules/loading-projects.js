@@ -1,7 +1,7 @@
-import {findDOM_node} from './findDOM_node.js';
-import {smoothScroll} from './smoothScroll.js';
-import {errorPopup} from './errorPopup.js';
-import {getResource} from '../services/requests.js';
+import { findDOM_node } from './findDOM_node.js';
+import { smoothScroll } from './smoothScroll.js';
+import { errorPopup } from './errorPopup.js';
+import { getResource } from '../services/requests.js';
 
 const cache = new Map();
 
@@ -52,11 +52,7 @@ async function asyncImageLoading(imgElement) {
 }
 
 function fillOutProjectTemplate(projectTempalte, sectionSelector, content) {
-	const sectionElement = findDOM_node(
-		sectionSelector,
-		null,
-		projectTempalte.firstElementChild
-	);
+	const sectionElement = findDOM_node(sectionSelector, null, projectTempalte.firstElementChild);
 
 	switch (sectionElement.tagName.toLowerCase()) {
 		case 'img':
@@ -83,14 +79,7 @@ function animateNewAddedProject(selector) {
 	addedProject.classList.add('animate__animated', 'animate__backInUp');
 }
 
-async function asyncAddNewProject({
-	imgURL,
-	title,
-	description,
-	technologies,
-	codeLink,
-	liveDemoLink,
-}) {
+async function asyncAddNewProject({ imgURL, title, description, technologies, codeLink, liveDemoLink }) {
 	const projectsContainer = findDOM_node('.works__project-wrapper');
 	const templateContent = getProjectTemplateContent('#project-template');
 
@@ -117,15 +106,12 @@ async function asyncAddNewProject({
 		});
 }
 
-export function changeProjectQuantityIndicator(indexOfNextLoadedProject = 13) {
-	const projectQuantityIndicator = findDOM_node(
-		'.load-button-block__q-indicator'
-	);
+export function changeProjectQuantityIndicator(indexOfNextLoadedProject = 14) {
+	const projectQuantityIndicator = findDOM_node('.load-button-block__q-indicator');
 
-	const nextQuantityVisibleProjects =
-		indexOfNextLoadedProject <= 12 ? indexOfNextLoadedProject : 2;
+	const nextQuantityVisibleProjects = indexOfNextLoadedProject <= 13 ? indexOfNextLoadedProject : 2;
 
-	projectQuantityIndicator.textContent = `${nextQuantityVisibleProjects} / 12`;
+	projectQuantityIndicator.textContent = `${nextQuantityVisibleProjects} / 13`;
 }
 
 const setUpDefaultButtonAppirance = (button) => {
@@ -167,7 +153,7 @@ function changeLoadButton(button, indexOfNextLoadedProject, isLoading) {
 		button.parentElement.classList.add('delete');
 	}
 
-	if (indexOfNextLoadedProject > 11) {
+	if (indexOfNextLoadedProject > 12) {
 		button.textContent = 'Remove the added projects';
 		button.parentElement.classList.add('delete');
 	}
@@ -179,10 +165,11 @@ const handleLoadMoreProjects = async (e, indexOfNextLoadedProject) => {
 
 	const currentLang = getCurrentPageLanguage();
 
-	const {projects} = cache.get('projects') ?? (await asyncLoadProjects());
+	const { projects } = cache.get('projects') ?? (await asyncLoadProjects());
 
 	const projectObj = projects[indexOfNextLoadedProject][currentLang];
 
+	console.log(indexOfNextLoadedProject, 'indexOfNextLoadedProject');
 	asyncAddNewProject(projectObj)
 		.then(() => {
 			setUpDefaultButtonAppirance(targetButton);
@@ -196,7 +183,7 @@ const handleLoadMoreProjects = async (e, indexOfNextLoadedProject) => {
 
 export function loadingProjects(loadButtonSelector) {
 	const loadingBtn = findDOM_node(loadButtonSelector);
-	const totalProjectQuantity = 12;
+	const totalProjectQuantity = 13;
 
 	loadingBtn &&
 		loadingBtn.addEventListener('click', (e) => {

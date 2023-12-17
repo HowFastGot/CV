@@ -1,7 +1,7 @@
-import {findDOM_node} from './findDOM_node.js';
-import {focusFormInput} from './handleFocusForm.js';
+import { findDOM_node } from './findDOM_node.js';
+import { focusFormInput } from './handleFocusForm.js';
 
-export function smoothScroll(tooltip = null, acordionElement = null) {
+export function smoothScroll(tooltip = null, anchorElement = null) {
 	if (tooltip) {
 		tooltip.addEventListener('click', (e) => {
 			e.preventDefault();
@@ -18,7 +18,7 @@ export function smoothScroll(tooltip = null, acordionElement = null) {
 			}
 		});
 	} else {
-		acordionElement.parentElement.scrollIntoView({
+		anchorElement.parentElement.scrollIntoView({
 			scrollIntoViewOptions: {
 				behavior: 'smooth',
 			},

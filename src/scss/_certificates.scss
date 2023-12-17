@@ -5,12 +5,11 @@
 	overflow: hidden;
 
 	h6 {
+		padding: 10px 20px;
 		font-family: 'lato900';
 		font-size: 30px;
 		text-align: center;
-	}
-
-	&__swiper {
+		border-radius: 5px;
 	}
 }
 
@@ -125,6 +124,10 @@ body.dark {
 	.certificates {
 		h6 {
 			color: $WHITE;
+
+			@media (max-width: 1006px) {
+				background: $VIO-BLUE-GRAD;
+			}
 		}
 	}
 }

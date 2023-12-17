@@ -2,6 +2,8 @@
 	&__title {
 		visibility: hidden;
 
+		padding: 10px 20px;
+		border-radius: 5px;
 		font-family: 'lato900';
 		font-size: 30px;
 		color: $BLACK;
@@ -51,6 +53,10 @@ body.dark {
 	.interview {
 		&__title {
 			color: $WHITE;
+
+			@media (max-width: 1006px) {
+				background: $VIO-BLUE-GRAD;
+			}
 		}
 	}
 }

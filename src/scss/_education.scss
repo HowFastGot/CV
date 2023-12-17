@@ -9,6 +9,8 @@
 }
 .education-block {
 	&__title {
+		padding: 10px 20px;
+		border-radius: 5px;
 		text-align: center;
 		text-transform: uppercase;
 		font-family: 'lato900';
@@ -125,8 +127,7 @@
 				position: absolute;
 				right: 10px;
 				top: -5px;
-				background: url('../img/icons/education/arr-accordion.svg') center/cover
-					no-repeat;
+				background: url('../img/icons/education/arr-accordion.svg') center/cover no-repeat;
 			}
 		}
 
@@ -202,8 +203,7 @@
 				width: 10px;
 				height: 10px;
 				margin-right: 5px;
-				background: url('../img/icons/education/share-arrow-wht.svg')
-					center/cover no-repeat;
+				background: url('../img/icons/education/share-arrow-wht.svg') center/cover no-repeat;
 			}
 		}
 	}
@@ -240,6 +240,14 @@ body.dark {
 			a {
 				color: $PurpleNav;
 				display: inline-block;
+			}
+		}
+	}
+
+	@media (max-width: 1006px) {
+		.education-block {
+			&__title {
+				background: $VIO-BLUE-GRAD;
 			}
 		}
 	}

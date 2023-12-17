@@ -1,6 +1,6 @@
 .footer {
 	padding: 20px 50px;
-	background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+	background: $VIO-BLUE-GRAD;
 	color: aliceblue;
 
 	._container {
@@ -21,7 +21,7 @@
 			left: 50%;
 			bottom: -30px;
 			transform: translateX(-50%);
-		}	
+		}
 	}
 
 	@media (min-width: $md1) {
@@ -42,7 +42,6 @@
 	&__contact-info {
 		margin-top: 50px;
 		text-align: center;
-
 
 		@media (max-width: $md1) {
 			margin-top: 50px;
@@ -77,8 +76,7 @@
 			width: 100px;
 			height: 100px;
 			transform: translateX(-50%);
-			background: url('../img/icons/Footer/Name-Logi.svg') no-repeat
-				center/cover;
+			background: url('../img/icons/Footer/Name-Logi.svg') no-repeat center/cover;
 
 			@media (max-width: $md3) {
 				width: 50px;

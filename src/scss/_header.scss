@@ -55,7 +55,7 @@
 		max-width: 70%;
 		min-width: 507px;
 		padding: 31px 37px 40px;
-		background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+		background: $VIO-BLUE-GRAD;
 		mix-blend-mode: normal;
 		opacity: 0.79;
 		border-radius: 34px;
@@ -311,7 +311,7 @@ body.dark {
 	}
 	.menu-header__list {
 		@media (min-width: $md2) {
-			background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+			background: $VIO-BLUE-GRAD;
 		}
 	}
 

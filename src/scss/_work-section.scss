@@ -45,7 +45,7 @@
 		@media (max-width: 1006px) {
 			display: block;
 			border: 0;
-			background: linear-gradient(141.51deg, #9c27b0 -18.34%, #651fff 66.03%);
+			background: $VIO-BLUE-GRAD;
 			color: $WHITE;
 		}
 
@@ -329,8 +329,7 @@ body.dark {
 			color: $WHITE;
 
 			&::before {
-				background: url('../img/icons/work/jam_github.svg') no-repeat
-					center/cover;
+				background: url('../img/icons/work/jam_github.svg') no-repeat center/cover;
 			}
 		}
 
@@ -338,8 +337,7 @@ body.dark {
 			color: $WHITE;
 
 			&::after {
-				background: url('../img/icons/work/outline_next.svg') no-repeat
-					center/cover;
+				background: url('../img/icons/work/outline_next.svg') no-repeat center/cover;
 			}
 		}
 

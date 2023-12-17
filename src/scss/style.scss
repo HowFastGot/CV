@@ -17,6 +17,7 @@
 @import '_settings-popup';
 @import '_interview';
 @import '_education';
+@import '_scrollButton';
 //-</Подключаем файлы стилей>==============================================================
 
 //<Подключаем шрифты>=================================================================================================
@@ -53,6 +54,7 @@ html {
 }
 
 body {
+	height: min-content;
 	font-family: $font-family;
 	color: #000;
 	font-size: 14px;
@@ -62,7 +64,7 @@ body {
 	}
 
 	&.dark {
-		background-color: #303030;
+		background-color: $BODY_BLACK;
 
 		.section-title {
 			color: $WHITE;
@@ -228,5 +230,4 @@ body {
 		font-size: 20px;
 	}
 }
-
 //-<Основная сетка>==================================================================
